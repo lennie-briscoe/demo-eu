@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// Plugin
+@tailwind base;
+@import './plugins/flickity';
+
+// Shared
+@import './shared/reset';
+@import './shared/vars';
+@import './shared/mixins';
+@import './shared/typography';
+@import './shared/global';
+
+// Pages
+@import './pages/styleguide';
+@import './pages/home';
+@import './pages/page-error';
+
+// Blocks
+
+
+// Partials
+
+
+// Components
+@tailwind components;
+
+// Utilities
+@tailwind utilities;
+@import './utilities/order';

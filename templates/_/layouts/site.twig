@@ -1,0 +1,31 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+{% extends "_/layouts/base" %}
+
+{# Add a dns prefetch header #}
+{% set baseUrl = url() %}
+{% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;" %}
+
+{# Set the `bodyClass` variable to the entry's section handle if there is one,
+   or the first URI segment (this is used by the parent template) #}
+{# {% if bodyClass is not defined %}
+    {% set bodyClass = entry is defined and entry.slug == 'home' ? 'intro' : '' %}
+{% endif %} #}
+
+{% block body %}
+
+    <div id="js-scroll" style="min-height: 100vh;">
+
+        {% include "_/partials/header" %}
+
+        <main data-router-wrapper>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include "_/partials/footer" %}
+
+    </div>
+
+    <div class="cover"></div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+{% set image = block.image[0] ?? null %}
+{% if image %}
+    <div class="js-smooth-section">
+        {# with, classes: 'example' #}
+        {% include "_/components/picture" with {
+            asset: image,
+            transform: 'base',
+            sizes: sizes ?? '100vw',
+        } %}
+    </div>
+{% endif %}

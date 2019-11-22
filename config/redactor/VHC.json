@@ -1,0 +1,50 @@
+{
+    "buttons": [
+        "html",
+        "formatting",
+        "bold",
+        "italic",
+        "unorderedlist",
+        "orderedlist",
+        "link",
+        "file"
+    ],
+    "formatting": [
+        "p",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "pre",
+        "blockquote"
+    ],
+    "plugins": [
+        "fullscreen",
+        "video",
+        "widget",
+        "table",
+        "customstyles"
+    ],
+    "pastePlainText": true,
+    "toolbarFixed": false,
+    "source": true,
+    "linkNewTab": true,
+    "customStyles": {
+        "customStyles": {
+            "dropdown": {
+                "orangeText": {
+                    "args": {
+                        "tag": "span",
+                        "class": "text-orange",
+                        "type": "toggle"
+                    }
+                },
+                "clearStyles": {
+                    "api": "module.inline.clearformat"
+                }
+            }
+        }
+    }
+}

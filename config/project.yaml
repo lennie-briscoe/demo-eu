@@ -1,0 +1,126 @@
+dateModified: 1573861782
+email:
+  fromEmail: sam@craftcms.com
+  fromName: 'Demo Starter'
+  template: ''
+  transportType: craftcms\postmark\Adapter
+  transportSettings:
+    token: $POSTMARK_API_TOKEN
+fieldGroups:
+  1bff9c9f-5c93-4679-967d-0f9095c856fa:
+    name: Common
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  colour-swatches:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.0.4
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  imager-pretransform:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  queue-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.8
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.0
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+sections:
+  9d1ed50c-2239-4171-8b5a-ab121973301f:
+    name: Home
+    handle: home
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: __home__
+        template: _/pages/home
+    entryTypes:
+      0b3ab84a-728c-4dfa-b505-ee524b9631d9:
+        name: Home
+        handle: home
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+siteGroups:
+  20d3ac0c-0016-4714-9ce6-ffd91f1a0d5b:
+    name: 'Demo Starter'
+sites:
+  c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Demo Starter'
+    primary: true
+    siteGroup: 20d3ac0c-0016-4714-9ce6-ffd91f1a0d5b
+    sortOrder: 1
+system:
+  edition: pro
+  name: 'Demo Starter'
+  live: true
+  schemaVersion: 3.3.3
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''

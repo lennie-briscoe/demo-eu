@@ -1,0 +1,77 @@
+// Global
+
+body,
+input,
+button,
+textarea,
+select {
+	font-family: sans-serif;
+	font-size: 16px;
+	font-feature-settings: 'tnum', 'liga', 'kern';
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+// ::selection {
+// 	background: #ccc;
+// }
+// ::-moz-selection {
+// 	background: #ccc;
+// }
+
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+h1 {
+    @apply text-6xl;
+}
+
+h2 {
+    @apply text-5xl;
+}
+
+h3 {
+    @apply text-4xl;
+}
+
+h4 {
+    @apply text-3xl;
+}
+
+h5 {
+    @apply text-2xl;
+}
+
+h6 {
+    @apply text-xl;
+}
+
+// Paragraph
+
+p {
+    &:not(:last-child) {
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+	// Headings
+
+	h1, h2, h3, h4, h5, h6 {
+
+	}
+
+	// Paragraph
+
+	p {
+
+	}
+
+}
