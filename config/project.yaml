@@ -1,4 +1,4 @@
-dateModified: 1574463529
+dateModified: 1574466931
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -9,6 +9,24 @@ email:
 fieldGroups:
   1bff9c9f-5c93-4679-967d-0f9095c856fa:
     name: Common
+fields:
+  701ed750-1c7f-4b39-9be6-2c25746f29ba:
+    name: 'Image Alt'
+    handle: imageAlt
+    instructions: ''
+    searchable: false
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
 plugins:
   aws-s3:
     edition: standard
@@ -124,3 +142,34 @@ users:
   defaultGroup: null
   photoVolumeUid: null
   photoSubpath: ''
+volumes:
+  a36fa6aa-4824-448f-82cf-b3086f8582c5:
+    name: Images
+    handle: images
+    type: craft\awss3\Volume
+    hasUrls: true
+    url: 'https://s3.us-west-2.amazonaws.com/craftcms-client-demos/'
+    settings:
+      subfolder: europa/images
+      keyId: $AWS_ACCESS_KEY_ID
+      secret: $AWS_SECRET_ACCESS_KEY
+      bucketSelectionMode: choose
+      bucket: craftcms-client-demos
+      region: us-west-2
+      expires: ''
+      makeUploadsPublic: '1'
+      storageClass: ''
+      cfDistributionId: ''
+      cfPrefix: ''
+      autoFocalPoint: ''
+    sortOrder: 1
+    fieldLayouts:
+      73319165-f289-4758-a3f8-a617823df46f:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              701ed750-1c7f-4b39-9be6-2c25746f29ba:
+                required: false
+                sortOrder: 1
