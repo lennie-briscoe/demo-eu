@@ -10,23 +10,108 @@ Website by [**vanholtzco**](https://vanholtz.co)
 
 # Local Environment Instructions
 
-- Clone this repo
-- Create a database
-- Duplicate the **.env.example** file and rename it **.env**
-- Modify the **.env** file with your local database information and Security Key
-  - Update the **BASE_PATH** and  **BASE_URL**
-  - Generate a cryptographically secure key, preferably using a password generator like 1Password. (There’s no length limit.)
-  - Paste your security key inside the quotes and save the file. `SECURITY_KEY=""`
-  - Run `./craft setup/security-key`
-- Run `composer install`
-- Point your local web server to the `/web` directory
-- Run `yarn install`
-- Finish up the Craft CMS 3 install [admin/](http://localhost/admin)
-  - Update Craft to the latest version [admin/utilities/updates](http://localhost/admin/utilities/updates)
-  - Install any plugins needed [admin/settings/plugins](http://localhost/admin/settings/plugins)
-  - Create [Sections](http://localhost/admin/settings/sections) and [Entries](http://localhost/admin/entries/)
-- Run `yarn watch`, `yarn sync`, `yarn dev`, or `yarn prod` to compile the project
-- The local site should now be accessible
+This assumes you have your preferred localhosting method: MAMP, Valet, etc.
+
+## Clone
+
+Clone this repo and get into the new folder it created.
+
+```bash
+git clone git@github.com:pixelandtonic/demo-europa-museum.git
+cd demo-europa-museum
+```
+
+Or, choose your own folder name.
+
+```bash
+git clone git@github.com:pixelandtonic/demo-europa-museum.git europa
+cd europa
+```
+
+## Install dependencies
+
+Use `yarn` instead of `npm`. The `yarn.lock` file enforces consistency between collaborators.
+
+```bash
+composer install
+yarn install
+```
+
+## Create a database
+
+Use PostgreSQL rather than MySQL. You can use MySQL, but won't be able to dump or import from staging or production environments to get content.
+
+We'll just use the default `postgres` user. That user does not need a password.
+
+If you have Postgres installed on a Mac with Homebrew, you should be able to run this.
+
+Note: All examples assume your database is named `europa`. Swap with your chosen database name if different.
+
+```bash
+createdb -U postgres europa
+```
+
+To list databases get into the postgres shell with the default `postgres` user.
+
+```bash
+psql -U postgres
+```
+
+The prompt will be `postgres#`. Run `\l` (backslash and lower case L)  to list databases.
+
+```bash
+postgres# \l
+```
+
+Exit with `\q`.
+
+```bash
+username# \q
+```
+
+To drop a database run this.
+
+```bash
+dropdb -U postgres europa
+```
+
+If it throws an error saying that there are other connections using it then run these two lines. (Change `europa` to the name of your database.)
+
+```bash
+psql -U postgres -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'europa' AND pid <> pg_backend_pid();"
+dropdb -U postgres europa
+```
+
+## Install Craft
+
+This command will:
+
+* Set up your `.env` values
+* Test your database connection
+* Let you install Craft if the database connection was ok
+
+```bash
+./craft setup
+```
+
+If that fails, you can try it again, or manually set up the `.env` file and run `./craft install`.
+
+Project Config will automatically create all fields, sections, and other settings.
+
+Just in case Craft or its plugins aren't up to date, run this.
+
+```bash
+./craft update
+```
+
+## Front-end Development
+
+There are a few commands you can run, found in `package.json`:
+
+* `yarn watch`
+* `yarn sync`
+* `yarn dev`
+* `yarn prod`
 
 ## Development Technologies
 
