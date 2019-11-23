@@ -1,4 +1,4 @@
-# Craft Demo - Starter
+# Europa Museum - a marketing demo site
 
 Website by [**vanholtzco**](https://vanholtz.co)
 
