@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 /* Mix Plugins */
-require('laravel-mix-bundle-analyzer');
+// require('laravel-mix-bundle-analyzer');
 require('laravel-mix-critical');
 require("laravel-mix-purgecss");
 
@@ -19,7 +19,6 @@ mix
         autoprefixer: false,
         processCssUrls: false,
         postCss: [
-            require('tailwindcss')('./tailwind.config.js'),
             require('cssnano')(),
         ],
     })
@@ -80,6 +79,6 @@ if (mix.inProduction()) {
         .sourceMaps(true, 'source-map');
 }
 
-if (mix.isWatching()) {
-    mix.bundleAnalyzer();
-}
+// if (mix.isWatching()) {
+//     mix.bundleAnalyzer();
+// }

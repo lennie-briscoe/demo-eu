@@ -116,8 +116,8 @@ There are a few commands you can run, found in `package.json`:
 ## Development Technologies
 
 - [Craft CMS 3](https://docs.craftcms.com/v3/)
-- MySQL (5.5+)
-- PHP (7+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
+- PostgreSQL (11.5+) / MySQL (5.7+)
+- PHP (7.0+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
 
 ### devDependencies
 - [Babel](https://babeljs.io/) with ES6
@@ -130,7 +130,6 @@ There are a few commands you can run, found in `package.json`:
 - [Highway.js](https://highway.js.org/)
 - [GSAP](https://greensock.com/gsap)
 - [Lazysizes](https://github.com/aFarkas/lazysizes#readme)
-- [TailwindCSS](https://tailwindcss.com/docs/)
 - [LocomotiveScroll](https://github.com/locomotivemtl/locomotive-scroll)
 
 ## Additional Craft CMS 3 Information

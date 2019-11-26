@@ -32,7 +32,7 @@ return [
         ],
     ],
 
-    // Live (production) environment
+    // Production (live) environment
     'production' => [
         // Disable project config changes on production
         'allowAdminChanges' => false,
