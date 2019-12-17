@@ -1,5 +1,6 @@
 # CRAFT ENVIRONMENT
 .env
+.env.sh
 
 # COMPOSER
 /vendor
