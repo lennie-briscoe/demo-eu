@@ -1,4 +1,4 @@
-dateModified: 1574725382
+dateModified: 1576628353
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -91,7 +91,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.0
+    schemaVersion: 2.2.1
   postmark:
     edition: standard
     enabled: true
