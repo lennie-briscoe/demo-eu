@@ -1,4 +1,4 @@
-dateModified: 1576628353
+dateModified: 1576714781
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -40,10 +40,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  freeform:
-    edition: lite
-    enabled: true
-    schemaVersion: 3.0.4
   imager:
     edition: standard
     enabled: true
@@ -96,6 +92,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
+  freeform:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.0.5
 sections:
   9d1ed50c-2239-4171-8b5a-ab121973301f:
     name: Home
