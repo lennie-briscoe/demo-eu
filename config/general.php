@@ -58,6 +58,7 @@ return [
         'devMode' => true,
         'enableTemplateCaching' => true,
         'isSystemLive' => false,
+        'defaultFileMode' => '0775',
         // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
         'aliases' => [
         ],
