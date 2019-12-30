@@ -80,6 +80,10 @@ class App {
             "scrollRestoration" in history ? history.scrollRestoration = "manual" : window.onbeforeunload = function() {window.scrollTo(0, 0) };
         }
 
+        store.darkToggle.addEventListener('click', () => {
+            store.body.classList.toggle('theme-dark');
+        });
+
     }
 
     initH() {

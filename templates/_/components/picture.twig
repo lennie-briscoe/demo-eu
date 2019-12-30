@@ -4,6 +4,8 @@
 
 {% set sizes = sizes ?? '100vw' %}
 
+{% set lazytransition = lazytransition ?? 'lazyfade' %}
+
 {# srcset widths #}
 {% set outputWidths = [375, 768, 1024, 1440] %}
 {% set srcset = [] %}
@@ -28,25 +30,23 @@
     {% set placeholderWidth = outputWidths|last %}
 {% endif %} #}
 
-{# {% set placeholderOptions = {
-    width: placeholderWidth,
-    jpegQuality: 1,
+{% set placeholderOptions = {
+    width: 256,
     effects: {
-        posterize: [16, 'no'],
         blur: 1,
     }
-} %} #}
+} %}
 
-{% set placeholderOptions = {
+{# {% set placeholderOptions = {
     width: 1,
     height: 1
-} %}
+} %} #}
 
 <picture class="lazypicture {{ classes ?? '' }}">
 
     {% if craft.imager.isAnimated(asset) or asset.extension == 'svg' %}
 
-        <img class="lazyfade lazyload"
+        <img class="{{ lazytransition }} lazyload"
             data-src="{{ asset.url }}"
             alt="{{ alt }}"
             {# crossorigin="anonymous" #}
@@ -56,7 +56,7 @@
 
         {% set placeholder = craft.imager.transformImage(asset, placeholderOptions) %}
 
-        <img class="lazyfade lazyload"
+        <img class="{{ lazytransition }} lazyload"
             src="{{ placeholder.url }}"
             data-srcset="{{ srcset }}"
             sizes="{{ sizes }}"
@@ -65,5 +65,5 @@
         >
 
     {% endif %}
-
+{{ placeholder.url }}
 </picture>

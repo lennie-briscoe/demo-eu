@@ -1,3 +1,97 @@
+// Web Font - Steradian
+
+// Light
+@font-face {
+    font-display: swap;
+    font-family: 'SteradianLight';
+            src: url('../../fonts/steradian/St100100-Lt.woff2') format('woff2'),
+                 url('../../fonts/steradian/St100100-Lt.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// Light - Italic
+@font-face {
+    font-display: swap;
+    font-family: 'SteradianLightItalic';
+            src: url('../../fonts/steradian/St100100-LtIt.woff2') format('woff2'),
+                 url('../../fonts/steradian/St100100-LtIt.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// Regular
+@font-face {
+    font-display: swap;
+    font-family: 'SteradianRegular';
+            src: url('../../fonts/steradian/St100100-Rg.woff2') format('woff2'),
+                 url('../../fonts/steradian/St100100-Rg.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// Regular - Italic
+@font-face {
+    font-display: swap;
+    font-family: 'SteradianRegularItalic';
+            src: url('../../fonts/steradian/St100100-RgIt.woff2') format('woff2'),
+                 url('../../fonts/steradian/St100100-RgIt.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// Web Font - Domaine Display
+
+// Regular
+@font-face {
+    font-display: swap;
+    font-family: 'DomaineDisplayRegular';
+            src: url('../../fonts/domaine-display/DomaineDisplayWeb-Regular.woff2') format('woff2'),
+                 url('../../fonts/domaine-display/DomaineDisplayWeb-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+// Regular - Italic
+@font-face {
+    font-display: swap;
+    font-family: 'DomaineDisplayRegularItalic';
+            src: url('../../fonts/domaine-display/DomaineDisplayWeb-RegularItalic.woff2') format('woff2'),
+                 url('../../fonts/domaine-display/DomaineDisplayWeb-RegularItalic.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+.steradian-light {
+    font-family: 'SteradianLight', sans-serif !important;
+}
+
+.steradian-light-italic {
+    font-family: 'SteradianLightItalic', sans-serif !important;
+}
+
+.steradian-regular {
+    font-family: 'SteradianRegular', sans-serif !important;
+}
+
+.steradian-regular-italic {
+    font-family: 'SteradianRegularItalic', sans-serif !important;
+}
+
+.domaine-display-regular {
+    font-family: 'DomaineDisplayRegular', serif !important;
+}
+
+.domaine-display-regular-italic {
+    font-family: 'DomaineDisplayRegularItalic', serif !important;
+}
+
 // Global
 
 body,
@@ -5,8 +99,9 @@ input,
 button,
 textarea,
 select {
-	font-family: sans-serif;
+	font-family: 'SteradianRegular', sans-serif;
 	font-size: 16px;
+    font-weight: normal;
 	font-feature-settings: 'tnum', 'liga', 'kern';
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -25,31 +120,38 @@ select {
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
-
+    font-family: 'DomaineDisplayRegular', serif;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 h1 {
-    @apply text-6xl;
+    @include responsive-font(13.2vw, 13.2vw, 190px, 13.2vw);
+    line-height: 1em;
 }
 
 h2 {
-    @apply text-5xl;
+    @include responsive-font(9vw, 9vw, 130px, 9vw);
+    letter-spacing: -0.02em;
 }
 
 h3 {
-    @apply text-4xl;
+    @include responsive-font(7.7vw, 7.7vw, 110px, 7.7vw);
+    letter-spacing: -0.01em;
 }
 
 h4 {
-    @apply text-3xl;
+    @include responsive-font(7vw, 7vw, 100px, 7vw);
 }
 
 h5 {
-    @apply text-2xl;
+    @include responsive-font(6.3vw, 6.3vw, 90px, 6.3vw);
 }
 
 h6 {
-    @apply text-xl;
+    @include responsive-font(4.2vw, 4.2vw, 60px, 4.2vw);
 }
 
 // Paragraph
@@ -57,6 +159,37 @@ h6 {
 p {
     &:not(:last-child) {
         margin-bottom: 1em;
+    }
+}
+
+// Anchor
+
+a {
+    color: #000;
+
+    &:not(.no-underline) {
+        position: relative;
+        display: inline-block;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: right center;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transition: transform 0.3s $ease-in-out-2;
+        }
+
+        &:hover:before,
+        &.active:before {
+            transform: translateX(-50%) scaleX(1);
+            // transform-origin: left center;
+            // transition-timing-function: $ease-out-2;
+        }
     }
 }
 
@@ -73,5 +206,33 @@ p {
 	p {
 
 	}
+
+}
+
+// Themes
+
+body.theme-dark {
+
+    // Global
+
+    color: #fff;
+
+    span,
+    p,
+    a,
+    input,
+    button,
+    textarea,
+    select {
+        color: #fff;
+    }
+
+    // Anchor
+
+    a {
+        &:before {
+            background-color: #fff;
+        }
+    }
 
 }

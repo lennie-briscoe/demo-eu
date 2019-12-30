@@ -1,19 +1,12 @@
-{% set theBlocks = entry.contentBlocks.all() | default('') %}
+{% set contentBlocks = entry.contentBlocks.all() | default('') %}
 
-{% if theBlocks is not null and theBlocks | length %}
+{% if contentBlocks is not null and contentBlocks | length %}
 
     <section class="content-blocks">
 
-        {% for theBlock in theBlocks %}
-            {% set theBlockHandle = theBlock.type.handle %}
-            {% set theBlockName =  theBlockHandle ~ "-block" %}
+        {% for theBlock in contentBlocks %}
+            {% set theBlockName =  theBlock.type.handle %}
             {% set isFirst = loop.index == 1 %}
-
-            {% if scrollSectionFirst and isFirst %}
-                {% set isScrollSectionFirst = true %}
-            {% else %}
-                {% set isScrollSectionFirst = false %}
-            {% endif %}
 
             {% include "_/components/blocks/" ~ theBlockName ignore missing with {
                 'theBlock' : theBlock,

@@ -1,0 +1,133 @@
+// Core Header
+
+.core-header {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 100%;
+    font-size: 18px;
+
+    body.scrolled & {
+
+        .core-header-content {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #fff;
+        }
+
+    }
+
+    .core-header-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 40px 60px;
+        background-color: transparent;
+        transition: padding 0.5s $ease-in-out-1, background-color 0.3s;
+    }
+
+    // .core-header-content:before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 2px;
+    //     background-color: #000;
+    // }
+
+    .core-logo {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        font-family: 'SteradianRegular', sans-serif;
+
+        .underline:before {
+            width: calc(100% + 2px);
+        }
+    }
+
+    .core-quick-links,
+    .core-nav-links {
+
+        a {
+            position: relative;
+            display: inline-block;
+            margin: 0 15px;
+            color: #000;
+            text-transform: uppercase;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+        }
+
+    }
+
+    .core-quick-links {
+        position: absolute;
+        // top: 0;
+        // left: 0;
+        width: calc(100% - 120px);
+        // height: 100%;
+        // padding: 40px 60px;
+        text-align: center;
+    }
+
+    .core-nav-links {
+        position: relative;
+        z-index: 1;
+    }
+
+    #dark-toggle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        cursor: pointer;
+    }
+
+}
+
+// Theme Dark
+body.theme-dark {
+
+    // Scrolled
+    &.scrolled .core-header-content {
+        background-color: rgba(0,0,0,0.95);
+    }
+
+    .core-header {
+
+        .core-header-content:before {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .core-quick-links,
+        .core-nav-links {
+
+            a {
+                color: #fff;
+            }
+
+        }
+
+        #dark-toggle {
+            background: #fff;
+        }
+
+    }
+
+}

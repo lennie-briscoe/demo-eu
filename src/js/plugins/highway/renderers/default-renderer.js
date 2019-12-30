@@ -19,6 +19,9 @@ import { Events as GlobalResizeEvents } from '../../../utils/GlobalResize';
 
 // import DefaultPage from '../../../pages/defaultPage';
 
+// Blocks
+import BlocksController from '../../../blocks/blocks-controller';
+
 // let defaultPage;
 
 class DefaultRenderer extends Highway.Renderer {
@@ -91,13 +94,16 @@ class DefaultRenderer extends Highway.Renderer {
 
         document.addEventListener('lazyloaded', _this.updateScroll);
 
+        // Blocks
+        this.blocksController = new BlocksController();
+
     }
 
     initSmooth() {
         const _this = this;
 
         this.locoScroll = new LocomotiveScroll({
-            el: document.querySelector('#js-scroll'),
+            el: document.querySelector('#loco-scroll'),
             smooth: true,
             inertia: 1,
             smoothMobile: false
@@ -144,6 +150,8 @@ class DefaultRenderer extends Highway.Renderer {
         }
 
         document.removeEventListener('lazyloaded', _this.updateScroll);
+
+        this.blocksController.stopBlocks();
     }
 
 }

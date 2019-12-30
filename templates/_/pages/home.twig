@@ -10,9 +10,169 @@
 
         <article data-router-view="home">
 
-            <div class="home-container wrapper" data-scroll-section>
+            <div class="home-container min-vh-100">
 
+                <div class="wrapper">
 
+                    <div class="hero" data-scroll-section>
+                        <h1 class="steradian-light text-center" data-scroll>
+                            <span class="word">The</span> <span class="word">Museum</span><br>
+                            <span class="word">for</span> <span class="word">European</span><br>
+                            <span class="word">A<span class="letter-spacing-normal">rtw</span>or<span class="letter-spacing-normal">k.</span></span>
+                        </h1>
+                    </div>
+
+                </div>
+
+                <div class="exhibitions" data-scroll-section>
+
+                    <div class="exhibitions-info">
+
+                        <div class="exhibitions-title-container">
+                            <h6 data-scroll data-scroll-speed="" data-scroll-delay="">
+                                Our Exhibitions
+                            </h6>
+                        </div>
+
+                        <div class="exhibitions-count-container">
+                            <h2 class="count steradian-light" data-scroll data-scroll-speed="" data-scroll-delay="">
+                                42
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    {# {% set projects = entry.projects %}
+
+                    {% for project in projects %}
+
+                        {% set title = project.homepageDescriptiveTitle | default(project.title) %}
+                        {% set bg = project.homepageFeaturedAsset.first() %}
+
+                        {% set speed = random(0, 5) %}
+                        {% set delay = random(3, 6) * 0.1 %}
+
+                        {% if loop.index == 1 or loop.index == loop.length %}
+                            {% set speed = 0 %}
+                        {% endif %} #}
+
+                        <div class="exhibit exhibit-odd exhibit-1">
+
+                            <div class="container" data-scroll data-scroll-speed="3" data-scroll-delay="">
+
+                                <a class="exhibit-link no-underline" href="#">
+
+                                    <div class="exhibit-image">
+                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-1.jpg" alt="">
+                                    </div>
+
+                                    <div class="exhibit-info">
+
+                                        <div class="exhibit-name">
+                                            <span>Van Gogh</span>
+                                        </div>
+
+                                        <div class="exhibit-date">
+                                            <span>01.19 - 12.20</span>
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exhibit exhibit-even exhibit-2">
+
+                            <div class="container" data-scroll data-scroll-speed="1" data-scroll-delay="">
+
+                                <a class="exhibit-link no-underline" href="#">
+
+                                    <div class="exhibit-image">
+                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-2.jpg" alt="">
+                                    </div>
+
+                                    <div class="exhibit-info">
+
+                                        <div class="exhibit-name">
+                                            <span>Van Gogh</span>
+                                        </div>
+
+                                        <div class="exhibit-date">
+                                            <span>01.19 - 12.20</span>
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exhibit exhibit-odd exhibit-3">
+
+                            <div class="container" data-scroll data-scroll-speed="5" data-scroll-delay="">
+
+                                <a class="exhibit-link no-underline" href="#">
+
+                                    <div class="exhibit-image">
+                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-3.jpg" alt="">
+                                    </div>
+
+                                    <div class="exhibit-info">
+
+                                        <div class="exhibit-name">
+                                            <span>Van Gogh</span>
+                                        </div>
+
+                                        <div class="exhibit-date">
+                                            <span>01.19 - 12.20</span>
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="exhibit exhibit-even exhibit-4">
+
+                            <div class="container" data-scroll data-scroll-speed="2" data-scroll-delay="">
+
+                                <a class="exhibit-link no-underline" href="#">
+
+                                    <div class="exhibit-image">
+                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-full-1.jpg" alt="">
+                                    </div>
+
+                                    <div class="exhibit-info">
+
+                                        <div class="exhibit-name">
+                                            <span>Van Gogh</span>
+                                        </div>
+
+                                        <div class="exhibit-date">
+                                            <span>01.19 - 12.20</span>
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    {# {% endfor %} #}
+
+                </div>
+
+                {% include '_/components/block-matrix' %}
 
             </div>
 

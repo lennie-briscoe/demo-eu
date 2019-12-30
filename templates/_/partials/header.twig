@@ -1,12 +1,18 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
-<header data-scroll-section>
+<header class="core-header">
 
-	<div>
-		<p>
-			Header
-		</p>
-	</div>
+    <div class="core-header-content">
 
-	{% include "_/partials/navbar" %}
+	<a class="core-logo no-underline" href="/">
+        <span class="underline">euro</span>pa.museum
+	</a>
+
+    {% include "_/partials/quick-links" %}
+
+	{% include "_/partials/nav-links" %}
+
+    </div>
+
+    <div id="dark-toggle"></div>
 
 </header>
