@@ -21,7 +21,7 @@ return [
         'generateTransformsBeforePageLoad' => true,
         'omitScriptNameInUrls' => true,
         'securityKey' => getenv('SECURITY_KEY'),
-        'maxUploadFileSize' => 10000000,
+        'maxUploadFileSize' => 100000000,
 
         'maxSlugIncrement' => 100,
 

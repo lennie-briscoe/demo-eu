@@ -1,7 +1,11 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 
 <nav class="core-nav-links">
-    <a href="#">News</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+
+    {% for link in navigation.linksRight.all() %}
+
+        <a href="{{ link.url }}">{{ link.title }}</a>
+
+    {% endfor %}
+
 </nav>

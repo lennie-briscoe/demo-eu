@@ -19,7 +19,7 @@ class BlocksController {
         // Blocks
 
         this.entrySlider = store.body.querySelectorAll('.entry-slider');
-        BlocksController.entrySlider = [];
+        BlocksController.entrySliders = [];
 
     }
 
@@ -31,7 +31,7 @@ class BlocksController {
         // Blocks
 
         this.entrySlider.forEach((element, i) => {
-            BlocksController.entrySlider[i] = new EntrySliderBlock(BlocksController, element);
+            BlocksController.entrySliders[i] = new EntrySliderBlock(BlocksController, element);
         });
     }
 
@@ -53,7 +53,7 @@ class BlocksController {
 
         this.removeListeners();
 
-        BlocksController.entrySliderBlocks.forEach(block => {
+        BlocksController.entrySliders.forEach(block => {
             block.destroy();
         });
     }

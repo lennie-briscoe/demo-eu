@@ -45,6 +45,7 @@ class DefaultRenderer extends Highway.Renderer {
         // console.log('onLeave');
     }
     onEnterCompleted() {
+        this.initVars();
         this.init();
 
         // console.log('onEnterCompleted');
@@ -60,10 +61,14 @@ class DefaultRenderer extends Highway.Renderer {
         // console.log('onLeaveCompleted');
     }
 
+    initVars() {
+        this.contentBlocks = store.body.querySelector('.content-blocks');
+    }
+
     init() {
         // console.log('init');
 
-        bindAll(this, ['onResize', 'updateScroll', 'scrolling']);
+        bindAll(this, ['onResize', 'updateScroll', 'onScroll']);
 
         const _this = this;
 
@@ -71,8 +76,10 @@ class DefaultRenderer extends Highway.Renderer {
 
         if (store.isSmooth) {
             // Pointer.init();
-            this.initSmooth();
         }
+        this.initLocoScroll();
+
+        this.scrolled = false;
 
         if (document.readyState === 'complete') {
 
@@ -83,6 +90,7 @@ class DefaultRenderer extends Highway.Renderer {
             window.addEventListener('load', () => {
 
                 store.body.classList.remove('loading');
+                store.isLoading = false;
                 // GlobalRAF.update();
 
                 _this.updateScroll();
@@ -95,21 +103,25 @@ class DefaultRenderer extends Highway.Renderer {
         document.addEventListener('lazyloaded', _this.updateScroll);
 
         // Blocks
-        this.blocksController = new BlocksController();
+        if (this.contentBlocks) {
+            this.blocksController = new BlocksController();
+        }
 
     }
 
-    initSmooth() {
+    initLocoScroll() {
         const _this = this;
 
         this.locoScroll = new LocomotiveScroll({
             el: document.querySelector('#loco-scroll'),
             smooth: true,
-            inertia: 1,
-            smoothMobile: false
+            // inertia: 1,
+            // smoothMobile: true,
         });
 
-        this.locoScroll.on('scroll', _this.scrolling);
+        store.locoScroll = this.locoScroll;
+
+        this.locoScroll.on('scroll', _this.onScroll);
     }
 
     onResize() {
@@ -118,19 +130,21 @@ class DefaultRenderer extends Highway.Renderer {
 
     updateScroll() {
         if (store.isSmooth) {
-
             this.locoScroll.update();
-
         }
     }
 
-    scrolling(e) {
+    onScroll(e) {
         const currentScroll = e.scroll.y;
 
-        if (currentScroll >= 50 && !store.body.classList.contains('scrolled')) {
+        EventBus.emit('scroll', e);
+
+        if (currentScroll >= 50 && !this.scrolled) {
             store.body.classList.add('scrolled');
-        } else if (currentScroll < 50 && store.body.classList.contains('scrolled')) {
+            this.scrolled = true;
+        } else if (currentScroll < 50 && this.scrolled) {
             store.body.classList.remove('scrolled');
+            this.scrolled = false;
         }
 
         // Pointer.run();
@@ -147,11 +161,14 @@ class DefaultRenderer extends Highway.Renderer {
 
         if (this.locoScroll) {
             this.locoScroll.destroy();
+            store.locoScroll = null;
         }
 
         document.removeEventListener('lazyloaded', _this.updateScroll);
 
-        this.blocksController.stopBlocks();
+        if (this.blocksController) {
+            this.blocksController.stopBlocks();
+        }
     }
 
 }
