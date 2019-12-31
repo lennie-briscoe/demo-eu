@@ -1,4 +1,4 @@
-dateModified: 1577689741
+dateModified: 1577827398
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -244,7 +244,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    schemaVersion: 3.0.4
+    schemaVersion: 3.0.5
   imager:
     edition: standard
     enabled: true
@@ -292,7 +292,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.0
+    schemaVersion: 2.2.1
   postmark:
     edition: standard
     enabled: true
