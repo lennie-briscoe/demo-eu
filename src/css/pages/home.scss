@@ -54,6 +54,18 @@
         // }
     }
 
+    .exhibitions-info {
+        .title,
+        .count {
+            opacity: 0;
+
+            &.is-inview {
+                opacity: 1;
+                transition: opacity 2s;
+            }
+        }
+    }
+
     .exhibit {
         position: relative;
         z-index: 1;

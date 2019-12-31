@@ -29,7 +29,7 @@
                     <div class="exhibitions-info">
 
                         <div class="exhibitions-title-container">
-                            <h6 data-scroll data-scroll-speed="" data-scroll-delay="">
+                            <h6 class="title" data-scroll data-scroll-speed="" data-scroll-delay="">
                                 Our Exhibitions
                             </h6>
                         </div>
@@ -42,38 +42,52 @@
 
                     </div>
 
-                    {# {% set projects = entry.projects %}
+                    {% set exhibits = craft.entries()
+                        .section('exhibits')
+                        .order('random()')
+                        .limit(4) %}
 
-                    {% for project in projects %}
+                    {% for exhibit in exhibits %}
 
-                        {% set title = project.homepageDescriptiveTitle | default(project.title) %}
-                        {% set bg = project.homepageFeaturedAsset.first() %}
+                        {% set exhibitUrl = exhibit.url %}
+                        {% set exhibitTitle = exhibit.title %}
+                        {% set exhibitStartDate = exhibit.postDate|date('m.d.Y') | default('') %}
+                        {% set exhibitEndDate = exhibit.expiryDate|date('m.d.Y') | default('') %}
+                        {% set exhibitHeroImage = exhibit.heroImage.one() %}
 
-                        {% set speed = random(0, 5) %}
+                        {% set speed = [3, 1, 5, 2] %}
+
+                        {# {% set speed = random(0, 5) %}
                         {% set delay = random(3, 6) * 0.1 %}
 
                         {% if loop.index == 1 or loop.index == loop.length %}
                             {% set speed = 0 %}
                         {% endif %} #}
 
-                        <div class="exhibit exhibit-odd exhibit-1">
+                        <div class="exhibit exhibit-odd exhibit-{{ loop.index }}">
 
-                            <div class="container" data-scroll data-scroll-speed="3" data-scroll-delay="">
+                            <div class="container" data-scroll data-scroll-speed="{{ speed[loop.index - 1] }}" data-scroll-delay="">
 
-                                <a class="exhibit-link no-underline" href="#">
+                                <a class="exhibit-link no-underline" href="{{ exhibitUrl }}">
 
                                     <div class="exhibit-image">
-                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-1.jpg" alt="">
+                                        <img class="lazyfade lazyload" data-src="{{ exhibitHeroImage.url }}" alt="">
                                     </div>
 
                                     <div class="exhibit-info">
 
                                         <div class="exhibit-name">
-                                            <span>Van Gogh</span>
+                                            <span>{{ exhibitTitle }}</span>
                                         </div>
 
                                         <div class="exhibit-date">
-                                            <span>01.19 - 12.20</span>
+                                            <span>
+                                                {{ exhibitStartDate }}
+                                                {% if exhibitEndDate %}
+                                                    -
+                                                    {{ exhibitEndDate }}
+                                                {% endif %}
+                                            </span>
                                         </div>
 
                                     </div>
@@ -84,91 +98,7 @@
 
                         </div>
 
-                        <div class="exhibit exhibit-even exhibit-2">
-
-                            <div class="container" data-scroll data-scroll-speed="1" data-scroll-delay="">
-
-                                <a class="exhibit-link no-underline" href="#">
-
-                                    <div class="exhibit-image">
-                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-2.jpg" alt="">
-                                    </div>
-
-                                    <div class="exhibit-info">
-
-                                        <div class="exhibit-name">
-                                            <span>Van Gogh</span>
-                                        </div>
-
-                                        <div class="exhibit-date">
-                                            <span>01.19 - 12.20</span>
-                                        </div>
-
-                                    </div>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exhibit exhibit-odd exhibit-3">
-
-                            <div class="container" data-scroll data-scroll-speed="5" data-scroll-delay="">
-
-                                <a class="exhibit-link no-underline" href="#">
-
-                                    <div class="exhibit-image">
-                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-small-3.jpg" alt="">
-                                    </div>
-
-                                    <div class="exhibit-info">
-
-                                        <div class="exhibit-name">
-                                            <span>Van Gogh</span>
-                                        </div>
-
-                                        <div class="exhibit-date">
-                                            <span>01.19 - 12.20</span>
-                                        </div>
-
-                                    </div>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="exhibit exhibit-even exhibit-4">
-
-                            <div class="container" data-scroll data-scroll-speed="2" data-scroll-delay="">
-
-                                <a class="exhibit-link no-underline" href="#">
-
-                                    <div class="exhibit-image">
-                                        <img class="lazyfade lazyload" data-src="/images/temp/temp-full-1.jpg" alt="">
-                                    </div>
-
-                                    <div class="exhibit-info">
-
-                                        <div class="exhibit-name">
-                                            <span>Van Gogh</span>
-                                        </div>
-
-                                        <div class="exhibit-date">
-                                            <span>01.19 - 12.20</span>
-                                        </div>
-
-                                    </div>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    {# {% endfor %} #}
+                    {% endfor %}
 
                 </div>
 
