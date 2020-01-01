@@ -64,7 +64,7 @@
                             {% set speed = 0 %}
                         {% endif %} #}
 
-                        <div class="exhibit exhibit-odd exhibit-{{ loop.index }}">
+                        <div class="exhibit exhibit-{% if loop.index is odd %}odd{% else %}even{% endif %} exhibit-{{ loop.index }}">
 
                             <div class="container" data-scroll data-scroll-speed="{{ speed[loop.index - 1] }}" data-scroll-delay="">
 
