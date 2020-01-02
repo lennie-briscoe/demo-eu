@@ -17,7 +17,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "aelvan/imager": "v2.3.0",
+        "aelvan/imager": "v2.3.1",
         "carlcs/craft-redactorcustomstyles": "3.0.2",
         "charliedev/section-field": "1.1.0",
         "craftcms/aws-s3": "1.2.5",
