@@ -1,9 +1,7 @@
 {
-    "/js/site.js": "/js/site.js",
-    "/css/site.css": "/css/site.css",
-    "/js/site.js.map": "/js/site.js.map",
-    "/css/site.css.map": "/css/site.css.map",
-    "/favicon.ico": "/favicon.ico",
-    "/manifest.json": "/manifest.json",
-    "/browserconfig.xml": "/browserconfig.xml"
+    "/js/site.js": "/js/site.js?id=420fbb4c647bdcc420aa",
+    "/css/site.css": "/css/site.css?id=83745a69f2e2ac4e7c53",
+    "/favicon.ico": "/favicon.ico?id=4982e7154b2cd73a259e",
+    "/manifest.json": "/manifest.json?id=faa922531ed30d5305f0",
+    "/browserconfig.xml": "/browserconfig.xml?id=b64916cfdff4473ab119"
 }

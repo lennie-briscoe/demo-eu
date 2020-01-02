@@ -1,4 +1,4 @@
-dateModified: 1576714781
+dateModified: 1577829750
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -9,7 +9,49 @@ email:
 fieldGroups:
   1bff9c9f-5c93-4679-967d-0f9095c856fa:
     name: Common
+  c48ef81e-dcad-417f-a7e7-ed34cac15d46:
+    name: Exhibitions
+  f1b24b40-32c4-47c3-859d-21dd41bbe6f4:
+    name: Globals
 fields:
+  1addbebe-4d59-4c1d-9607-6c47999665df:
+    name: 'Links - Middle'
+    handle: linksMiddle
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: ''
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: f1b24b40-32c4-47c3-859d-21dd41bbe6f4
+  599f0646-f724-4ce4-a810-a8eaf7798b2d:
+    name: 'Links - Right'
+    handle: linksRight
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: ''
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: f1b24b40-32c4-47c3-859d-21dd41bbe6f4
   701ed750-1c7f-4b39-9be6-2c25746f29ba:
     name: 'Image Alt'
     handle: imageAlt
@@ -27,6 +69,222 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
+  778abb42-18bd-447c-99ae-483c775ed3bd:
+    name: 'Content Blocks'
+    handle: contentBlocks
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_contentblocks}}'
+      propagationMethod: all
+    contentColumnType: string
+    fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
+  beb1c87a-67bb-421f-933f-4bc3d1e125e3:
+    name: 'Hero Image'
+    handle: heroImage
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      defaultUploadLocationSubpath: exhibitions/
+      singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - image
+      sources:
+        - 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      source: null
+      targetSiteId: null
+      viewMode: large
+      limit: '1'
+      selectionLabel: 'Add an image'
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: c48ef81e-dcad-417f-a7e7-ed34cac15d46
+globalSets:
+  a90cc22d-485c-4cd7-a4b9-63a8a637e90d:
+    name: Navigation
+    handle: navigation
+    fieldLayouts:
+      eb1e53f5-82c8-40b9-9072-91da10f51fe7:
+        tabs:
+          -
+            name: 'Navigation Links'
+            sortOrder: 1
+            fields:
+              1addbebe-4d59-4c1d-9607-6c47999665df:
+                required: false
+                sortOrder: 1
+              599f0646-f724-4ce4-a810-a8eaf7798b2d:
+                required: false
+                sortOrder: 2
+matrixBlockTypes:
+  0d3f8f65-dde1-4921-a575-26ade4545fc9:
+    field: 778abb42-18bd-447c-99ae-483c775ed3bd
+    name: 'Entry Slider'
+    handle: entrySlider
+    sortOrder: 2
+    fields:
+      13b529cb-1236-4eb5-95a0-e20c2358385e:
+        name: 'Slide Entries'
+        handle: slideEntries
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Entries
+        settings:
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+      4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      b7672c12-833b-4554-afc9-ec3d68dbd78d:
+        name: 'CTA Link Text'
+        handle: ctaLinkText
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      f668aa75-41bb-4309-9114-26d72e1547ff:
+        name: 'CTA Link'
+        handle: ctaLink
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Entries
+        settings:
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: false
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      e8d49680-7ba8-48aa-83b6-01f3ddbfe9c4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              13b529cb-1236-4eb5-95a0-e20c2358385e:
+                required: false
+                sortOrder: 4
+              4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
+                required: false
+                sortOrder: 3
+              b7672c12-833b-4554-afc9-ec3d68dbd78d:
+                required: false
+                sortOrder: 1
+              f668aa75-41bb-4309-9114-26d72e1547ff:
+                required: false
+                sortOrder: 2
+  83ef9ed9-6360-4f64-abbb-920baeb2048e:
+    field: 778abb42-18bd-447c-99ae-483c775ed3bd
+    name: Exhibit
+    handle: exhibit
+    sortOrder: 1
+    fields:
+      6c31cab7-7f79-4628-b345-9a700a16a726:
+        name: Exhibit
+        handle: exhibit
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Entries
+        settings:
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: '1'
+          selectionLabel: 'Add an Exhibit'
+          localizeRelations: false
+          validateRelatedElements: ''
+        contentColumnType: string
+        fieldGroup: null
+      8df6d29d-59a0-44ee-80e5-f69849956547:
+        name: 'Text Color'
+        handle: textColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\RadioButtons
+        settings:
+          options:
+            -
+              label: 'Black Text'
+              value: blackText
+              default: '1'
+            -
+              label: 'White Text'
+              value: whiteText
+              default: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      317b7d36-2f97-4ffa-846f-0404ab3c6df8:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              6c31cab7-7f79-4628-b345-9a700a16a726:
+                required: false
+                sortOrder: 1
+              8df6d29d-59a0-44ee-80e5-f69849956547:
+                required: false
+                sortOrder: 2
 plugins:
   aws-s3:
     edition: standard
@@ -40,6 +298,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  freeform:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.0.5
   imager:
     edition: standard
     enabled: true
@@ -92,11 +354,107 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
-  freeform:
-    edition: lite
-    enabled: true
-    schemaVersion: 3.0.5
 sections:
+  0edb3240-3f53-4f13-a789-2bd0b6cae755:
+    name: Styleguide
+    handle: styleguide
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: styleguide
+        template: _/pages/styleguide
+    entryTypes:
+      03ad2302-4a79-4d90-91f8-bb515f0157d0:
+        name: Styleguide
+        handle: styleguide
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  8a02b167-35d9-4c71-bc4b-59ee401246e3:
+    name: Visit
+    handle: visit
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: visit
+        template: _/pages/visit
+    entryTypes:
+      ccf2030d-2ade-4d8c-9a90-4f50b2ffd37e:
+        name: Visit
+        handle: visit
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  8f6c3046-e9ee-4df9-af84-6dc0199f01da:
+    name: Contact
+    handle: contact
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: contact
+        template: _/pages/contact
+    entryTypes:
+      d703e6d3-677f-4b60-99d7-44b4710ff7bc:
+        name: Contact
+        handle: contact
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  977f4737-eaaa-4d0f-aadb-10251ee1c4ff:
+    name: About
+    handle: about
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: about
+        template: _/pages/about
+    entryTypes:
+      5bd803f3-dec3-41e6-b829-f90b49ac8dd3:
+        name: About
+        handle: about
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  9b80c4d3-7a27-4bc4-af25-742e6cf5f77a:
+    name: News
+    handle: news
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: news
+        template: _/pages/news
+    entryTypes:
+      19f3873e-d59d-48d0-bbee-1c25acd90c6c:
+        name: News
+        handle: news
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
   9d1ed50c-2239-4171-8b5a-ab121973301f:
     name: Home
     handle: home
@@ -114,16 +472,79 @@ sections:
         name: Home
         handle: home
         hasTitleField: false
+        titleLabel: ''
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+        fieldLayouts:
+          e1fad73a-2e23-4fa8-8f33-5037fe6b6d76:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  778abb42-18bd-447c-99ae-483c775ed3bd:
+                    required: false
+                    sortOrder: 1
+  b39c0003-6393-4175-8698-6edef920f7fd:
+    name: Exhibitions
+    handle: exhibitions
+    type: single
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: exhibitions
+        template: _/pages/exhibitions
+    entryTypes:
+      9f8a4de3-d72b-4d23-bb81-c83ef4611889:
+        name: Exhibitions
+        handle: exhibitions
+        hasTitleField: false
         titleLabel: null
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+  c49dac11-102e-429e-8bcc-5c8d99508dcb:
+    name: Exhibits
+    handle: exhibits
+    type: structure
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'exhibitions/{slug}'
+        template: _/pages/exhibit
+    structure:
+      uid: 0410f32e-7831-41b2-bd6f-cb90cc47e1aa
+      maxLevels: 1
+    entryTypes:
+      13b5cd9c-c5b1-40bb-8a8a-dc14815aabad:
+        name: Exhibitions
+        handle: exhibitions
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          268b8d62-05d6-417a-9a6b-ed707ea8dd4b:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  beb1c87a-67bb-421f-933f-4bc3d1e125e3:
+                    required: false
+                    sortOrder: 1
 siteGroups:
   20d3ac0c-0016-4714-9ce6-ffd91f1a0d5b:
     name: 'Europa Museum'
 sites:
   c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
     siteGroup: 20d3ac0c-0016-4714-9ce6-ffd91f1a0d5b
-    name: Europa
+    name: europa.museum
     handle: default
     language: en-US
     hasUrls: true

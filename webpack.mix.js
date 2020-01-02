@@ -31,14 +31,14 @@ mix
         ],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         extensions: ['html', 'js', 'php', 'twig', 'scss', 'css'],
-        whitelist: ['first-load', 'loading', 'is-ie', 'is-device', 'is-phone', 'is-desktop', 'lazypicture', 'lazyloading', 'lazyloaded', 'lazyfade', 'lazyblur', 'animated-gif', 'has-scroll-smooth', 'has-scroll-init', 'has-scroll-scrolling', 'has-scroll-dragging', 'c-scrollbar', 'c-scrollbar_thumb', 'is-inview', 'flickity-button', 'flickity-button-icon', 'previous', 'next', 'arrow', 'flickity-page-dots', '[data-page="home"]', 'active', 'word']
+        whitelist: ['first-load', 'loading', 'is-ie', 'is-device', 'is-phone', 'is-desktop', 'lazypicture', 'lazyloading', 'lazyloaded', 'lazyfade', 'lazyblur', 'animated-gif', 'has-scroll-smooth', 'has-scroll-init', 'has-scroll-scrolling', 'has-scroll-dragging', 'c-scrollbar', 'c-scrollbar_thumb', 'is-inview', 'flickity-button', 'flickity-button-icon', 'previous', 'next', 'arrow', 'flickity-page-dots', 'is-selected', 'scrolled', '[data-page="home"]', '[data-page="exhibitions"]', '[data-page="visit"]', '[data-page="news"]', '[data-page="about"]', '[data-page="contact"]', 'active', 'word', 'whiteText', 'exhibit-odd', 'exhibit-even']
     })
 
     .critical({
         enabled: mix.inProduction(),
         urls: [
             {
-                src: process.env.BASE_URL + '/',
+                src: process.env.DEFAULT_SITE_URL + '/',
                 dest: './templates/home-critical.min.css',
             },
         ],

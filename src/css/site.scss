@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 // Plugin
-@tailwind base;
 @import './plugins/flickity';
 
 // Shared
@@ -10,21 +9,22 @@
 @import './shared/mixins';
 @import './shared/typography';
 @import './shared/global';
+@import './shared/core-header';
+@import './shared/core-footer';
 
 // Pages
 @import './pages/styleguide';
 @import './pages/home';
+@import './pages/exhibitions';
+@import './pages/visit';
+@import './pages/news';
+@import './pages/about';
+@import './pages/contact';
 @import './pages/page-error';
 
 // Blocks
-
+@import './components/blocks/exhibit';
+@import './components/blocks/entry-slider';
 
 // Partials
 
-
-// Components
-@tailwind components;
-
-// Utilities
-@tailwind utilities;
-@import './utilities/order';

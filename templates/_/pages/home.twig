@@ -10,9 +10,99 @@
 
         <article data-router-view="home">
 
-            <div class="home-container wrapper" data-scroll-section>
+            <div class="home-container min-vh-100">
 
+                <div class="wrapper">
 
+                    <div class="hero" data-scroll-section>
+                        <h1 class="steradian-light text-center" data-scroll>
+                            <span class="word">The</span> <span class="word">Museum</span><br>
+                            <span class="word">for</span> <span class="word">European</span><br>
+                            <span class="word">A<span class="letter-spacing-normal">rtw</span>or<span class="letter-spacing-normal">k.</span></span>
+                        </h1>
+                    </div>
+
+                </div>
+
+                <div class="exhibitions" data-scroll-section>
+
+                    <div class="exhibitions-info">
+
+                        <div class="exhibitions-title-container">
+                            <h6 class="title" data-scroll data-scroll-speed="" data-scroll-delay="">
+                                Our Exhibitions
+                            </h6>
+                        </div>
+
+                        <div class="exhibitions-count-container">
+                            <h2 class="count steradian-light" data-scroll data-scroll-speed="" data-scroll-delay="">
+                                {{ craft.entries().section('exhibits').total() }}
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    {% set exhibits = craft.entries()
+                        .section('exhibits')
+                        .order('random()')
+                        .limit(4) %}
+
+                    {% for exhibit in exhibits %}
+
+                        {% set exhibitUrl = exhibit.url %}
+                        {% set exhibitTitle = exhibit.title %}
+                        {% set exhibitStartDate = exhibit.postDate|date('m.d.Y') | default('') %}
+                        {% set exhibitEndDate = exhibit.expiryDate|date('m.d.Y') | default('') %}
+                        {% set exhibitHeroImage = exhibit.heroImage.one() %}
+
+                        {% set speed = [3, 1, 5, 2] %}
+
+                        {# {% set speed = random(0, 5) %}
+                        {% set delay = random(3, 6) * 0.1 %}
+
+                        {% if loop.index == 1 or loop.index == loop.length %}
+                            {% set speed = 0 %}
+                        {% endif %} #}
+
+                        <div class="exhibit exhibit-{% if loop.index is odd %}odd{% else %}even{% endif %} exhibit-{{ loop.index }}">
+
+                            <div class="container" data-scroll data-scroll-speed="{{ speed[loop.index - 1] }}" data-scroll-delay="">
+
+                                <a class="exhibit-link no-underline" href="{{ exhibitUrl }}">
+
+                                    <div class="exhibit-image">
+                                        <img class="lazyfade lazyload" data-src="{{ exhibitHeroImage.url }}" alt="">
+                                    </div>
+
+                                    <div class="exhibit-info">
+
+                                        <div class="exhibit-name">
+                                            <span>{{ exhibitTitle }}</span>
+                                        </div>
+
+                                        <div class="exhibit-date">
+                                            <span>
+                                                {{ exhibitStartDate }}
+                                                {% if exhibitEndDate %}
+                                                    -
+                                                    {{ exhibitEndDate }}
+                                                {% endif %}
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                {% include '_/components/block-matrix' %}
 
             </div>
 
