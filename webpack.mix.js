@@ -39,7 +39,7 @@ mix
         urls: [
             {
                 src: process.env.DEFAULT_SITE_URL + '/',
-                dest: './templates/home-critical.min.css',
+                dest: './templates/_/home-critical.min.css',
             },
         ],
         options: {
