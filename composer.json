@@ -31,6 +31,7 @@
         "nystudio107/craft-typogrify": "1.1.18",
         "rias/craft-colour-swatches": "1.2.3",
         "rias/craft-position-fieldtype": "1.0.14",
+        "samhernandez/craft-db-paths": "^1.0",
         "sebastianlenz/linkfield": "1.0.19",
         "solspace/craft-freeform": "^3.5.3",
         "studioespresso/craft-dumper": "2.0.0",
