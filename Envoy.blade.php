@@ -31,14 +31,14 @@
 
 @task('composer')
     cd {{ $workingDir }}
-    composer install
+    composer install --no-progress
 @endtask
 
 @task('composer_nuke')
     cd {{ $workingDir }}
     rm -Rf vendor
     composer clearcache
-    composer install
+    composer install --no-progress
 @endtask
 
 {{-- Example: envoy run craft --cmd="clear-caches/all" --}}
