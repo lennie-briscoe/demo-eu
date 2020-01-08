@@ -37,7 +37,7 @@
 
                         <div class="exhibitions-count-container">
                             <h2 class="count steradian-light" data-scroll data-scroll-speed="" data-scroll-delay="">
-                                {{ craft.entries().section('exhibits').total() }}
+                                {{ craft.entries().section('exhibits').count() }}
                             </h2>
                         </div>
 
@@ -45,10 +45,10 @@
 
                     {% set exhibits = craft.entries()
                         .section('exhibits')
-                        .order('random()')
+                        .orderBy('random()')
                         .limit(4) %}
 
-                    {% for exhibit in exhibits %}
+                    {% for exhibit in exhibits.all() %}
 
                         {% set exhibitUrl = exhibit.url %}
                         {% set exhibitTitle = exhibit.title %}
