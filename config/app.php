@@ -21,8 +21,9 @@ return [
             'site-module' => [
                 'class' => \modules\sitemodule\SiteModule::class,
             ],
+            'craft-db-paths' => \samhernandez\craftdbpaths\CraftDbPaths::class,
         ],
-        'bootstrap' => ['site-module'],
+        'bootstrap' => ['site-module', 'craft-db-paths'],
     ],
 
     // Live (production) environment
