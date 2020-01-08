@@ -16,7 +16,7 @@
 # /web/images
 # /web/js
 # /web/mix-manifest.json
-/web/assets
+/web/assets/imager
 /web/uploads
 
 # BUILD FILES
