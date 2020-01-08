@@ -98,7 +98,7 @@
     composer_install
 @endtask
 
-{{-- Yarn tasks --}}
+{{-- Yarn tasks - DON'T USE, compile locally --}}
 
 {{--
     Usage: envoy run yarn_install
