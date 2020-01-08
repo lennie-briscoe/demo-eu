@@ -6,7 +6,26 @@
     if (!$branch) {
         $branch = 'master';
     }
+
+    print_r($argv);
 @endsetup
+
+{{-- General command execution --}}
+
+{{--
+    Usage: envoy run exec --cmd="[a bash command]"
+
+    Example:
+        envoy run exec --cmd="./craft/clear-caches/all"
+
+    Use to run anything not provided in this file.
+--}}
+@task('exec')
+    cd {{ $workingDir }}
+    {{ $cmd }}
+@endtask
+
+{{-- Deployment --}}
 
 @task('deploy')
     cd {{ $workingDir }}
@@ -24,36 +43,84 @@
     git pull origin {{ $branch }}
 @endtask
 
-@task('build')
+{{-- Database tasks --}}
+
+{{--
+    Usage:
+        envoy run backup
+--}}
+@task('backup')
     cd {{ $workingDir }}
-    yarn run production
+    ./craft backup/db
 @endtask
 
-@task('composer')
+{{--
+    Usage:
+        envoy run backups
+    
+    Lists the backup files in `storage/backups`.
+--}}
+@task('backups')
+    cd {{ $workingDir }}
+    ls {{ $workingDir }}/storage/backups
+    #ls -1 {{ $workingDir }}/storage/backups | tr '\n' '\0' | xargs -0 -n 1 basename
+@endtask
+
+{{--
+    Usage:
+        envoy run restore
+        envoy run restore --file="backup-filename.sql"
+    
+    See a list of backup files with `envoy run backups`.
+--}}
+@task('restore')
+    cd {{ $workingDir }}
+    ./craft restore storage/backups/{{ $file ?? '' }}
+@endtask
+
+{{-- Composer tasks --}}
+
+{{--
+    Usage: envoy run composer_install
+--}}
+@task('composer_install')
     cd {{ $workingDir }}
     composer install --no-progress
 @endtask
 
+{{--
+    Usage: envoy run composer_nuke
+--}}
 @task('composer_nuke')
     cd {{ $workingDir }}
     rm -Rf vendor
     composer clearcache
-    composer install --no-progress
+    composer_install
 @endtask
 
-{{-- Example: envoy run craft --cmd="clear-caches/all" --}}
-@task('craft')
+{{-- Yarn tasks --}}
+
+{{--
+    Usage: envoy run yarn_install
+--}}
+@task('yarn_install')
     cd {{ $workingDir }}
-    ./craft {{ $cmd }}
+    yarn install --no-progress
 @endtask
 
-@task('yarn')
-    cd {{ $workingDir }}
-    yarn install
-@endtask
-
+{{--
+    Usage: envoy run yarn_nuke
+--}}
 @task('yarn_nuke')
     cd {{ $workingDir }}
     rm -rf node_modules
-    yarn install
+    yarn_install
+@endtask
+
+{{--
+    Usage: envoy run yarn_prod
+--}}
+@task('yarn_prod')
+    cd {{ $workingDir }}
+    yarn prod
 @endtask
