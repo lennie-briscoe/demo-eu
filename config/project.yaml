@@ -1,4 +1,16 @@
-dateModified: 1578526029
+categoryGroups:
+  6b0e8c8f-3b9a-440d-b5ad-e209cd4eb486:
+    name: 'News Category'
+    handle: newsCategory
+    structure:
+      uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
+      maxLevels: null
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        hasUrls: false
+        uriFormat: null
+        template: null
+dateModified: 1578555018
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -9,11 +21,35 @@ email:
 fieldGroups:
   1bff9c9f-5c93-4679-967d-0f9095c856fa:
     name: Common
+  c0ba2861-5497-46d7-86b4-71dcb76f2a16:
+    name: 'News Articles'
   c48ef81e-dcad-417f-a7e7-ed34cac15d46:
     name: Exhibitions
   f1b24b40-32c4-47c3-859d-21dd41bbe6f4:
     name: Globals
 fields:
+  079ddf1a-d985-4de2-9929-8dc87fa2047f:
+    name: 'News Category'
+    handle: newsCategory
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Categories
+    settings:
+      allowLimit: false
+      allowMultipleSources: false
+      branchLimit: '1'
+      sources: '*'
+      source: 'group:6b0e8c8f-3b9a-440d-b5ad-e209cd4eb486'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: c0ba2861-5497-46d7-86b4-71dcb76f2a16
   1addbebe-4d59-4c1d-9607-6c47999665df:
     name: 'Links - Middle'
     handle: linksMiddle
@@ -224,6 +260,18 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      e6e6fbf0-a370-48de-b635-6f31bece3c9d:
+        name: 'Slide Layout Centered'
+        handle: slideLayoutCentered
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Lightswitch
+        settings:
+          default: '1'
+        contentColumnType: boolean
+        fieldGroup: null
       f668aa75-41bb-4309-9114-26d72e1547ff:
         name: 'CTA Link'
         handle: ctaLink
@@ -255,10 +303,13 @@ matrixBlockTypes:
                 sortOrder: 4
               4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
                 required: false
-                sortOrder: 3
+                sortOrder: 1
               b7672c12-833b-4554-afc9-ec3d68dbd78d:
                 required: false
-                sortOrder: 1
+                sortOrder: 3
+              e6e6fbf0-a370-48de-b635-6f31bece3c9d:
+                required: false
+                sortOrder: 5
               f668aa75-41bb-4309-9114-26d72e1547ff:
                 required: false
                 sortOrder: 2
@@ -434,8 +485,8 @@ matrixBlockTypes:
         contentColumnType: string
         fieldGroup: null
       4c127ec9-df18-4d62-bd02-cf8b5044f7ea:
-        name: 'Left State Label'
-        handle: leftStateLabel
+        name: 'Left Stat Label'
+        handle: leftStatLabel
         instructions: ''
         searchable: true
         translationMethod: none
@@ -698,6 +749,49 @@ sections:
         titleLabel: null
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+  666bcffb-61d7-43b4-a9f5-8c51c458b356:
+    name: 'News Articles'
+    handle: newsArticles
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'news/{slug}'
+        template: _/pages/news-article
+    entryTypes:
+      f4cfbdf3-fa41-42c6-99f5-d0efefc2e406:
+        name: 'News Articles'
+        handle: newsArticles
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          f2d9b3bb-59ca-48fc-b355-3cb128ae9dd8:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  079ddf1a-d985-4de2-9929-8dc87fa2047f:
+                    required: false
+                    sortOrder: 1
+                  778abb42-18bd-447c-99ae-483c775ed3bd:
+                    required: false
+                    sortOrder: 3
+                  beb1c87a-67bb-421f-933f-4bc3d1e125e3:
+                    required: false
+                    sortOrder: 2
+              -
+                name: SEO
+                sortOrder: 2
+                fields:
+                  c8da1bd9-67c9-402f-8a95-aeaec337e207:
+                    required: false
+                    sortOrder: 1
   8a02b167-35d9-4c71-bc4b-59ee401246e3:
     name: Visit
     handle: visit
@@ -990,9 +1084,9 @@ system:
 users:
   requireEmailVerification: true
   allowPublicRegistration: false
-  defaultGroup: null
-  photoVolumeUid: null
-  photoSubpath: ''
+  defaultGroup: ''
+  photoVolumeUid: a36fa6aa-4824-448f-82cf-b3086f8582c5
+  photoSubpath: user-photos/
 volumes:
   a36fa6aa-4824-448f-82cf-b3086f8582c5:
     name: Images

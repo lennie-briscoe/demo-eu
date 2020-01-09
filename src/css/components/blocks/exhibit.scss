@@ -50,6 +50,7 @@
     .title {
         font-family: 'SteradianRegular';
         text-transform: uppercase;
+        user-select: none;
 
         &.whiteText {
             color: #fff;
@@ -89,6 +90,50 @@
 
         &.title-container {
             opacity: 1;
+        }
+
+    }
+
+    // Responsive
+
+    @media screen and (max-width: 767px) {
+
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .exhibit-container {
+            @include aspect-ratio(4 3);
+        }
+
+        .title-container {
+            transform: none;
+        }
+
+    }
+
+}
+
+body.is-device {
+
+    .exhibit-block {
+
+        .title-container {
+            transform: none;
+        }
+
+    }
+
+}
+
+
+// Themes
+
+body.theme-dark {
+
+    .exhibit-block {
+
+        .title.whiteText {
+            color: #ccc;
         }
 
     }

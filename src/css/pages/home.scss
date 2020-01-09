@@ -39,6 +39,13 @@
         text-align: center;
         text-transform: uppercase;
         pointer-events: none;
+    }
+
+    .exhibit-name {
+        user-select: none;
+    }
+
+    .exhibit-date {
         user-select: none;
     }
 
@@ -57,6 +64,7 @@
     .exhibitions-info {
         .title,
         .count {
+            user-select: none;
             opacity: 0;
 
             &.is-inview {
@@ -81,9 +89,9 @@
         justify-content: flex-end;
     }
 
-    .exhibit-1 {
-        z-index: -1;
-    }
+    // .exhibit-1 {
+    //     z-index: -1;
+    // }
 
     .exhibit-2 {
         transform: translateY(-8vh);
@@ -95,7 +103,7 @@
     }
 
     .exhibit-4 {
-        z-index: -1;
+        // z-index: -1;
         justify-content: flex-start;
         transform: translateY(-4vh);
     }
@@ -113,6 +121,7 @@
         width: 100%;
 
         .exhibit-image {
+            user-select: none;
             opacity: 0;
         }
 
@@ -207,7 +216,25 @@
 
     @media screen and (max-width: 767px) {
 
+        .exhibitions-info {
+            display: none;
+        }
 
+        .exhibit-1 {
+            transform: translateY(-2vh);
+        }
+
+        .exhibit-2 {
+            transform: translateY(10vh);
+        }
+
+        .exhibit-3 {
+            transform: translateY(-12vh);
+        }
+
+        .exhibit-4 {
+            transform: translateY(-4vh);
+        }
 
     }
 
@@ -223,6 +250,43 @@ html.has-scroll-scrolling [data-page="home"] {
                 transform: translateY(100%) !important;
             }
         }
+    }
+
+}
+
+// Themes
+
+body.theme-dark {
+
+    &[data-page=home] {
+
+        .hero span {
+            color: #ccc;
+        }
+
+        .exhibitions-info {
+            .title,
+            .count {
+                color: #222;
+            }
+        }
+
+        .exhibit-image {
+            background-color: #000;
+        }
+
+        .exhibit-name {
+            span {
+                color: #777;
+            }
+        }
+
+        .exhibit-date {
+            span {
+                color: #333;
+            }
+        }
+
     }
 
 }

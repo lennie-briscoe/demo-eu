@@ -1,9 +1,10 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 
+{% set heading = theBlock.heading | default('') %}
 {% set ctaLinkText = theBlock.ctaLinkText | default('') %}
 {% set ctaLink = theBlock.ctaLink.one().url | default('') %}
-{% set heading = theBlock.heading | default('') %}
 {% set slideEntries = theBlock.slideEntries.all() | default('') %}
+{% set slideLayoutCentered = theBlock.slideLayoutCentered %}
 
 {# {% if exhibit %} #}
 
@@ -35,7 +36,7 @@
 
         <div class="entry-slider-container">
 
-            <div class="entry-slider {% if slideEntries|length > 3 %}slide-wrap{% endif %}">
+            <div class="entry-slider {{ slideLayoutCentered }} {% if slideLayoutCentered %}slide-wrap{% endif %}">
 
                 {% for entry in slideEntries %}
 
@@ -52,6 +53,7 @@
                     }) %}
 
                     {% set slideTitle = entry.title %}
+                    {% set slideNewsCategory = entry.newsCategory.one() | default('') %}
                     {% set slideDate = entry.postDate|date('m.d.Y') | default('') %}
                     {% set slideUrl = entry.url %}
 
@@ -67,6 +69,12 @@
                                 <div class="slide-title">
                                     {{ slideTitle }}
                                 </div>
+
+                                {% if slideNewsCategory %}
+                                    <div class="slide-news-category">
+                                        &mdash; {{ slideNewsCategory }} &mdash;
+                                    </div>
+                                {% endif %}
 
                                 <div class="slide-date">
                                     {{ slideDate }}

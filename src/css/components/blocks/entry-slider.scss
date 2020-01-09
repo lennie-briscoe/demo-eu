@@ -30,6 +30,8 @@
     .entry-slider-heading {
         width: 60%;
         margin-bottom: 0;
+        padding-left: 60px;
+        padding-right: 60px;
         text-align: center;
         text-transform: uppercase;
         pointer-events: none;
@@ -50,6 +52,7 @@
     .btn-slider-prev,
     .btn-slider-next {
         border: 0;
+        background-color: transparent;
         outline: none;
         cursor: pointer;
     }
@@ -152,9 +155,98 @@
         font-size: 20px;
     }
 
+    .slide-news-category {
+        font-family: 'SteradianRegular', sans-serif;
+        font-size: 20px;
+    }
+
     // Is Inview
 
     .is-inview {
+
+    }
+
+    // Responsive
+
+    @media screen and (max-width: 767px) {
+
+        .entry-slider-info {
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .entry-slider-heading {
+            order: 1;
+            width: 100%;
+        }
+
+        .entry-slider-link-container {
+            order: 2;
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .entry-slider-arrows {
+            order: 3;
+            width: 100%;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .slide-image-container {
+            min-height: 225px;
+        }
+
+        .slide-link {
+            margin-top: 30px;
+        }
+
+    }
+
+}
+
+// Theme Dark
+body.theme-dark {
+
+    .entry-slider-block {
+
+        a.entry-slider-link {
+            color: #777;
+        }
+
+        .entry-slider-heading {
+            color: #ccc;
+        }
+
+        .entry-slider-arrows .divider {
+            color: #555;
+        }
+
+        .entry-slider.slide-wrap .slide.is-selected .slide-image {
+            box-shadow: 0 10px 70px -40px hsla(0,0%,100%,0.7);
+        }
+
+        .slide-title {
+            color: #777;
+        }
+
+        .slide-news-category,
+        .slide-date {
+            color: #555;
+        }
+
+        .entry-slider .slide:after {
+            background-color: #222;
+        }
+
+        .entry-slider.slide-wrap .slide:after {
+            background-color: #222;
+        }
+
+        .entry-slider.slide-wrap .slide.is-selected:after {
+            background-color: #fff;
+        }
 
     }
 

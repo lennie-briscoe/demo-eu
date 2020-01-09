@@ -102,7 +102,7 @@ select {
 	font-family: 'SteradianRegular', sans-serif;
 	font-size: 16px;
     font-weight: normal;
-	font-feature-settings: 'tnum', 'liga', 'kern';
+    font-feature-settings: "liga", "kern";
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -169,7 +169,7 @@ a {
 
     &:not(.no-underline) {
         position: relative;
-        display: inline-block;
+        // display: inline-block;
 
         &:before {
             content: '';
@@ -231,7 +231,7 @@ body.theme-dark {
 
     a {
         &:before {
-            background-color: #fff;
+            background-color: #ccc;
         }
     }
 

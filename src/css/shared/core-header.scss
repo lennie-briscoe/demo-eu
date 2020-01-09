@@ -99,6 +99,25 @@
         cursor: pointer;
     }
 
+    // Responsive
+
+    @media screen and (max-width: 1023px) {
+
+        .core-quick-links,
+        .core-nav-links {
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .core-header-content {
+            padding: 30px;
+        }
+
+    }
+
 }
 
 // Theme Dark
@@ -125,7 +144,7 @@ body.theme-dark {
         }
 
         #dark-toggle {
-            background: #fff;
+            background: #555;
         }
 
     }
