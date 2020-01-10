@@ -3,8 +3,8 @@ import imagesLoaded from 'flickity-imagesloaded';
 
 import store from '../store';
 import bindAll from '../utils/bindAll';
-// import { Events } from '../events/Events.js';
-// import { GlobalResize } from '../events/Resize';
+// import EventBus from '../utils/EventBus';
+// import { Events as GlobalResizeEvents } from '../utils/GlobalResize';
 
 class EntrySliderBlock {
     constructor(BlocksController, slider) {
@@ -58,7 +58,7 @@ class EntrySliderBlock {
             _this.flkty.resize();
         });
 
-        // Events.on('resize', _this.onResize);
+        // EventBus.on(GlobalResizeEvents.RESIZE, _this.onResize);
 
         this.slidePrev.addEventListener('click', _this.sliderPrev);
         this.slideNext.addEventListener('click', _this.sliderNext);
@@ -71,6 +71,8 @@ class EntrySliderBlock {
         window.removeEventListener('load', function() {
             _this.flkty.resize();
         });
+
+        // EventBus.off(GlobalResizeEvents.RESIZE, _this.onResize);
 
         this.slidePrev.removeEventListener('click', _this.sliderPrev);
         this.slideNext.removeEventListener('click', _this.sliderNext);

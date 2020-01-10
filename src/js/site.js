@@ -32,6 +32,9 @@ import ContactRenderer from './plugins/highway/renderers/contact-renderer';
 import DefaultTransition from './plugins/highway/transitions/default-transition';
 import HomeTransition from './plugins/highway/transitions/home-transition';
 
+// Components
+import MobileNavMenu from './components/mobileNavMenu';
+
 window.firstLoad = true;
 
 // Highway
@@ -90,6 +93,11 @@ class App {
         store.darkToggle.addEventListener('click', () => {
             store.body.classList.toggle('theme-dark');
         });
+
+        // Mobile Nav Menu
+        if (store.isMobileNav) {
+            const mobileNavMenu = new MobileNavMenu();
+        }
 
     }
 

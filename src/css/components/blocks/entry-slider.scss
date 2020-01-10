@@ -16,7 +16,8 @@
     }
 
     .entry-slider-link-container {
-        width: 20%;
+        flex-shrink: 0;
+        min-width: 112x;
     }
 
     .entry-slider-link {
@@ -28,7 +29,7 @@
     }
 
     .entry-slider-heading {
-        width: 60%;
+        width: 100%;
         margin-bottom: 0;
         padding-left: 60px;
         padding-right: 60px;
@@ -39,7 +40,8 @@
     }
 
     .entry-slider-arrows {
-        width: 20%;
+        flex-shrink: 0;
+        min-width: 120px;
         text-align: right;
     }
 
@@ -173,6 +175,13 @@
         .entry-slider-info {
             flex-wrap: wrap;
             margin-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .entry-slider-container {
+            padding-left: 30px;
+            padding-right: 30px;
         }
 
         .entry-slider-heading {

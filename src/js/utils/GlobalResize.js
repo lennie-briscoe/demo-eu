@@ -12,6 +12,13 @@ class GlobalResize {
     onResize() {
         store.width = window.innerWidth;
         store.height = window.innerHeight;
+
+        if (store.width >= 768 && store.isMobileNav) {
+            store.isMobileNav = false;
+        } else if (store.width < 768 && !store.isMobileNav) {
+            store.isMobileNav = true;
+        }
+
         EventBus.emit(GlobalResize.events.RESIZE);
     }
 }

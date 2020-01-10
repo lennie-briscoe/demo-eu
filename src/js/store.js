@@ -7,6 +7,7 @@ let store = {
     cover: document.querySelector('.cover'),
     isDevice: document.body.classList.contains('is-device'),
     isDesktop: document.body.classList.contains('is-desktop'),
+    isMobileNav: window.innerWidth < 1024 ? true : false,
     locoScroll: null
 };
 
