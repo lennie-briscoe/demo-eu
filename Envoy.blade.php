@@ -1,4 +1,8 @@
-@servers(['web' => ['europa.staging']])
+{{--
+    Be sure to set up `Host europa.stage` in your local `~/.ssh/config`
+    to point to the DO dropet IP with the correct user. (Ask for that info.)
+--}}
+@servers(['web' => ['europa.stage']])
 
 @setup
     $workingDir = '/home/craftcms/europa';
@@ -27,6 +31,16 @@
 
 {{-- Deployment --}}
 
+{{--
+    Usage:
+        envoy run deploy
+        envoy run deploy --branch=[branch other than master]
+    
+    Will `git pull master` on the server unless you provide an
+    alternate branch. If so, it will switch branches an pull.
+    If you want it to be on the `dev` branch, use the `--branch=dev`
+    every time you deploy dev.
+--}}
 @task('deploy')
     cd {{ $workingDir }}
 
