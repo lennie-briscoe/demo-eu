@@ -53,13 +53,13 @@ return [
     // Staging (pre-production) environment
     'staging' => [
         // Disable project config changes on staging
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
         'allowUpdates' => false,
         'backupOnUpdate' => false,
         'devMode' => true,
         'enableTemplateCaching' => true,
         'isSystemLive' => false,
-        'defaultFileMode' => '0775',
+        'defaultFileMode' => '0774',
         // Aliases parsed in sites’ settings, volumes’ settings, and Local volumes’ settings
         'aliases' => [
         ],
