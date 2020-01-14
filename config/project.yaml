@@ -7,10 +7,10 @@ categoryGroups:
       maxLevels: null
     siteSettings:
       c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
-        hasUrls: false
-        uriFormat: null
-        template: null
-dateModified: 1579025798
+        hasUrls: true
+        uriFormat: 'news/category/{slug}'
+        template: _/pages/news
+dateModified: 1579037881
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -88,6 +88,23 @@ fields:
       validateRelatedElements: ''
     contentColumnType: string
     fieldGroup: f1b24b40-32c4-47c3-859d-21dd41bbe6f4
+  59eb8fe2-8081-44bc-82ee-b7bc5f91c4ec:
+    name: Summary
+    handle: summary
+    instructions: 'Short summary for index page'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: '1'
+      initialRows: '1'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: c0ba2861-5497-46d7-86b4-71dcb76f2a16
   701ed750-1c7f-4b39-9be6-2c25746f29ba:
     name: 'Image Alt'
     handle: imageAlt
@@ -878,9 +895,12 @@ sections:
                   079ddf1a-d985-4de2-9929-8dc87fa2047f:
                     required: false
                     sortOrder: 1
-                  778abb42-18bd-447c-99ae-483c775ed3bd:
+                  59eb8fe2-8081-44bc-82ee-b7bc5f91c4ec:
                     required: false
                     sortOrder: 3
+                  778abb42-18bd-447c-99ae-483c775ed3bd:
+                    required: false
+                    sortOrder: 4
                   beb1c87a-67bb-421f-933f-4bc3d1e125e3:
                     required: false
                     sortOrder: 2

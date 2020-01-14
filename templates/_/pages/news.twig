@@ -7,12 +7,70 @@
 {% endblock %}
 
 {% block content %}
-
-        <article data-router-view="news" data-handle="{{ entry.type.handle }}">
+        {% set handle = category is defined ? category.title : entry.type.handle %}
+        <article data-router-view="news" data-handle="{{ handle }}">
 
             <div class="news-container wrapper min-vh-100" data-scroll-section>
 
+                {#
+                    This template is shared by both the News single section and the News category.
+                    If there is a `category` variable defined then we got here from a category
+                    route. Otherwise, we got here from the news route.
 
+                    We'll also eagerload the categories and hero images. Eagerloaded fields
+                    are then arrays; empty arrays if no category or image.
+                #}
+                {% if category is defined %}
+
+                    {% set query = craft.entries.section('newsArticles')
+                        .with(['heroImage', 'newsCategory'])
+                        .relatedTo(category)
+                        .limit(2)
+                    %}
+                {% else %}
+                    <h1>News</h1>
+
+                    {% set query = craft.entries().section('newsArticles')
+                        .with(['heroImage', 'newsCategory'])
+                        .limit(2)
+                     %}
+                {% endif %}
+
+                {% paginate query as pageInfo, pageEntries %}
+
+                {% for newsEntry in pageEntries %}
+                    <article>
+                        <h2>{{ newsEntry.getLink() }}</h2>
+
+                        {% if newsEntry.newsCategory | length %}
+                            <p>
+                                Category: {{ newsEntry.newsCategory[0].getLink() }}
+                            </p>
+                        {% endif %}
+
+                        {% if newsEntry.heroImage | length %}                            
+                            <div>
+                                <img src="{{ newsEntry.heroImage[0].url() }}" style="max-width: 400px;">
+                            </div>
+                        {% endif %}
+
+                        <p>{{ newsEntry.summary | nl2br }}</p>
+
+                    </article>
+
+                    <hr>
+
+                {% endfor %}
+
+                <div>
+                    {% if pageInfo.prevUrl %}
+                        <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
+                    {% endif %}
+
+                    {% if pageInfo.nextUrl %}
+                        <a href="{{ pageInfo.nextUrl }}">Next Page</a>
+                    {% endif %}
+                </div>
 
             </div>
 
