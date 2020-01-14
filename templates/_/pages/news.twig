@@ -7,20 +7,24 @@
 {% endblock %}
 
 {% block content %}
-        {% set handle = category is defined ? category.title : entry.type.handle %}
+        {#
+            This template is shared by both the News single section and the News category.
+            If there is a `category` variable defined then we got here from a category
+            route. Otherwise, we got here from the news route.
+        #}
+        {% set handle = category is defined ? category.slug : entry.type.handle %}
         <article data-router-view="news" data-handle="{{ handle }}">
 
             <div class="news-container wrapper min-vh-100" data-scroll-section>
 
                 {#
-                    This template is shared by both the News single section and the News category.
-                    If there is a `category` variable defined then we got here from a category
-                    route. Otherwise, we got here from the news route.
-
-                    We'll also eagerload the categories and hero images. Eagerloaded fields
+                    We'll also eagerload categories and hero images. Eagerloaded fields
                     are then arrays; empty arrays if no category or image.
                 #}
                 {% if category is defined %}
+                    <h1>News Category: {{ category.title }}</h1>
+
+                    <p><a href="{{ url('news') }}">← Back to News index</a></p>
 
                     {% set query = craft.entries.section('newsArticles')
                         .with(['heroImage', 'newsCategory'])
