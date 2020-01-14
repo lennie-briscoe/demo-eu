@@ -1,6 +1,6 @@
-{% set contentBlocks = entry.contentBlocks.all() | default('') %}
+{% set contentBlocks = entry.contentBlocks.all() | default([]) %}
 
-{% if contentBlocks is not null and contentBlocks | length %}
+{% if contentBlocks | length %}
 
     <section class="content-blocks">
 

@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: false
         uriFormat: null
         template: null
-dateModified: 1578555018
+dateModified: 1579025798
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -313,6 +313,52 @@ matrixBlockTypes:
               f668aa75-41bb-4309-9114-26d72e1547ff:
                 required: false
                 sortOrder: 2
+  24db24b1-bf70-414a-8652-ba22d7b0dfc3:
+    field: 778abb42-18bd-447c-99ae-483c775ed3bd
+    name: Form
+    handle: form
+    sortOrder: 5
+    fields:
+      a4c579fb-e9c9-4d0c-91f6-1b3d9980c5ee:
+        name: 'Success Message'
+        handle: successMessage
+        instructions: 'Optional success message for this specific form.'
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      e44383bb-8f5a-4b3b-9114-30a955feb64c:
+        name: Form
+        handle: form
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: Solspace\Freeform\FieldTypes\FormFieldType
+        contentColumnType: integer
+        fieldGroup: null
+    fieldLayouts:
+      2e620162-c9b6-427b-8b34-01749ceed604:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              a4c579fb-e9c9-4d0c-91f6-1b3d9980c5ee:
+                required: false
+                sortOrder: 2
+              e44383bb-8f5a-4b3b-9114-30a955feb64c:
+                required: true
+                sortOrder: 1
   83ef9ed9-6360-4f64-abbb-920baeb2048e:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     name: Exhibit
@@ -676,6 +722,55 @@ plugins:
     edition: lite
     enabled: true
     schemaVersion: 3.0.5
+    settings:
+      pluginName: null
+      formTemplateDirectory: ''
+      emailTemplateDirectory: null
+      emailTemplateStorage: db
+      defaultView: dashboard
+      fieldDisplayOrder: name
+      showTutorial: ''
+      removeNewlines: ''
+      defaultTemplates: '1'
+      footerScripts: false
+      scriptInsertLocation: footer
+      formSubmitDisable: '1'
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      customHoneypotName: null
+      customErrorMessage: null
+      formSubmitExpiration: null
+      minimumSubmitTime: null
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      blockedEmails: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      blockedEmailsError: 'Invalid Email Address'
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      blockedIpAddresses: null
+      purgableSubmissionAgeInDays: null
+      purgableSpamAgeInDays: null
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_username: null
+      salesforce_password: null
+      spamFolderEnabled: false
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaSecret: null
+      recaptchaType: v2_checkbox
+      recaptchaMinScore: 0.5
+      recaptchaBehaviour: display_error
+      renderFormHtmlInCpViews: '1'
+      ajaxByDefault: '1'
+      autoScrollToErrors: ''
+      fillWithGet: '1'
+      formattingTemplate: flexbox.html
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
   imager:
     edition: standard
     enabled: true
@@ -725,6 +820,10 @@ plugins:
     enabled: true
     schemaVersion: 2.0.1
   queue-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  kint:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
