@@ -11,13 +11,17 @@
 
 # WEB
 /web/cpresources
-# /web/assets
-# /web/css
-# /web/images
-# /web/js
-# /web/mix-manifest.json
+/web/assets
+/web/css
+/web/images
+/web/js
+/web/fonts
+/web/mix-manifest.json
 /web/assets/imager
 /web/uploads
+/web/favicon.ico
+/web/manifest.json
+/web/browserconfig.xml
 
 # BUILD FILES
 /node_modules
