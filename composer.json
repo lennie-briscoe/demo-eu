@@ -21,7 +21,7 @@
         "carlcs/craft-redactorcustomstyles": "3.0.2",
         "charliedev/section-field": "1.1.0",
         "craftcms/aws-s3": "1.2.7",
-        "craftcms/cms": "3.4.x-dev#a8800da8fc69698e59262b5dd4b9b6dcb7278b81",
+        "craftcms/cms": "3.4.x-dev#fb018d99b501d8e6074a03b8c08e46aadb6bde24",
         "craftcms/postmark": "2.0.2",
         "craftcms/redactor": "2.4.0",
         "mildlygeeky/craft-kint": "1.0.0",
