@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'news/category/{slug}'
         template: _/pages/news
-dateModified: 1579044514
+dateModified: 1579049462
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -897,10 +897,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
-  queue-manager:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   kint:
     edition: standard
     enabled: true
