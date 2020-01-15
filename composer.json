@@ -39,7 +39,8 @@
         "superbig/craft-imagerpretransform": "2.0.3",
         "verbb/smith": "1.0.0",
         "verbb/super-table": "2.3.2",
-        "vlucas/phpdotenv": "^3.4.0"
+        "vlucas/phpdotenv": "^3.4.0",
+        "wrav/oembed": "1.1.8"
     },
     "autoload": {
       "psr-4": {

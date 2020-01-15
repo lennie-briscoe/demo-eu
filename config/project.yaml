@@ -10,7 +10,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'news/category/{slug}'
         template: _/pages/news
-dateModified: 1579037881
+dateModified: 1579044514
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -434,6 +434,39 @@ matrixBlockTypes:
               8df6d29d-59a0-44ee-80e5-f69849956547:
                 required: false
                 sortOrder: 2
+  9ba346ec-12cc-4b07-9a30-677efc6e97c1:
+    field: 778abb42-18bd-447c-99ae-483c775ed3bd
+    name: 'Google Map Embed'
+    handle: googleMapEmbed
+    sortOrder: 7
+    fields:
+      2d7b7e2f-71b1-4b25-8501-c8edc07a7f18:
+        name: 'Embed Code'
+        handle: embedCode
+        instructions: 'Go to Google Maps, find a location, click the Share button, click Copy HTML, then paste into the text box below.'
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: '1'
+          multiline: '1'
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      74ad9d74-87f7-47ce-979e-cd93cc0f6002:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2d7b7e2f-71b1-4b25-8501-c8edc07a7f18:
+                required: false
+                sortOrder: 1
   a4b1ac77-02b4-4121-91b4-8d3754b290d4:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     name: 'Image and Heading'
@@ -497,6 +530,34 @@ matrixBlockTypes:
               f109ee5b-bb41-47ce-aaa0-53b5304e0e22:
                 required: false
                 sortOrder: 2
+  ad260beb-c59d-4ce5-b8bc-72828ee4eebc:
+    field: 778abb42-18bd-447c-99ae-483c775ed3bd
+    name: Embed
+    handle: embed
+    sortOrder: 6
+    fields:
+      c88dc31c-dfde-42c6-93df-6af9d0c907b8:
+        name: Embed
+        handle: embed
+        instructions: 'Enter a URL link to Twitter tweet, Instagram post, YouTube video, and more.'
+        searchable: false
+        translationMethod: none
+        translationKeyFormat: null
+        type: wrav\oembed\fields\OembedField
+        settings:
+          url: ''
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      a0493dba-06c8-4dd6-ba71-c90579ce7c72:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              c88dc31c-dfde-42c6-93df-6af9d0c907b8:
+                required: true
+                sortOrder: 1
   f75a20aa-e20c-4f26-b217-2d2ffa1a7cac:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     name: 'Stats and Image'
@@ -844,6 +905,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
 sections:
   0edb3240-3f53-4f13-a789-2bd0b6cae755:
     name: Styleguide

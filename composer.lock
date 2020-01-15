@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "511bcaec34f55804e7a23d0f19f4ae3f",
+    "content-hash": "39b19e6a425ba08cdae42243471cbf75",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -1085,6 +1085,49 @@
                 "php-emoji"
             ],
             "time": "2018-09-28T05:23:38+00:00"
+        },
+        {
+            "name": "embed/embed",
+            "version": "v3.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/dc1dc3c126f8a78acdae06b83f591c0728ea131d",
+                "reference": "dc1dc3c126f8a78acdae06b83f591c0728ea131d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "php": "^5.6|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "time": "2019-09-16T19:34:02+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -7049,6 +7092,66 @@
             ],
             "description": "A Swiftmailer Transport for Postmark.",
             "time": "2019-07-07T18:41:29+00:00"
+        },
+        {
+            "name": "wrav/oembed",
+            "version": "1.1.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wrav/oembed/zipball/886b013a50bfd2a9183002c9f5ce4104f609d29a",
+                "reference": "886b013a50bfd2a9183002c9f5ce4104f609d29a",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.23",
+                "embed/embed": "^3.3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "oEmbed",
+                "handle": "oembed",
+                "schemaVersion": "1.0.1",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/wrav/oembed/master/CHANGELOG.md",
+                "components": {
+                    "oembedService": "wrav\\oembed\\services\\OembedService"
+                },
+                "class": "wrav\\oembed\\Oembed"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wrav\\oembed\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "reganlawton",
+                    "homepage": "https://github.com/reganlawton"
+                }
+            ],
+            "description": "A simple plugin to extract media information from websites, like youtube videos, twitter statuses or blog articles.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "facebook",
+                "iframe",
+                "instagram",
+                "oembed",
+                "twitter",
+                "vimeo",
+                "youtube"
+            ],
+            "support": {
+                "docs": "https://github.com/wrav/oembed/blob/master/README.md",
+                "issues": "https://github.com/wrav/oembed/issues"
+            },
+            "time": "2019-09-16T00:15:40+00:00"
         },
         {
             "name": "yii2tech/ar-softdelete",

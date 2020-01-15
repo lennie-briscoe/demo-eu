@@ -1,0 +1,20 @@
+<div class="content-block google-map-embed-block" data-scroll-section>
+
+
+	<div class="google-map-embed-container">
+
+        {% if theBlock.embedCode | trim | slice(0, 46) == '<iframe src="https://www.google.com/maps/embed' %}
+
+            {{ theBlock.embedCode | raw }}
+
+        {% else %}
+            <p>
+                Error: Invalid Google Maps embed code.
+            </p>
+        {% endif %}
+
+	</div>
+
+    <style>.google-map-embed-container iframe { width: 100%; }</style>
+
+</div>
