@@ -53,7 +53,7 @@ return [
     // Staging (pre-production) environment
     'staging' => [
         // Disable project config changes on staging
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
         'allowUpdates' => false,
         'backupOnUpdate' => false,
         'devMode' => true,
