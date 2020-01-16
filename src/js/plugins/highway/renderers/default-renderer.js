@@ -17,7 +17,7 @@ import EventBus from '../../../utils/EventBus';
 // import { Events as GlobalRAFEvents } from '../../../utils/GlobalRAF';
 import { Events as GlobalResizeEvents } from '../../../utils/GlobalResize';
 
-// import DefaultPage from '../../../pages/defaultPage';
+// import DefaultPage from '../../../pages/default-page';
 
 // Blocks
 import BlocksController from '../../../blocks/blocks-controller';
