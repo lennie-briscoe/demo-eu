@@ -36,7 +36,7 @@ return [
     // Production (live) environment
     'production' => [
         // Disable project config changes on production
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
         'allowUpdates' => false,
         'backupOnUpdate' => false,
         'devMode' => false,
