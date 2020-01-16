@@ -59,8 +59,17 @@
         padding-right: 30px;
 
         &.last {
-            width: 50px;
+            width: 55px;
             padding-right: 0;
+        }
+    }
+
+    .view-map,
+    .scroll-top {
+        + svg {
+            position: relative;
+            top: 2px;
+            margin-left: 10px;
         }
     }
 

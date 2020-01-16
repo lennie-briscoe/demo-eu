@@ -1,0 +1,73 @@
+.cta-caption-block {
+
+    width: 100%;
+    max-width: 940px;
+    margin: 120px auto;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    .caption-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid #000;
+        padding-top: 30px;
+        font-family: 'SteradianLight', sans-serif;
+    }
+
+    .caption-heading {
+        text-transform: uppercase;
+    }
+
+    .text,
+    .link {
+        width: calc(50% - 30px);
+    }
+
+    &.has-icon {
+        .text {
+            padding-top: 3px;
+        }
+    }
+
+    .link {
+
+        text-align: right;
+
+        a {
+            display: inline;
+        }
+
+        svg {
+            position: relative;
+            top: 3px;
+            max-width: 22px;
+            margin-left: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .caption-container {
+            flex-wrap: wrap;
+        }
+
+        .text,
+        .link {
+            width: 100%;
+        }
+
+        .link {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+    }
+
+}

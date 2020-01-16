@@ -5,10 +5,11 @@
 {% set ctaLink = theBlock.ctaLink.one().url | default('') %}
 {% set slideEntries = theBlock.slideEntries.all() | default('') %}
 {% set slideLayoutCentered = theBlock.slideLayoutCentered %}
+{% set darkUI = theBlock.darkUI %}
 
 {# {% if exhibit %} #}
 
-    <div class="content-block entry-slider-block" data-scroll-section>
+    <div class="content-block entry-slider-block {% if darkUI %}dark-ui{% endif %}" data-scroll-section>
 
         <div class="entry-slider-info">
 
@@ -24,11 +25,15 @@
 
             <div class="entry-slider-arrows">
 
-                <button class="btn-slider-prev"><</button>
+                <button class="btn-slider-prev">
+                    {% include "_/svg/arrowLeft" %}
+                </button>
 
                 <span class="divider">|</span>
 
-                <button class="btn-slider-next">></button>
+                <button class="btn-slider-next">
+                    {% include "_/svg/arrowRight" %}
+                </button>
 
             </div>
 

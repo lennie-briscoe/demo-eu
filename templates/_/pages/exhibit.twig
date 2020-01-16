@@ -10,11 +10,54 @@
 
         <article data-router-view="exhibit" data-handle="{{ entry.type.handle }}">
 
-            <div class="exhibit-container wrapper min-vh-100" data-scroll-section>
+            <div class="exhibit-container" data-scroll-section>
 
+                <h1 class="heading">
+                    {{ entry.title }}
+                </h1>
 
+                {% set heroImage = entry.heroImage.one() ?? null %}
+
+                {% if heroImage %}
+
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            {% include "_/components/picture" with {
+                                asset: heroImage,
+                                transform: 'base',
+                                sizes: sizes ?? '100vw',
+                                lazytransition: 'none'
+                            } %}
+                        </div>
+                    </div>
+
+                    <div class="hero-info">
+
+                        <div class="caption">
+                            {% set imageCaption = heroImage.imageCaption | default('') %}
+                            {{ imageCaption | typogrify }}
+                        </div>
+
+                        <div class="dates">
+                            {% set startDate = entry.postDate|date('m.y') | default('') %}
+                            {% set endDate = entry.expiryDate|date('m.y') | default('') %}
+
+                            {{ startDate }} &mdash; {{ endDate }}
+                        </div>
+
+                        <div class="tickets">
+                            {% filter typogrify %}
+                                Tickets are purchased at the Museum
+                            {% endfilter %}
+                        </div>
+
+                    </div>
+
+                {% endif %}
 
             </div>
+
+            {% include "_/components/block-matrix" %}
 
         </article>
 

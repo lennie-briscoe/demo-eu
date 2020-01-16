@@ -25,9 +25,12 @@
 @import './pages/page-error';
 
 // Blocks
+@import './components/blocks/heading';
+@import './components/blocks/wysiwyg';
+@import './components/blocks/cta-caption';
+@import './components/blocks/stats-and-image';
 @import './components/blocks/exhibit';
 @import './components/blocks/entry-slider';
-@import './components/blocks/stats-and-image';
 
 // Partials
 

@@ -128,30 +128,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    @include responsive-font(13.2vw, 13.2vw, 190px, 13.2vw);
+    @include responsive-font(13.2vw, 13.2vw, 190px);
     line-height: 1em;
 }
 
 h2 {
-    @include responsive-font(9vw, 9vw, 130px, 9vw);
+    @include responsive-font(9vw, 9vw, 130px);
     letter-spacing: -0.02em;
 }
 
 h3 {
-    @include responsive-font(7.7vw, 7.7vw, 110px, 7.7vw);
+    @include responsive-font(7.7vw, 7.7vw, 110px);
     letter-spacing: -0.01em;
 }
 
 h4 {
-    @include responsive-font(7vw, 7vw, 100px, 7vw);
+    @include responsive-font(7vw, 7vw, 100px);
 }
 
 h5 {
-    @include responsive-font(6.3vw, 6.3vw, 90px, 6.3vw);
+    @include responsive-font(6.3vw, 6.3vw, 90px);
 }
 
 h6 {
-    @include responsive-font(4.2vw, 4.2vw, 60px, 4.2vw);
+    @include responsive-font(4.2vw, 4.2vw, 60px);
 }
 
 // Paragraph

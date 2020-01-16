@@ -1,0 +1,57 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+{% set heading = theBlock.heading %}
+{% set information = theBlock.information %}
+{% set linkLabel = theBlock.linkLabel %}
+{% set internalLink = theBlock.internalLink.one().url %}
+{% set externalLink = theBlock.externalLink %}
+{% set linkIcon = theBlock.linkIcon %}
+
+<div class="content-block cta-caption-block {% if linkIcon %}has-icon{% endif %}" data-scroll-section>
+
+    <div class="caption-container">
+
+        <div class="text">
+
+            {% if heading %}
+                <span class="caption-heading">
+                    {{ heading }}
+                </span>
+            {% endif %}
+
+            {% if heading and information %}
+                &mdash;
+            {% endif %}
+
+            {% if information %}
+                <span class="information">
+                    {{ information | typogrify }}
+                </span>
+            {% endif %}
+
+        </div>
+
+        <div class="link">
+
+            {% if internalLink %}
+                <a href="{{ internalLink }}">
+                    {{ linkLabel }}
+                </a>
+            {% elseif externalLink %}
+                <a href="{{ externalLink }}">
+                    {{ linkLabel }}
+                    {% include "_/svg/" ~ linkIcon ignore missing %}
+                </a>
+            {% endif %}
+
+            {% if linkIcon and internalLink or linkIcon and externalLink %}
+                <span>
+                    {% include "_/svg/" ~ linkIcon ignore missing %}
+                </span>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>

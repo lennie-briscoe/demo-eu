@@ -7,6 +7,7 @@
         "unorderedlist",
         "orderedlist",
         "link",
+        "image",
         "file"
     ],
     "formatting": [
@@ -30,21 +31,5 @@
     "pastePlainText": true,
     "toolbarFixed": false,
     "source": true,
-    "linkNewTab": true,
-    "customStyles": {
-        "customStyles": {
-            "dropdown": {
-                "orangeText": {
-                    "args": {
-                        "tag": "span",
-                        "class": "text-orange",
-                        "type": "toggle"
-                    }
-                },
-                "clearStyles": {
-                    "api": "module.inline.clearformat"
-                }
-            }
-        }
-    }
+    "linkNewTab": true
 }
