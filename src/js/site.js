@@ -23,8 +23,10 @@ import DefaultRenderer from './plugins/highway/renderers/default-renderer';
 import StyleguideRenderer from './plugins/highway/renderers/styleguide-renderer';
 import HomeRenderer from './plugins/highway/renderers/home-renderer';
 import ExhibitionsRenderer from './plugins/highway/renderers/exhibitions-renderer';
+import ExhibitRenderer from './plugins/highway/renderers/exhibit-renderer';
 import VisitRenderer from './plugins/highway/renderers/visit-renderer';
 import NewsRenderer from './plugins/highway/renderers/news-renderer';
+import NewsArticleRenderer from './plugins/highway/renderers/newsArticle-renderer';
 import AboutRenderer from './plugins/highway/renderers/about-renderer';
 import ContactRenderer from './plugins/highway/renderers/contact-renderer';
 
@@ -108,8 +110,10 @@ class App {
                 styleguide: StyleguideRenderer,
                 home: HomeRenderer,
                 exhibitions: ExhibitionsRenderer,
+                exhibit: ExhibitRenderer,
                 visit: VisitRenderer,
                 news: NewsRenderer,
+                newsArticle: NewsArticleRenderer,
                 about: AboutRenderer,
                 contact: ContactRenderer
             },

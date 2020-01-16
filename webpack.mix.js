@@ -31,14 +31,14 @@ mix
         ],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         extensions: ['html', 'js', 'php', 'twig', 'scss', 'css'],
-        whitelist: ['first-load', 'loading', 'is-ie', 'is-device', 'is-phone', 'is-desktop', 'lazypicture', 'lazyloading', 'lazyloaded', 'lazyfade', 'lazyblur', 'animated-gif', 'has-scroll-smooth', 'has-scroll-init', 'has-scroll-scrolling', 'has-scroll-dragging', 'c-scrollbar', 'c-scrollbar_thumb', 'is-inview', 'flickity-button', 'flickity-button-icon', 'previous', 'next', 'arrow', 'flickity-page-dots', 'is-selected', 'scrolled', '[data-page="home"]', '[data-page="exhibitions"]', '[data-page="visit"]', '[data-page="news"]', '[data-page="about"]', '[data-page="contact"]', 'active', 'word', 'whiteText', 'exhibit-odd', 'exhibit-even', 'exhibit-1', 'exhibit-2', 'exhibit-3', 'exhibit-4']
+        whitelist: ['first-load', 'loading', 'is-ie', 'is-device', 'is-phone', 'is-desktop', 'lazypicture', 'lazyloading', 'lazyloaded', 'lazyfade', 'lazyblur', 'animated-gif', 'has-scroll-smooth', 'has-scroll-init', 'has-scroll-scrolling', 'has-scroll-dragging', 'c-scrollbar', 'c-scrollbar_thumb', 'is-inview', 'flickity-button', 'flickity-button-icon', 'previous', 'next', 'arrow', 'flickity-page-dots', 'is-selected', 'scrolled', 'page-404', 'page-503', 'page-error', '[data-page="home"]', '[data-page="exhibitions"]', '[data-page="visit"]', '[data-page="news"]', '[data-page="about"]', '[data-page="contact"]', '[data-router-view="exhibitions"]', '[data-router-view="visit"]', '[data-router-view="news"]', '[data-router-view="newsArticle"]', '[data-router-view="about"]', '[data-router-view="contact"]', '[data-router-view="styleguide"]', 'active', 'word', 'whiteText', 'exhibit-odd', 'exhibit-even', 'exhibit-1', 'exhibit-2', 'exhibit-3', 'exhibit-4']
     })
 
     .critical({
         enabled: mix.inProduction(),
         urls: [
             {
-                src: process.env.DEFAULT_SITE_URL + '/',
+                src: process.env.DEFAULT_SITE_URL,
                 dest: './templates/_/home-critical.min.css',
             },
         ],
@@ -66,7 +66,7 @@ if (mix.inProduction()) {
     mix
         .sourceMaps(true, 'source-map')
         .browserSync({
-            proxy: 'localhost',
+            proxy: 'demo-europa-museum.test',
             port: 3000,
             files: [
                 './web/css/{*,**/*}.css',
