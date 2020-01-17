@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ef147e24c6caec7285b9d901d3e7e0a",
+    "content-hash": "c8b019b855679e1feba8084982987c78",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -4251,16 +4251,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.38",
+            "version": "3.2.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "ea40d15bf182761e5f69eec52f46354b884609ef"
+                "reference": "c04732f04a8ce9ce3a72d7170bce1b6cce2ffe08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/ea40d15bf182761e5f69eec52f46354b884609ef",
-                "reference": "ea40d15bf182761e5f69eec52f46354b884609ef",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c04732f04a8ce9ce3a72d7170bce1b6cce2ffe08",
+                "reference": "c04732f04a8ce9ce3a72d7170bce1b6cce2ffe08",
                 "shasum": ""
             },
             "require": {
@@ -4296,7 +4296,6 @@
                     "nystudio107\\seomatic\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -4308,20 +4307,24 @@
             ],
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
-                "Craft",
-                "JSON-LD",
-                "Sitemap",
                 "cms",
+                "craft",
                 "craft-plugin",
                 "craftcms",
                 "facebook",
+                "json-ld",
                 "meta",
                 "seo",
                 "seomatic",
+                "sitemap",
                 "tags",
                 "twitter"
             ],
-            "time": "2020-01-07T17:12:49+00:00"
+            "support": {
+                "docs": "https://nystudio107.com/plugins/seomatic/documentation",
+                "issues": "https://nystudio107.com/plugins/seomatic/support"
+            },
+            "time": "2020-01-17T13:54:42+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
