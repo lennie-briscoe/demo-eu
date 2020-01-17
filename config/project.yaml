@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579293968
+dateModified: 1579297229
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -1701,4 +1701,4 @@ volumes:
       subfolder: $AWS_IMAGES_SUBFOLDER
     sortOrder: 1
     type: craft\awss3\Volume
-    url: 'https://s3.us-west-2.amazonaws.com/craftcms-client-demos/'
+    url: $AWS_BASE_URL
