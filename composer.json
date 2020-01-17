@@ -19,7 +19,6 @@
     "require": {
         "aelvan/imager": "v2.3.1",
         "carlcs/craft-redactorcustomstyles": "3.0.2",
-        "charliedev/section-field": "1.1.0",
         "craftcms/aws-s3": "1.2.7",
         "craftcms/cms": "3.4.0-RC2",
         "craftcms/postmark": "2.0.2",
@@ -29,15 +28,11 @@
         "nystudio107/craft-minify": "1.2.9",
         "nystudio107/craft-seomatic": "3.2.39",
         "nystudio107/craft-typogrify": "1.1.18",
-        "rias/craft-colour-swatches": "1.2.3",
-        "rias/craft-position-fieldtype": "1.0.14",
         "samhernandez/craft-db-paths": "^1.0",
         "sebastianlenz/linkfield": "1.0.19",
         "solspace/craft-freeform": "3.5.10",
         "studioespresso/craft-dumper": "2.0.0",
         "superbig/craft-imagerpretransform": "2.0.3",
-        "verbb/smith": "1.0.0",
-        "verbb/super-table": "2.3.2",
         "vlucas/phpdotenv": "^3.4.0",
         "wrav/oembed": "1.1.8"
     },

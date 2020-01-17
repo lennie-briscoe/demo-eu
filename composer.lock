@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8b019b855679e1feba8084982987c78",
+    "content-hash": "a85f8d83e08a4f079c8dd81da80d3251",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -264,60 +264,6 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
-        },
-        {
-            "name": "charliedev/section-field",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/charliedevelopment/craft3-section-field.git",
-                "reference": "a7fb2aab0bd56b8bde10d25e4ccc5e46b529a362"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/charliedevelopment/craft3-section-field/zipball/a7fb2aab0bd56b8bde10d25e4ccc5e46b529a362",
-                "reference": "a7fb2aab0bd56b8bde10d25e4ccc5e46b529a362",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Section Field",
-                "handle": "section-field",
-                "changelogUrl": "https://raw.githubusercontent.com/charliedevelopment/craft3-section-field/master/CHANGELOG.md",
-                "downloadUrl": "https://github.com/charliedevelopment/craft3-section-field/archive/master.zip",
-                "schemaVersion": "0.0.1",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "class": "charliedev\\sectionfield\\Section"
-            },
-            "autoload": {
-                "psr-4": {
-                    "charliedev\\sectionfield\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charlie Development",
-                    "email": "support@charliedev.com",
-                    "homepage": "http://charliedev.com/"
-                }
-            ],
-            "description": "Field type that allows the selection of Craft sections.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craftcms",
-                "field",
-                "section"
-            ],
-            "time": "2018-08-02T16:03:54+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -5392,110 +5338,6 @@
             "time": "2019-12-17T08:18:51+00:00"
         },
         {
-            "name": "rias/craft-colour-swatches",
-            "version": "1.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/riasvdv/craft-colour-swatches.git",
-                "reference": "c4b8a45a7097d40c842c48ec629504eabd93bb52"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/riasvdv/craft-colour-swatches/zipball/c4b8a45a7097d40c842c48ec629504eabd93bb52",
-                "reference": "c4b8a45a7097d40c842c48ec629504eabd93bb52",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Colour Swatches",
-                "handle": "colour-swatches",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-colour-swatches/master/CHANGELOG.md",
-                "class": "rias\\colourswatches\\ColourSwatches"
-            },
-            "autoload": {
-                "psr-4": {
-                    "rias\\colourswatches\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rias",
-                    "homepage": "https://rias.be"
-                }
-            ],
-            "description": "Let clients choose from a predefined set of colours.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "colour-swatches",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "time": "2019-04-25T16:53:38+00:00"
-        },
-        {
-            "name": "rias/craft-position-fieldtype",
-            "version": "1.0.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/riasvdv/craft-position-fieldtype.git",
-                "reference": "18fc333880c34fd13ec2b04f43ad0a9a8b090ce2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/riasvdv/craft-position-fieldtype/zipball/18fc333880c34fd13ec2b04f43ad0a9a8b090ce2",
-                "reference": "18fc333880c34fd13ec2b04f43ad0a9a8b090ce2",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Position Fieldtype",
-                "handle": "position-fieldtype",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": false,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-position-fieldtype/master/CHANGELOG.md",
-                "class": "rias\\positionfieldtype\\PositionFieldtype"
-            },
-            "autoload": {
-                "psr-4": {
-                    "rias\\positionfieldtype\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rias",
-                    "homepage": "https://rias.be"
-                }
-            ],
-            "description": "Brings back the Position fieldtype from Craft 2",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "position fieldtype"
-            ],
-            "time": "2018-10-07T10:25:48+00:00"
-        },
-        {
             "name": "rize/uri-template",
             "version": "0.3.2",
             "source": {
@@ -7469,106 +7311,6 @@
                 "templating"
             ],
             "time": "2019-12-28T07:12:03+00:00"
-        },
-        {
-            "name": "verbb/smith",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/smith.git",
-                "reference": "d2c10ab00b88df5dabf89b71b88caa3fc545a414"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/smith/zipball/d2c10ab00b88df5dabf89b71b88caa3fc545a414",
-                "reference": "d2c10ab00b88df5dabf89b71b88caa3fc545a414",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Smith",
-                "handle": "smith",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/smith/craft-3/CHANGELOG.md",
-                "class": "verbb\\smith\\Smith"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\smith\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Add copy, paste and clone functionality to Matrix blocks.",
-            "keywords": [
-                "Craft",
-                "Smith",
-                "cms",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "time": "2019-04-14T09:09:32+00:00"
-        },
-        {
-            "name": "verbb/super-table",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/super-table.git",
-                "reference": "2e60ff6e382c1fcc1fde8b310ca0a0cce013a0ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/super-table/zipball/2e60ff6e382c1fcc1fde8b310ca0a0cce013a0ee",
-                "reference": "2e60ff6e382c1fcc1fde8b310ca0a0cce013a0ee",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.3.1.1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Super Table",
-                "handle": "super-table",
-                "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
-                "documentationUrl": "https://github.com/verbb/super-table",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/super-table/craft-3/CHANGELOG.md",
-                "class": "verbb\\supertable\\SuperTable"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\supertable\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "super table"
-            ],
-            "time": "2020-01-08T23:56:18+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
