@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579291581
+dateModified: 1579293968
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -1688,17 +1688,17 @@ volumes:
     name: Images
     settings:
       autoFocalPoint: ''
-      bucket: craftcms-client-demos
-      bucketSelectionMode: choose
+      bucket: $AWS_IMAGES_BUCKET
+      bucketSelectionMode: manual
       cfDistributionId: ''
       cfPrefix: ''
       expires: ''
       keyId: $AWS_ACCESS_KEY_ID
       makeUploadsPublic: '1'
-      region: us-west-2
+      region: $AWS_REGION
       secret: $AWS_SECRET_ACCESS_KEY
       storageClass: ''
-      subfolder: europa/images
+      subfolder: $AWS_IMAGES_SUBFOLDER
     sortOrder: 1
     type: craft\awss3\Volume
     url: 'https://s3.us-west-2.amazonaws.com/craftcms-client-demos/'
