@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579256902
+dateModified: 1579291581
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -438,6 +438,7 @@ matrixBlockTypes:
         instructions: ''
         name: Form
         searchable: true
+        settings: null
         translationKeyFormat: null
         translationMethod: none
         type: Solspace\Freeform\FieldTypes\FormFieldType
