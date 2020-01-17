@@ -1,6 +1,7 @@
 import DefaultRenderer from './default-renderer';
 
 import Exhibitions from '../../../pages/exhibitions';
+import store from '../../../store';
 
 let exhibitions;
 

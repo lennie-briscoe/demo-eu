@@ -1,8 +1,8 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 
-{% set heading = theBlock.heading %}
+{% set heading = theBlock.heading ?? altText|default('') %}
 
-{% if heading %}
+{% if heading|length %}
 
     <div class="content-block heading-block" data-scroll-section>
         <div class="heading">

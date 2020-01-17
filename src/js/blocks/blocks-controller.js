@@ -3,7 +3,7 @@ import store from '../store';
 import bindAll from '../utils/bindAll';
 
 // Blocks
-import EntrySliderBlock from './entry-slider';
+import SliderBlock from './slider';
 
 class BlocksController {
     constructor() {
@@ -18,8 +18,8 @@ class BlocksController {
 
         // Blocks
 
-        this.entrySlider = store.body.querySelectorAll('.entry-slider');
-        BlocksController.entrySliders = [];
+        this.slider = store.body.querySelectorAll('.slider');
+        BlocksController.sliders = [];
 
     }
 
@@ -30,8 +30,8 @@ class BlocksController {
 
         // Blocks
 
-        this.entrySlider.forEach((element, i) => {
-            BlocksController.entrySliders[i] = new EntrySliderBlock(BlocksController, element);
+        this.slider.forEach((element, i) => {
+            BlocksController.sliders[i] = new SliderBlock(BlocksController, element);
         });
     }
 
@@ -53,7 +53,7 @@ class BlocksController {
 
         this.removeListeners();
 
-        BlocksController.entrySliders.forEach(block => {
+        BlocksController.sliders.forEach(block => {
             block.destroy();
         });
     }

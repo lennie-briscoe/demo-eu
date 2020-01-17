@@ -295,6 +295,18 @@ html.has-scroll-dragging {
 
 // Class Helpers
 
+@media screen and (max-width: 1024px) {
+    .hide-on-tablet {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
 .min-vh-100 {
     min-height: 100vh;
 }

@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579167157
+dateModified: 1579256902
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -243,27 +243,59 @@ matrixBlockTypes:
         tabs:
           -
             fields:
-              13b529cb-1236-4eb5-95a0-e20c2358385e:
+              11b555a2-89cb-434c-a97c-8bf858a76326:
                 required: false
                 sortOrder: 4
+              13b529cb-1236-4eb5-95a0-e20c2358385e:
+                required: false
+                sortOrder: 5
               4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
                 required: false
                 sortOrder: 1
               85241ed2-6bbd-4dd0-af5c-07842116ccf3:
                 required: false
-                sortOrder: 6
+                sortOrder: 7
               b7672c12-833b-4554-afc9-ec3d68dbd78d:
                 required: false
                 sortOrder: 3
               e6e6fbf0-a370-48de-b635-6f31bece3c9d:
                 required: false
-                sortOrder: 5
+                sortOrder: 6
               f668aa75-41bb-4309-9114-26d72e1547ff:
                 required: false
                 sortOrder: 2
             name: Content
             sortOrder: 1
     fields:
+      11b555a2-89cb-434c-a97c-8bf858a76326:
+        contentColumnType: string
+        fieldGroup: null
+        handle: slideImages
+        instructions: ''
+        name: 'Slide Images'
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+          defaultUploadLocationSubpath: ''
+          limit: ''
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources: '*'
+          targetSiteId: null
+          useSingleFolder: true
+          validateRelatedElements: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
       13b529cb-1236-4eb5-95a0-e20c2358385e:
         contentColumnType: string
         fieldGroup: null
@@ -335,7 +367,7 @@ matrixBlockTypes:
         contentColumnType: boolean
         fieldGroup: null
         handle: slideLayoutCentered
-        instructions: ''
+        instructions: 'When enabled it''s best to have 6+ Slide Images/Entries so that the slider will wrap nicely on wide screens.'
         name: 'Slide Layout Centered'
         searchable: true
         settings:
@@ -362,9 +394,9 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: site
         type: craft\fields\Entries
-    handle: entrySlider
-    name: 'Entry Slider'
-    sortOrder: 7
+    handle: slider
+    name: Slider
+    sortOrder: 4
   24db24b1-bf70-414a-8652-ba22d7b0dfc3:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     fieldLayouts:
@@ -603,7 +635,7 @@ matrixBlockTypes:
         type: craft\fields\PlainText
     handle: ctaCaption
     name: 'CTA Caption'
-    sortOrder: 3
+    sortOrder: 6
   83ef9ed9-6360-4f64-abbb-920baeb2048e:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     fieldLayouts:
@@ -661,7 +693,7 @@ matrixBlockTypes:
         type: craft\fields\RadioButtons
     handle: exhibit
     name: Exhibit
-    sortOrder: 6
+    sortOrder: 7
   8f9a20e9-754d-490d-baa6-b9512feafa91:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     fieldLayouts:
@@ -699,7 +731,7 @@ matrixBlockTypes:
         type: craft\redactor\Field
     handle: wysiwyg
     name: WYSIWYG
-    sortOrder: 2
+    sortOrder: 5
   9ba346ec-12cc-4b07-9a30-677efc6e97c1:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     fieldLayouts:
@@ -741,15 +773,80 @@ matrixBlockTypes:
         tabs:
           -
             fields:
+              3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f:
+                required: false
+                sortOrder: 5
+              3b943244-76d1-4973-9d71-6ec6c109e255:
+                required: false
+                sortOrder: 4
+              a65ec270-2111-40c2-bf47-f3d6d929603a:
+                required: false
+                sortOrder: 2
               dad3b3bd-ab3c-486d-a552-b3cc718f8e1c:
                 required: false
                 sortOrder: 1
               f109ee5b-bb41-47ce-aaa0-53b5304e0e22:
                 required: false
-                sortOrder: 2
+                sortOrder: 3
             name: Content
             sortOrder: 1
     fields:
+      3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f:
+        contentColumnType: string
+        fieldGroup: null
+        handle: textColor
+        instructions: ''
+        name: 'Text Color'
+        searchable: true
+        settings:
+          options:
+            -
+              default: '1'
+              label: 'Black Text'
+              value: blackText
+            -
+              default: ''
+              label: 'White Text'
+              value: whiteText
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\RadioButtons
+      3b943244-76d1-4973-9d71-6ec6c109e255:
+        contentColumnType: text
+        fieldGroup: null
+        handle: subHeading
+        instructions: ''
+        name: 'Sub Heading'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      a65ec270-2111-40c2-bf47-f3d6d929603a:
+        contentColumnType: text
+        fieldGroup: null
+        handle: preHeading
+        instructions: ''
+        name: 'Pre Heading'
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: ''
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
       dad3b3bd-ab3c-486d-a552-b3cc718f8e1c:
         contentColumnType: string
         fieldGroup: null
@@ -797,9 +894,9 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\PlainText
-    handle: imageAndHeading
-    name: 'Image and Heading'
-    sortOrder: 4
+    handle: imageAndHeadings
+    name: 'Image and Headings'
+    sortOrder: 2
   ad260beb-c59d-4ce5-b8bc-72828ee4eebc:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd
     fieldLayouts:
@@ -1060,7 +1157,7 @@ matrixBlockTypes:
         type: craft\fields\Entries
     handle: statsAndImage
     name: 'Stats and Image'
-    sortOrder: 5
+    sortOrder: 3
 plugins:
   aws-s3:
     edition: standard
