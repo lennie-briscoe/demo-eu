@@ -3,22 +3,16 @@ import imagesLoaded from 'flickity-imagesloaded';
 
 import store from '../store';
 import bindAll from '../utils/bindAll';
-// import EventBus from '../utils/EventBus';
-// import { Events as GlobalResizeEvents } from '../utils/GlobalResize';
 
-class EntrySliderBlock {
+class SliderBlock {
     constructor(BlocksController, slider) {
-        // const _this = this;
-
         this.initVars(BlocksController, slider);
-
         this.initBlock();
     }
 
     // Init Vars
     initVars(BlocksController, slider) {
-        // bindAll(this, ['onResize', 'sliderPrev', 'sliderNext']);
-        bindAll(this, ['sliderPrev', 'sliderNext']);
+        bindAll(this, ['sliderPrev', 'sliderNext', 'dragStart', 'dragEnd']);
 
         this.BlocksController = BlocksController;
         this.slider = slider;
@@ -31,37 +25,48 @@ class EntrySliderBlock {
             this.slideInitialIndex = 0;
         }
 
-        this.sliderBlock = this.slider.closest('.entry-slider-block');
+        this.sliderBlock = this.slider.closest('.slider-block');
 
         this.slidePrev = this.sliderBlock.querySelector('.btn-slider-prev');
         this.slideNext = this.sliderBlock.querySelector('.btn-slider-next');
+
+        this.slides = this.sliderBlock.querySelectorAll('.slide');
 
         this.flkty = null;
     }
 
     // Init Page
     initBlock() {
-        // const _this = this;
-
-        this.initEvents();
-
         if (this.slider) {
             this.initSlider();
         }
+
+        this.initEvents();
     }
 
     // Init Events
     initEvents() {
         const _this = this;
 
-        window.addEventListener('load', function() {
-            _this.flkty.resize();
-        });
+        if (document.readyState === 'complete') {
 
-        // EventBus.on(GlobalResizeEvents.RESIZE, _this.onResize);
+            this.flkty.resize();
+            store.locoScroll.update();
+
+        } else {
+
+            window.addEventListener('load', function() {
+                _this.flkty.resize();
+                store.locoScroll.update();
+            });
+
+        }
 
         this.slidePrev.addEventListener('click', _this.sliderPrev);
         this.slideNext.addEventListener('click', _this.sliderNext);
+
+        this.flkty.on('dragStart', _this.dragStart);
+        this.flkty.on('dragEnd', _this.dragEnd);
     }
 
     // destroy
@@ -72,10 +77,11 @@ class EntrySliderBlock {
             _this.flkty.resize();
         });
 
-        // EventBus.off(GlobalResizeEvents.RESIZE, _this.onResize);
-
         this.slidePrev.removeEventListener('click', _this.sliderPrev);
         this.slideNext.removeEventListener('click', _this.sliderNext);
+
+        this.flkty.off('dragStart', _this.dragStart);
+        this.flkty.off('dragEnd', _this.dragEnd);
     }
 
     // Init Slider
@@ -95,7 +101,6 @@ class EntrySliderBlock {
         };
 
         Flickity.prototype.applyBrakes = function( freeScrollSlowDown ) {
-            // do not apply brakes if pointer down or no slides
             const dragDown = this.isDraggable && this.isPointerDown;
             if ( dragDown || !this.slides.length ) {
                 return;
@@ -116,7 +121,7 @@ class EntrySliderBlock {
             pageDots: false,
             wrapAround: _this.slideWrapAround,
             contain: true,
-            adaptiveHeight: true,
+            adaptiveHeight: false,
             cellAlign: 'center',
             freeScroll: true,
             freeScrollFriction: 0.03,
@@ -132,6 +137,18 @@ class EntrySliderBlock {
     sliderNext() {
         this.flkty.next();
     }
+
+    dragStart() {
+        this.slides.forEach(slide => {
+            slide.style.pointerEvents = "none";
+        });
+    }
+
+    dragEnd() {
+        this.slides.forEach(slide => {
+            slide.style.pointerEvents = "auto";
+        });
+    }
 }
 
-export default EntrySliderBlock;
+export default SliderBlock;

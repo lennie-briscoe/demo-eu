@@ -22,7 +22,7 @@ return [
         'omitScriptNameInUrls' => true,
         'securityKey' => getenv('SECURITY_KEY'),
         'maxInvalidLogins' => 1000,
-        'maxUploadFileSize' => 10000000,
+        'maxUploadFileSize' => 20000000,
         'resourceBasePath' => dirname(__DIR__) . '/web/cpresources',
         'maxSlugIncrement' => 100,
 

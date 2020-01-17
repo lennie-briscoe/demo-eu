@@ -1,0 +1,42 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+{% set image = theBlock.image.one() ?? null %}
+{% set textColor = theBlock.textColor | default('#000') %}
+{% set preHeading = theBlock.preHeading | default('') %}
+{% set heading = theBlock.heading | default('') %}
+{% set subHeading = theBlock.subHeading | default('') %}
+
+<div class="content-block image-and-headings-block {{ textColor }}" data-scroll-section>
+
+    <div class="image-and-headings-container">
+
+        <div class="title-container" data-scroll data-scroll-speed="2">
+            <h3 class="title">
+                <span class="pre-heading">
+                    {{ preHeading }}
+                </span>
+                <span class="main-heading">
+                    {{ heading }}
+                </span>
+            </h3>
+        </div>
+
+        <div class="sub-heading" data-scroll data-scroll-speed="0">
+            {{ subHeading }}
+        </div>
+
+        {% if image %}
+            <div class="image" data-scroll data-scroll-speed="-2">
+                {# with, classes: 'example' #}
+                {% include "_/components/picture" with {
+                    asset: image,
+                    transform: 'base',
+                    sizes: sizes ?? '100vw',
+                    lazytransition: 'none'
+                } %}
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
