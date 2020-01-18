@@ -6,8 +6,9 @@
 /vendor
 
 # CRAFT STORAGE
+!/storage/
 /storage/*
-!/storage/rebrand/*
+!/storage/rebrand/
 
 # WEB
 /web/cpresources
