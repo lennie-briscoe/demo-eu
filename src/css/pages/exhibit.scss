@@ -187,3 +187,20 @@
     }
 
 }
+
+// Theme Dark
+body.theme-dark {
+
+    [data-router-view="exhibit"] {
+
+        .hero-image-container {
+            box-shadow: 0 10px 70px -40px rgba(255,255,255,0.4);
+        }
+
+        .hero-info {
+            border-bottom-color: #fff;
+        }
+
+    }
+
+}

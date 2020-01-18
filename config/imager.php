@@ -114,7 +114,7 @@ return [
         ]
     ],
 
-    'storages' => [], //'aws'
+    'storages' => ['aws'],
     'storageConfig' => [
         'aws' => [
             'accessKey' => getenv('AWS_ACCESS_KEY_ID'),

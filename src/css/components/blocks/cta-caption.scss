@@ -71,3 +71,21 @@
     }
 
 }
+
+// Themes
+
+body.theme-dark {
+
+    .cta-caption-block {
+
+        .caption-container {
+            border-top-color: #fff;
+        }
+
+        .link svg path {
+            fill: #fff;
+        }
+
+    }
+
+}

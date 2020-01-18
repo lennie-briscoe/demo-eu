@@ -103,7 +103,7 @@
 
                         {% set slideTitle = entry.title %}
                         {% set slideNewsCategory = entry.newsCategory.one() | default('') %}
-                        {% set slideDate = entry.postDate|date('m.d.Y') | default('') %}
+                        {% set slideDate = entry.postDate|date('m.y') | default('') %}
                         {% set slideUrl = entry.url %}
 
                         {% if heroImage %}
@@ -121,7 +121,7 @@
 
                                     {% if slideNewsCategory %}
                                         <div class="slide-news-category">
-                                            &mdash; {{ slideNewsCategory }} &mdash;
+                                            {{ slideNewsCategory }}
                                         </div>
                                     {% endif %}
 

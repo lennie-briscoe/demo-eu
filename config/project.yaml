@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579307821
+dateModified: 1579309339
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -655,16 +655,18 @@ matrixBlockTypes:
       6c31cab7-7f79-4628-b345-9a700a16a726:
         contentColumnType: string
         fieldGroup: null
-        handle: exhibit
+        handle: entry
         instructions: ''
-        name: Exhibit
+        name: Entry
         searchable: true
         settings:
           limit: '1'
           localizeRelations: false
-          selectionLabel: 'Add an Exhibit'
+          selectionLabel: ''
           source: null
-          sources: '*'
+          sources:
+            - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb'
+            - 'section:666bcffb-61d7-43b4-a9f5-8c51c458b356'
           targetSiteId: null
           validateRelatedElements: ''
           viewMode: null
@@ -691,8 +693,8 @@ matrixBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\RadioButtons
-    handle: exhibit
-    name: Exhibit
+    handle: featuredEntry
+    name: 'Featured Entry'
     sortOrder: 7
   8f9a20e9-754d-490d-baa6-b9512feafa91:
     field: 778abb42-18bd-447c-99ae-483c775ed3bd

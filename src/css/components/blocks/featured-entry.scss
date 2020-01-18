@@ -1,9 +1,9 @@
-.exhibit-block {
+.featured-entry-block {
 
     padding-left: 60px;
     padding-right: 60px;
 
-    .exhibit-container {
+    .featured-entry-container {
         position: relative;
         @include aspect-ratio(16 9);
         overflow: hidden;
@@ -101,7 +101,7 @@
         padding-left: 30px;
         padding-right: 30px;
 
-        .exhibit-container {
+        .featured-entry-container {
             @include aspect-ratio(4 3);
         }
 
@@ -115,7 +115,7 @@
 
 body.is-device {
 
-    .exhibit-block {
+    .featured-entry-block {
 
         .title-container {
             transform: none;
@@ -130,10 +130,10 @@ body.is-device {
 
 body.theme-dark {
 
-    .exhibit-block {
+    .featured-entry-block {
 
         .title.whiteText {
-            color: #ccc;
+            color: #fff;
         }
 
     }

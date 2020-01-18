@@ -262,13 +262,13 @@ body.theme-dark {
     &[data-page=home] {
 
         .hero span {
-            color: #ccc;
+            color: #fff;
         }
 
         .exhibitions-info {
             .title,
             .count {
-                color: #222;
+                color: #333;
             }
         }
 
@@ -278,13 +278,13 @@ body.theme-dark {
 
         .exhibit-name {
             span {
-                color: #777;
+                color: #aaa;
             }
         }
 
         .exhibit-date {
             span {
-                color: #333;
+                color: #555;
             }
         }
 
