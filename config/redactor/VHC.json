@@ -7,8 +7,7 @@
         "unorderedlist",
         "orderedlist",
         "link",
-        "image",
-        "file"
+        "image"
     ],
     "formatting": [
         "p",
@@ -22,11 +21,7 @@
         "blockquote"
     ],
     "plugins": [
-        "fullscreen",
-        "video",
-        "widget",
-        "table",
-        "customstyles"
+        "fullscreen"
     ],
     "pastePlainText": true,
     "toolbarFixed": false,
