@@ -7,7 +7,7 @@
 
 # CRAFT STORAGE
 /storage/*
-!/storage/.gitkeep
+!/storage/rebrand/*
 
 # WEB
 /web/cpresources
