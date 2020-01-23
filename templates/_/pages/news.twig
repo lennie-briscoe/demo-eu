@@ -7,77 +7,80 @@
 {% endblock %}
 
 {% block content %}
-        {#
-            This template is shared by both the News single section and the News category.
-            If there is a `category` variable defined then we got here from a category
-            route. Otherwise, we got here from the news route.
-        #}
-        {% set handle = category is defined ? category.slug : entry.type.handle %}
-        <article data-router-view="news" data-handle="{{ handle }}">
 
-            <div class="news-container wrapper min-vh-100" data-scroll-section>
+    {#
+        This template is shared by both the News single section and the News category.
+        If there is a `category` variable defined then we got here from a category
+        route. Otherwise, we got here from the news route.
+    #}
 
-                {#
-                    We'll also eagerload categories and hero images. Eagerloaded fields
-                    are then arrays; empty arrays if no category or image.
-                #}
-                {% if category is defined %}
-                    <h1>News Category: {{ category.title }}</h1>
+    {% set handle = category is defined ? category.slug : entry.type.handle %}
 
-                    <p><a href="{{ url('news') }}">← Back to News index</a></p>
+    <article data-router-view="news" data-handle="{{ handle }}">
 
-                    {% set query = craft.entries.section('newsArticles')
-                        .with(['heroImage', 'newsCategory'])
-                        .relatedTo(category)
-                        .limit(2)
+        <div class="news-container wrapper min-vh-100" data-scroll-section>
+
+            {#
+                We'll also eagerload categories and hero images. Eagerloaded fields
+                are then arrays; empty arrays if no category or image.
+            #}
+            {% if category is defined %}
+                <h1>News Category: {{ category.title }}</h1>
+
+                <p><a href="{{ url('news') }}">← Back to News index</a></p>
+
+                {% set query = craft.entries.section('newsArticles')
+                    .with(['heroImage', 'newsCategory'])
+                    .relatedTo(category)
+                    .limit(2)
+                %}
+            {% else %}
+                <h1>News</h1>
+
+                {% set query = craft.entries().section('newsArticles')
+                    .with(['heroImage', 'newsCategory'])
+                    .limit(2)
                     %}
-                {% else %}
-                    <h1>News</h1>
+            {% endif %}
 
-                    {% set query = craft.entries().section('newsArticles')
-                        .with(['heroImage', 'newsCategory'])
-                        .limit(2)
-                     %}
+            {% paginate query as pageInfo, pageEntries %}
+
+            {% for newsEntry in pageEntries %}
+                <article>
+                    <h2>{{ newsEntry.getLink() }}</h2>
+
+                    {% if newsEntry.newsCategory | length %}
+                        <p>
+                            Category: {{ newsEntry.newsCategory[0].getLink() }}
+                        </p>
+                    {% endif %}
+
+                    {% if newsEntry.heroImage | length %}
+                        <div>
+                            <img src="{{ newsEntry.heroImage[0].url() }}" style="max-width: 400px;">
+                        </div>
+                    {% endif %}
+
+                    <p>{{ newsEntry.summary | nl2br }}</p>
+
+                </article>
+
+                <hr>
+
+            {% endfor %}
+
+            <div>
+                {% if pageInfo.prevUrl %}
+                    <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
                 {% endif %}
 
-                {% paginate query as pageInfo, pageEntries %}
-
-                {% for newsEntry in pageEntries %}
-                    <article>
-                        <h2>{{ newsEntry.getLink() }}</h2>
-
-                        {% if newsEntry.newsCategory | length %}
-                            <p>
-                                Category: {{ newsEntry.newsCategory[0].getLink() }}
-                            </p>
-                        {% endif %}
-
-                        {% if newsEntry.heroImage | length %}                            
-                            <div>
-                                <img src="{{ newsEntry.heroImage[0].url() }}" style="max-width: 400px;">
-                            </div>
-                        {% endif %}
-
-                        <p>{{ newsEntry.summary | nl2br }}</p>
-
-                    </article>
-
-                    <hr>
-
-                {% endfor %}
-
-                <div>
-                    {% if pageInfo.prevUrl %}
-                        <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
-                    {% endif %}
-
-                    {% if pageInfo.nextUrl %}
-                        <a href="{{ pageInfo.nextUrl }}">Next Page</a>
-                    {% endif %}
-                </div>
-
+                {% if pageInfo.nextUrl %}
+                    <a href="{{ pageInfo.nextUrl }}">Next Page</a>
+                {% endif %}
             </div>
 
-        </article>
+        </div>
+
+    </article>
 
 {% endblock %}

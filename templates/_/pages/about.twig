@@ -8,14 +8,36 @@
 
 {% block content %}
 
-        <article data-router-view="about" data-handle="{{ entry.type.handle }}">
+    {% set heroTitle = entry.heroTitle | default(entry.title) %}
+    {% set heroImage = entry.heroImage.one() ?? null %}
 
-            <div class="about-container wrapper min-vh-100" data-scroll-section>
+    <article data-router-view="about" data-handle="{{ entry.type.handle }}">
 
-                {% include "_/components/block-matrix" %}
+        <div class="about-container {% if not heroImage %}no-hero-image{% endif %}" data-scroll-section>
 
-            </div>
+            <h1 class="hero-heading">
+                {{ heroTitle }}
+            </h1>
 
-        </article>
+            {% if heroImage %}
+
+                <div class="hero-image-container" data-scroll data-scroll-speed="1">
+                    <div class="hero-image">
+                        {% include "_/components/picture" with {
+                            asset: heroImage,
+                            transform: 'base',
+                            sizes: sizes ?? '100vw',
+                            lazytransition: 'none'
+                        } %}
+                    </div>
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        {% include "_/components/block-matrix" %}
+
+    </article>
 
 {% endblock %}

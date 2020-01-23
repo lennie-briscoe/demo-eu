@@ -2,7 +2,7 @@
 
     {% for link in navigation.linksMiddle.all() %}
 
-        <a class="link" href="{{ link.url }}">
+        <a class="link" href="{{ link.url }}" {% if link.title == 'Contact' %}data-router-disabled{% endif %}>
             <span class="link-text">
                 {{ link.title }}
             </span>
@@ -12,7 +12,7 @@
 
     {% for link in navigation.linksRight.all() %}
 
-        <a class="link" href="{{ link.url }}">
+        <a class="link" href="{{ link.url }}" {% if link.title == 'Contact' %}data-router-disabled{% endif %}>
             <span class="link-text">
                 {{ link.title }}
             </span>

@@ -13,7 +13,7 @@
 
         <div class="text-container">
 
-            <div class="stat-left">
+            <div class="stat-left {% if theBlock.rightStatValue|length == 0 %}hide-on-mobile{% endif %}">
                 <div class="stat-value">
                     {{ theBlock.leftStatValue }}
                 </div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="stat-right">
+            <div class="stat-right {% if theBlock.rightStatValue|length == 0 %}hide-on-mobile{% endif %}">
                 <div class="stat-value">
                     {{ theBlock.rightStatValue }}
                 </div>

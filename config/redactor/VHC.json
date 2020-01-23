@@ -24,7 +24,7 @@
         "fullscreen"
     ],
     "pastePlainText": true,
-    "toolbarFixed": false,
+    "toolbarFixed": true,
     "source": true,
     "linkNewTab": true
 }

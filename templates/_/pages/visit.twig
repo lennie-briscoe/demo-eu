@@ -10,11 +10,36 @@
 
         <article data-router-view="visit" data-handle="{{ entry.type.handle }}">
 
-            <div class="visit-container wrapper min-vh-100" data-scroll-section>
+            <div class="visit-container" data-scroll-section>
 
+                <h1 class="hero-heading">
+                    {{ entry.title }}
+                </h1>
 
+                {% set heroImage = entry.heroImage.one() ?? null %}
+
+                {% if heroImage %}
+
+                    <div class="hero-image-container">
+                        <div class="hero-image" data-scroll data-scroll-speed="-1">
+                            {% include "_/components/picture" with {
+                                asset: heroImage,
+                                transform: 'base',
+                                sizes: sizes ?? '100vw',
+                                lazytransition: 'none'
+                            } %}
+                        </div>
+                    </div>
+
+                {% endif %}
+
+                <button class="btn-down">
+                    {% include "_/svg/arrowDown" %}
+                </button>
 
             </div>
+
+            {% include "_/components/block-matrix" %}
 
         </article>
 

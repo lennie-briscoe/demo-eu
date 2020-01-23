@@ -5,8 +5,9 @@
 {% set preHeading = theBlock.preHeading | default('') %}
 {% set heading = theBlock.heading | default('') %}
 {% set subHeading = theBlock.subHeading | default('') %}
+{% set highlightText = theBlock.highlightText ? 'is-highlighted' : '' %}
 
-<div class="content-block image-and-headings-block {{ textColor }}" data-scroll-section>
+<div class="content-block image-and-headings-block {{ textColor }} {{ highlightText }}" data-scroll-section>
 
     <div class="image-and-headings-container">
 
@@ -21,7 +22,7 @@
             </h3>
         </div>
 
-        <div class="sub-heading" data-scroll data-scroll-speed="0">
+        <div class="sub-heading" data-scroll data-scroll-speed="2">
             {{ subHeading }}
         </div>
 

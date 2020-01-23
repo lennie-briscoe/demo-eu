@@ -4,6 +4,8 @@
         "formatting",
         "bold",
         "italic",
+        "unorderedlist",
+        "orderedlist",
         "link"
     ],
     "formatting": [
@@ -21,7 +23,7 @@
         "fullscreen"
     ],
     "pastePlainText": true,
-    "toolbarFixed": false,
+    "toolbarFixed": true,
     "source": true,
     "linkNewTab": true
 }

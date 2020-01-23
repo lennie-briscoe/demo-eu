@@ -5,15 +5,16 @@ import bindAll from '../utils/bindAll';
 
 class Visit {
     constructor() {
-        bindAll(this, []);
-
         this.initVars();
         this.initPage();
     }
 
     // Init Vars
     initVars() {
+        bindAll(this, ['scrollDown']);
 
+        this.btnDown = store.body.querySelector('.btn-down');
+        this.contentBlocks = store.body.querySelector('.content-blocks');
     }
 
     // Init Page
@@ -28,7 +29,7 @@ class Visit {
     addListeners() {
         const _this = this;
 
-
+        this.btnDown.addEventListener('click', _this.scrollDown);
     }
 
     removeListeners() {
@@ -42,6 +43,16 @@ class Visit {
         console.log('Visit: stopPage()');
 
         this.removeListeners();
+    }
+
+    scrollDown() {
+        const _this = this;
+
+        store.body.style.pointerEvents = 'none';
+        store.locoScroll.scrollTo(_this.contentBlocks, -120);
+        setTimeout(() => {
+            store.body.style.pointerEvents = 'auto';
+        }, 1000);
     }
 
 }

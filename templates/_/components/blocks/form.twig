@@ -16,7 +16,7 @@
 {% set freeformId = 'freeform-' ~ seq('freeform') %}
 {% set templateId = 'template-' ~ freeformId %}
 
-<div id="{{ freeformId }}" class="content-block form-block}}">
+<div id="{{ freeformId }}" class="content-block form-block" data-scroll-section>
 
 	{{ theBlock.form.render() }}
 
