@@ -3,11 +3,12 @@
 {% set heading = theBlock.heading %}
 {% set information = theBlock.information %}
 {% set linkLabel = theBlock.linkLabel %}
-{% set internalLink = theBlock.internalLink.one().url %}
+{% set internalLink = theBlock.internalLink.one().url | default('') %}
 {% set externalLink = theBlock.externalLink %}
 {% set linkIcon = theBlock.linkIcon %}
+{% set narrowWidth = theBlock.narrowWidth ? "narrowWidth" : "" %}
 
-<div class="content-block cta-caption-block {% if linkIcon %}has-icon{% endif %}" data-scroll-section>
+<div class="content-block cta-caption-block {% if linkIcon %}has-icon{% endif %} {{ narrowWidth }}" data-scroll-section>
 
     <div class="caption-container">
 
@@ -15,7 +16,8 @@
 
             {% if heading %}
                 <span class="caption-heading">
-                    {{ heading }}
+                    {# {{ heading }} #}
+                    {{ include(template_from_string(heading)|raw) }}
                 </span>
             {% endif %}
 
@@ -40,11 +42,11 @@
             {% elseif externalLink %}
                 <a href="{{ externalLink }}">
                     {{ linkLabel }}
-                    {% include "_/svg/" ~ linkIcon ignore missing %}
                 </a>
             {% endif %}
 
-            {% if linkIcon and internalLink or linkIcon and externalLink %}
+            {# {% if linkIcon and internalLink or linkIcon and externalLink %} #}
+            {% if linkIcon %}
                 <span>
                     {% include "_/svg/" ~ linkIcon ignore missing %}
                 </span>

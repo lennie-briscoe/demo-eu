@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579771421
+dateModified: 1579861084
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -108,13 +108,14 @@ fields:
     contentColumnType: text
     fieldGroup: c0ba2861-5497-46d7-86b4-71dcb76f2a16
     handle: summary
-    instructions: 'Short summary for index page'
+    instructions: 'Short summary for News page and RSS feed.'
     name: Summary
     searchable: true
     settings:
-      charLimit: ''
+      byteLimit: null
+      charLimit: null
       code: ''
-      columnType: text
+      columnType: null
       initialRows: '1'
       multiline: '1'
       placeholder: ''
@@ -503,6 +504,9 @@ matrixBlockTypes:
         tabs:
           -
             fields:
+              0ba28a66-d3aa-4c97-ad77-8e26087b3d70:
+                required: false
+                sortOrder: 7
               24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
                 required: false
                 sortOrder: 1
@@ -524,6 +528,18 @@ matrixBlockTypes:
             name: Content
             sortOrder: 1
     fields:
+      0ba28a66-d3aa-4c97-ad77-8e26087b3d70:
+        contentColumnType: boolean
+        fieldGroup: null
+        handle: narrowWidth
+        instructions: ''
+        name: 'Narrow Width'
+        searchable: true
+        settings:
+          default: '1'
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Lightswitch
       24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
         contentColumnType: text
         fieldGroup: null
@@ -599,6 +615,10 @@ matrixBlockTypes:
               default: ''
               label: 'Map Pin'
               value: mapPin
+            -
+              default: ''
+              label: News
+              value: news
         translationKeyFormat: null
         translationMethod: none
         type: craft\fields\Dropdown
@@ -1580,11 +1600,18 @@ sections:
             tabs:
               -
                 fields:
+                  778abb42-18bd-447c-99ae-483c775ed3bd:
+                    required: false
+                    sortOrder: 1
+                name: Content
+                sortOrder: 1
+              -
+                fields:
                   c8da1bd9-67c9-402f-8a95-aeaec337e207:
                     required: false
                     sortOrder: 1
                 name: SEO
-                sortOrder: 1
+                sortOrder: 2
         handle: news
         hasTitleField: false
         name: News

@@ -14,29 +14,41 @@
         route. Otherwise, we got here from the news route.
     #}
 
-    {% set handle = category is defined ? category.slug : entry.type.handle %}
+    {# {% set handle = category is defined ? category.slug : entry.type.handle %} #}
 
-    <article data-router-view="news" data-handle="{{ handle }}">
+    <article data-router-view="news" data-handle="news">
 
-        <div class="news-container wrapper min-vh-100" data-scroll-section>
+        <div class="news-container" data-scroll-section>
+
+            {% if category is defined %}
+                {% include '_/svg/arrowLeft' %}
+                <a href="{{ url('news') }}">Back to News</a>
+            {% endif %}
+
+            {% if category is defined %}
+                <h5 class="hero-category-heading">“{{ category.title }}”</h5>
+            {% else %}
+                <h1 class="hero-heading">News</h1>
+            {% endif %}
+
+        </div>
+
+        {% include "_/components/block-matrix" %}
+
+        <div class="news-container" data-scroll-section>
 
             {#
                 We'll also eagerload categories and hero images. Eagerloaded fields
                 are then arrays; empty arrays if no category or image.
             #}
+
             {% if category is defined %}
-                <h1>News Category: {{ category.title }}</h1>
-
-                <p><a href="{{ url('news') }}">← Back to News index</a></p>
-
                 {% set query = craft.entries.section('newsArticles')
                     .with(['heroImage', 'newsCategory'])
                     .relatedTo(category)
                     .limit(2)
                 %}
             {% else %}
-                <h1>News</h1>
-
                 {% set query = craft.entries().section('newsArticles')
                     .with(['heroImage', 'newsCategory'])
                     .limit(2)
@@ -46,38 +58,69 @@
             {% paginate query as pageInfo, pageEntries %}
 
             {% for newsEntry in pageEntries %}
-                <article>
-                    <h2>{{ newsEntry.getLink() }}</h2>
 
-                    {% if newsEntry.newsCategory | length %}
-                        <p>
-                            Category: {{ newsEntry.newsCategory[0].getLink() }}
-                        </p>
-                    {% endif %}
+                {% set articleImage = newsEntry.heroImage[0] %}
 
-                    {% if newsEntry.heroImage | length %}
-                        <div>
-                            <img src="{{ newsEntry.heroImage[0].url() }}" style="max-width: 400px;">
+                <article class="news-article">
+
+                    <div class="info-left">
+
+                        {% if newsEntry.heroImage | length %}
+                            <a class="article-image-link no-underline" href="{{ newsEntry.url }}">
+                                {% include "_/components/picture" with {
+                                    asset: articleImage,
+                                    transform: 'base',
+                                    sizes: sizes ?? '100vw',
+                                    lazytransition: 'none'
+                                } %}
+                            </a>
+                        {% endif %}
+
+                    </div>
+
+                    <div class="info-right">
+
+                        <h6 class="article-heading">
+                            {{ newsEntry.getLink() | typogrify }}
+                        </h6>
+
+                        <div class="article-category-date">
+                            {{ newsEntry.postDate|date('d.m.Y') }}
+                            {% if newsEntry.newsCategory | length %}
+                                <span class="divider">|</span>
+                                {{ newsEntry.newsCategory[0].getLink() }}
+                            {% endif %}
                         </div>
-                    {% endif %}
 
-                    <p>{{ newsEntry.summary | nl2br }}</p>
+                        <p class="article-summary">
+                            {{ newsEntry.summary | nl2br | typogrify }}
+                        </p>
+
+                    </div>
 
                 </article>
 
-                <hr>
-
             {% endfor %}
 
-            <div>
-                {% if pageInfo.prevUrl %}
-                    <a href="{{ pageInfo.prevUrl }}">Previous Page</a>
-                {% endif %}
+            {% if pageInfo.prevUrl or pageInfo.nextUrl %}
 
-                {% if pageInfo.nextUrl %}
-                    <a href="{{ pageInfo.nextUrl }}">Next Page</a>
-                {% endif %}
-            </div>
+                <div class="pagination">
+
+                    {% if pageInfo.prevUrl %}
+                        <a href="{{ pageInfo.prevUrl }}">Previous</a>
+                    {% endif %}
+
+                    {% if pageInfo.prevUrl and pageInfo.nextUrl %}
+                        <span class="divider">|</span>
+                    {% endif %}
+
+                    {% if pageInfo.nextUrl %}
+                        <a href="{{ pageInfo.nextUrl }}">Next</a>
+                    {% endif %}
+
+                </div>
+
+            {% endif %}
 
         </div>
 
