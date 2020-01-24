@@ -61,18 +61,21 @@
 
                 {% set articleImage = newsEntry.heroImage[0] %}
 
+                {% set articleImageTransformed = craft.imager.transformImage(articleImage, {
+                    width: 440,
+                    allowUpscale: false,
+                    format: 'jpg',
+                    jpegQuality: 80,
+                    interlace: true
+                }) %}
+
                 <article class="news-article">
 
                     <div class="info-left">
 
                         {% if newsEntry.heroImage | length %}
                             <a class="article-image-link no-underline" href="{{ newsEntry.url }}">
-                                {% include "_/components/picture" with {
-                                    asset: articleImage,
-                                    transform: 'base',
-                                    sizes: sizes ?? '100vw',
-                                    lazytransition: 'none'
-                                } %}
+                                <img src="{{ articleImageTransformed }}" alt="{{ articleImage.title }}">
                             </a>
                         {% endif %}
 
