@@ -1,16 +1,20 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
-{% set entryTitle = 'error' %}
+{% set entryTitle = 'Error' %}
 
 {% extends "_/layouts/site" %}
 
 {% block content %}
 
-    <section>
-        <div>
-            <p>
-                Generic Error
-            </p>
+    <article data-router-view="default" data-handle="{{ entryTitle | lower }}">
+
+        <div class="default-container wrapper" data-scroll-section>
+
+            <h3 class="text-center">
+                {{ entryTitle }}
+            </h3>
+
         </div>
-    </section>
+
+    </article>
 
 {% endblock %}

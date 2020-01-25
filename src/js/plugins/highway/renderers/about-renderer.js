@@ -1,14 +1,14 @@
 import DefaultRenderer from './default-renderer';
 
-import About from '../../../pages/about';
+// import About from '../../../pages/about';
 
-let about;
+// let about;
 
 class AboutRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
 
-        about = new About();
+        // about = new About();
     }
     onLeave() {
         super.onLeave();
@@ -19,8 +19,8 @@ class AboutRenderer extends DefaultRenderer {
     onLeaveCompleted() {
         super.onLeaveCompleted();
 
-        about.stopPage();
-        about = null;
+        // about.stopPage();
+        // about = null;
     }
 }
 

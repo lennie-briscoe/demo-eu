@@ -49,7 +49,7 @@ class BlocksController {
 
     // Stop Blocks
     stopBlocks() {
-        console.log('BlocksController: stopBlocks()');
+        // console.log('BlocksController: stopBlocks()');
 
         this.removeListeners();
 

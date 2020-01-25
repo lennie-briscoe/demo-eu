@@ -83,7 +83,7 @@ class MobileNavMenu {
 
     // Resize
     onResize() {
-        console.log('resize');
+        // console.log('resize');
     }
 
     // Mobile Nav Menu - Toggle
@@ -109,4 +109,4 @@ class MobileNavMenu {
 
 }
 
-export default MobileNavMenu;
+export const GlobalMobileNavMenu = new MobileNavMenu();

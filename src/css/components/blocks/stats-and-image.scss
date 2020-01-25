@@ -134,12 +134,16 @@ body.theme-dark {
 
     .stats-and-image-block {
 
+        .text-container:before {
+            background-color: #fff;
+        }
+
         .stat-value {
             color: #aaa;
         }
 
         .stat-label {
-            color: #555;
+            color: #aaa;
         }
 
         .heading {

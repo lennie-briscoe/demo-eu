@@ -5,6 +5,7 @@ let store = {
     height: window.innerHeight,
     darkToggle: document.querySelector('#dark-toggle'),
     cover: document.querySelector('.cover'),
+    coreFooter: document.querySelector('.core-footer'),
     isDevice: document.body.classList.contains('is-device'),
     isDesktop: document.body.classList.contains('is-desktop'),
     isMobileNav: window.innerWidth < 1024 ? true : false,

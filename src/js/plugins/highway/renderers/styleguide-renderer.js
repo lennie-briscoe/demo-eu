@@ -1,14 +1,14 @@
 import DefaultRenderer from './default-renderer';
 
-import Styleguide from '../../../pages/styleguide';
+// import Styleguide from '../../../pages/styleguide';
 
-let styleguide;
+// let styleguide;
 
 class StyleguideRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
 
-        styleguide = new Styleguide();
+        // styleguide = new Styleguide();
     }
     onLeave() {
         super.onLeave();
@@ -19,8 +19,8 @@ class StyleguideRenderer extends DefaultRenderer {
     onLeaveCompleted() {
         super.onLeaveCompleted();
 
-        styleguide.stopPage();
-        styleguide = null;
+        // styleguide.stopPage();
+        // styleguide = null;
     }
 }
 

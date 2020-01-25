@@ -18,15 +18,16 @@
 
     <article data-router-view="news" data-handle="news">
 
-        <div class="news-container" data-scroll-section>
+        <div class="news-container narrowWidth" data-scroll-section>
 
             {% if category is defined %}
                 {% include '_/svg/arrowLeft' %}
-                <a href="{{ url('news') }}">Back to News</a>
+                <a class="link-back" href="{{ url('news') }}">Back to News</a>
             {% endif %}
 
             {% if category is defined %}
-                <h5 class="hero-category-heading">“{{ category.title }}”</h5>
+                <div class="hero-category">NEWS Category:</div>
+                <h5 class="hero-category-heading">{{ category.title }}</h5>
             {% else %}
                 <h1 class="hero-heading">News</h1>
             {% endif %}
@@ -88,7 +89,7 @@
                         </h6>
 
                         <div class="article-category-date">
-                            {{ newsEntry.postDate|date('d.m.Y') }}
+                            {{ newsEntry.postDate|date('m.d.Y') }}
                             {% if newsEntry.newsCategory | length %}
                                 <span class="divider">|</span>
                                 {{ newsEntry.newsCategory[0].getLink() }}

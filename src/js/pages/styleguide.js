@@ -17,7 +17,7 @@ class Styleguide {
 
     // Init Page
     initPage() {
-        console.log('Styleguide: initPage()');
+        // console.log('Styleguide: initPage()');
         // this.addListeners();
     }
 
@@ -35,7 +35,7 @@ class Styleguide {
 
     // Stop Page
     stopPage() {
-        console.log('Styleguide: stopPage()');
+        // console.log('Styleguide: stopPage()');
 
         // this.removeListeners();
     }

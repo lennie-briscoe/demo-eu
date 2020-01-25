@@ -1,14 +1,14 @@
 import DefaultRenderer from './default-renderer';
 
-import NewsArticle from '../../../pages/news-article';
+// import NewsArticle from '../../../pages/news-article';
 
-let newsArticle;
+// let newsArticle;
 
 class NewsArticleRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
 
-        newsArticle = new NewsArticle();
+        // newsArticle = new NewsArticle();
     }
     onLeave() {
         super.onLeave();
@@ -19,8 +19,8 @@ class NewsArticleRenderer extends DefaultRenderer {
     onLeaveCompleted() {
         super.onLeaveCompleted();
 
-        newsArticle.stopPage();
-        newsArticle = null;
+        // newsArticle.stopPage();
+        // newsArticle = null;
     }
 }
 

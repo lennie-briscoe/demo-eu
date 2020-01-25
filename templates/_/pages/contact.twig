@@ -21,12 +21,12 @@
             {% if heroImage %}
 
                 <div class="hero-image-container">
-                    <div class="hero-image" data-scroll data-scroll-speed="1">
+                    <div class="hero-image" data-scroll data-scroll-speed="2" data-scroll-position="top">
                         {% include "_/components/picture" with {
                             asset: heroImage,
                             transform: 'base',
                             sizes: sizes ?? '100vw',
-                            lazytransition: 'none'
+                            lazytransition: 'lazyfade'
                         } %}
                     </div>
                 </div>

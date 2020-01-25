@@ -10,7 +10,6 @@ import store from '../../../store';
 // Utils
 import bindAll from '../../../utils/bindAll';
 // import GlobalRAF from '../../../utils/GlobalRAF';
-// import Pointer from '../../../utils/Pointer';
 
 // Events
 import EventBus from '../../../utils/EventBus';
@@ -55,6 +54,8 @@ class DefaultRenderer extends Highway.Renderer {
 
         store.body.dataset.page = '';
 
+        store.coreFooter.style.cssText = '';
+
         // defaultPage.stopPage();
         // defaultPage = null;
 
@@ -74,9 +75,6 @@ class DefaultRenderer extends Highway.Renderer {
 
         // GlobalRAF.update();
 
-        if (store.isSmooth) {
-            // Pointer.init();
-        }
         this.initLocoScroll();
 
         this.scrolled = false;
@@ -146,18 +144,12 @@ class DefaultRenderer extends Highway.Renderer {
             store.body.classList.remove('scrolled');
             this.scrolled = false;
         }
-
-        // Pointer.run();
     }
 
     destroy() {
         // console.log('destroy');
 
         const _this = this;
-
-        // if (Pointer) {
-        //     Pointer.destroy();
-        // }
 
         if (this.locoScroll) {
             this.locoScroll.destroy();

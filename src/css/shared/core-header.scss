@@ -27,7 +27,8 @@
         justify-content: space-between;
         width: 100%;
         padding: 40px 60px;
-        background-color: transparent;
+        // background-color: transparent;
+        background-color: #fff;
         transition: padding 0.5s $ease-in-out-1, background-color 0.3s;
     }
 
@@ -110,6 +111,9 @@
     // Responsive
 
     @media screen and (max-width: 1023px) {
+
+        left: 0;
+        transform: none;
 
         .core-quick-links,
         .core-nav-links {
@@ -227,9 +231,13 @@
 // Theme Dark
 body.theme-dark {
 
+    .core-header-content {
+        background-color: #000;
+    }
+
     // Scrolled
     &.scrolled .core-header-content {
-        background-color: rgba(0,0,0,0.95);
+        background-color: #000;
     }
 
     .core-header {

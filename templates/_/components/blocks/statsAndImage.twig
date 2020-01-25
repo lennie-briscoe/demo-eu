@@ -24,7 +24,7 @@
 
             <div class="info">
                 <h4 class="heading">
-                    {{ theBlock.heading }}
+                    {{ theBlock.heading | typogrify }}
                 </h4>
                 <div class="description">
                     {{ theBlock.description }}
@@ -53,7 +53,7 @@
                     asset: image,
                     transform: 'base',
                     sizes: sizes ?? '100vw',
-                    lazytransition: 'none'
+                    lazytransition: 'lazyfade'
                 } %}
             </div>
         {% endif %}

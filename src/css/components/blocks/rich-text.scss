@@ -79,9 +79,13 @@
 
     figure {
         width: 100%;
-        margin: 0 0 30px;
+        margin: 10px 0 30px;
         background-color: #f7f7f7;
         box-shadow: 0px 70px 50px -50px rgba(0,0,0,0.2);
+    }
+
+    &.layout-imageFullWidth figure {
+        margin: 60px 0;
     }
 
     &.layout-imageLeft figure {
@@ -135,6 +139,10 @@
         figure {
             width: 100%;
             margin-top: 0;
+        }
+
+        &.layout-imageFullWidth figure {
+            margin: 30px 0;
         }
 
         &.layout-imageLeft figure {

@@ -1,11 +1,10 @@
-import store from '../store';
+// import store from '../store';
 
-import bindAll from '../utils/bindAll';
-// import splitWord from '../utils/splitWord';
+// import bindAll from '../utils/bindAll';
 
 class Exhibit {
     constructor() {
-        bindAll(this, []);
+        // bindAll(this, []);
 
         this.initVars();
         this.initPage();
@@ -18,28 +17,25 @@ class Exhibit {
 
     // Init Page
     initPage() {
-        console.log('Exhibit: initPage()');
+        // console.log('Exhibit: initPage()');
         this.addListeners();
-
-        // Split Word example usage:
-        // elem.innerHTML = splitWord(elem.innerHTML.trim());
     }
 
     addListeners() {
-        const _this = this;
+        // const _this = this;
 
 
     }
 
     removeListeners() {
-        const _this = this;
+        // const _this = this;
 
 
     }
 
     // Stop Page
     stopPage() {
-        console.log('Exhibit: stopPage()');
+        // console.log('Exhibit: stopPage()');
 
         this.removeListeners();
     }

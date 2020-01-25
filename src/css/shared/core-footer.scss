@@ -73,6 +73,11 @@
         }
     }
 
+    .scroll-top {
+        display: inline-block;
+        cursor: pointer;
+    }
+
     .hide {
         visibility: hidden;
         pointer-events: none;
@@ -148,6 +153,10 @@ body.theme-dark {
 
         border-color: #555;
 
+        a:before {
+            background-color: #777;
+        }
+
         .row-1 {
             a.core-logo,
             a.core-logo span,
@@ -175,6 +184,14 @@ body.theme-dark {
             .copyright {
                 color: #555;
             }
+        }
+
+        .view-map + svg path {
+            fill: #777;
+        }
+
+        .scroll-top + svg path {
+            fill: #fff;
         }
 
     }

@@ -11,29 +11,31 @@
 
     <div class="image-and-headings-container">
 
-        <div class="title-container" data-scroll data-scroll-speed="2">
+        <div class="title-container" data-scroll data-scroll-speed="1">
             <h3 class="title">
                 <span class="pre-heading">
                     {{ preHeading }}
                 </span>
                 <span class="main-heading">
-                    {{ heading }}
+                    {{ heading | typogrify }}
                 </span>
             </h3>
         </div>
 
-        <div class="sub-heading" data-scroll data-scroll-speed="2">
-            {{ subHeading }}
-        </div>
+        {% if subHeading %}
+            <div class="sub-heading" data-scroll data-scroll-speed="">
+                {{ subHeading }}
+            </div>
+        {% endif %}
 
         {% if image %}
-            <div class="image" data-scroll data-scroll-speed="-2">
+            <div class="image" data-scroll data-scroll-speed="-1">
                 {# with, classes: 'example' #}
                 {% include "_/components/picture" with {
                     asset: image,
                     transform: 'base',
                     sizes: sizes ?? '100vw',
-                    lazytransition: 'none'
+                    lazytransition: 'lazyfadeDelay'
                 } %}
             </div>
         {% endif %}

@@ -1,7 +1,6 @@
 import store from '../store';
 
 import bindAll from '../utils/bindAll';
-// import splitWord from '../utils/splitWord';
 
 class Visit {
     constructor() {
@@ -19,11 +18,8 @@ class Visit {
 
     // Init Page
     initPage() {
-        console.log('Visit: initPage()');
+        // console.log('Visit: initPage()');
         this.addListeners();
-
-        // Split Word example usage:
-        // elem.innerHTML = splitWord(elem.innerHTML.trim());
     }
 
     addListeners() {
@@ -35,12 +31,12 @@ class Visit {
     removeListeners() {
         const _this = this;
 
-
+        this.btnDown.removeEventListener('click', _this.scrollDown);
     }
 
     // Stop Page
     stopPage() {
-        console.log('Visit: stopPage()');
+        // console.log('Visit: stopPage()');
 
         this.removeListeners();
     }

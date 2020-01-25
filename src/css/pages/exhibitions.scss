@@ -33,6 +33,7 @@
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
+            // transition: transform 1s $ease-out-2;
         }
 
         .hero-image {
@@ -106,6 +107,7 @@
 
             .rich-text {
                 border-top: 0;
+                padding-top: 0;
             }
 
             h4 {
@@ -235,6 +237,26 @@
 
         #dark-toggle {
             background: #555;
+        }
+
+    }
+
+}
+
+// Themes
+
+body.theme-dark {
+
+    &[data-page="exhibitions"] {
+
+        [data-router-view="exhibitions"] {
+
+            // Block Overrides
+
+            .heading-block .heading {
+                border-bottom-color: #fff;
+            }
+
         }
 
     }

@@ -7,7 +7,7 @@
     padding-right: 60px;
 
     &.narrowWidth {
-        max-width: 940px;
+        max-width: 1024px;
         padding-left: 120px;
         padding-right: 120px;
     }
@@ -23,6 +23,28 @@
 
     .caption-heading {
         text-transform: uppercase;
+
+        img {
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+            width: auto;
+            height: 1em;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .information {
+        img {
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+            width: auto;
+            height: 1em;
+            border-radius: 50%;
+            overflow: hidden;
+        }
     }
 
     .text,
@@ -48,6 +70,10 @@
             position: relative;
             top: 3px;
             max-width: 22px;
+            height: 1em;
+        }
+
+        a + span svg {
             margin-left: 10px;
         }
 
@@ -59,6 +85,11 @@
         margin-bottom: 60px;
         padding-left: 30px;
         padding-right: 30px;
+
+        &.narrowWidth {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
         .caption-container {
             flex-wrap: wrap;
@@ -72,6 +103,14 @@
         .link {
             margin-top: 15px;
             text-align: left;
+
+            span {
+                display: none;
+            }
+
+            a + span {
+                display: inline-block;
+            }
         }
 
     }

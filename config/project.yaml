@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579861084
+dateModified: 1579937930
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -21,6 +21,8 @@ email:
 fieldGroups:
   1bff9c9f-5c93-4679-967d-0f9095c856fa:
     name: Common
+  71a8e9e8-3d7d-4ceb-91f8-482de5453eab:
+    name: Home
   c0ba2861-5497-46d7-86b4-71dcb76f2a16:
     name: 'News Articles'
   f1b24b40-32c4-47c3-859d-21dd41bbe6f4:
@@ -158,7 +160,7 @@ fields:
     contentColumnType: text
     fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
     handle: imageCaption
-    instructions: ''
+    instructions: 'Format: "Title" — 2020, Author Name'
     name: 'Image Caption'
     searchable: true
     settings:
@@ -202,6 +204,26 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  c3286b59-368a-4fdf-8dbe-48084247c9e2:
+    contentColumnType: string
+    fieldGroup: 71a8e9e8-3d7d-4ceb-91f8-482de5453eab
+    handle: featuredExhibits
+    instructions: 'Will be displayed in a random order.'
+    name: 'Featured Exhibits'
+    searchable: true
+    settings:
+      limit: '4'
+      localizeRelations: false
+      selectionLabel: ''
+      source: null
+      sources:
+        - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb'
+      targetSiteId: null
+      validateRelatedElements: ''
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
   c8da1bd9-67c9-402f-8a95-aeaec337e207:
     contentColumnType: text
     fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
@@ -237,6 +259,24 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\seomatic\fields\SeoSettings
+  cf7038b3-3aa7-4d1f-8a12-1cf0017d5b2c:
+    contentColumnType: text
+    fieldGroup: 71a8e9e8-3d7d-4ceb-91f8-482de5453eab
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 globalSets:
   a90cc22d-485c-4cd7-a4b9-63a8a637e90d:
     fieldLayouts:
@@ -544,7 +584,7 @@ matrixBlockTypes:
         contentColumnType: text
         fieldGroup: null
         handle: heading
-        instructions: ''
+        instructions: 'Allows HTML & Twig syntax.'
         name: Heading
         searchable: true
         settings:
@@ -657,7 +697,7 @@ matrixBlockTypes:
         contentColumnType: text
         fieldGroup: null
         handle: information
-        instructions: ''
+        instructions: 'Allows HTML & Twig syntax.'
         name: Information
         searchable: true
         settings:
@@ -1643,7 +1683,13 @@ sections:
                 fields:
                   778abb42-18bd-447c-99ae-483c775ed3bd:
                     required: false
+                    sortOrder: 3
+                  c3286b59-368a-4fdf-8dbe-48084247c9e2:
+                    required: false
                     sortOrder: 2
+                  cf7038b3-3aa7-4d1f-8a12-1cf0017d5b2c:
+                    required: false
+                    sortOrder: 1
                 name: Content
                 sortOrder: 1
               -
@@ -2006,6 +2052,26 @@ users:
   photoVolumeUid: a36fa6aa-4824-448f-82cf-b3086f8582c5
   requireEmailVerification: true
 volumes:
+  59fe2323-f422-462b-b80a-1067cd3300df:
+    handle: files
+    hasUrls: true
+    name: Files
+    settings:
+      autoFocalPoint: ''
+      bucket: $AWS_IMAGES_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: ''
+      cfPrefix: ''
+      expires: ''
+      keyId: $AWS_ACCESS_KEY_ID
+      makeUploadsPublic: '1'
+      region: $AWS_REGION
+      secret: $AWS_SECRET_ACCESS_KEY
+      storageClass: ''
+      subfolder: $AWS_FILES_SUBFOLDER
+    sortOrder: 2
+    type: craft\awss3\Volume
+    url: $AWS_BASE_URL
   a36fa6aa-4824-448f-82cf-b3086f8582c5:
     fieldLayouts:
       73319165-f289-4758-a3f8-a617823df46f:

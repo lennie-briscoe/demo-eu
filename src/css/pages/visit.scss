@@ -12,6 +12,7 @@
 
         .visit-container {
             position: relative;
+            // margin-top: 103px;
             color: #fff;
             background-color: #000;
         }
@@ -39,6 +40,7 @@
 
             position: relative;
             @include aspect-ratio(16 9);
+            // transition: transform 1s $ease-out-2;
 
             picture,
             picture img {
@@ -113,7 +115,7 @@
 
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
 
         [data-router-view="visit"] {
 

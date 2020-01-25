@@ -1,10 +1,10 @@
-import store from '../store';
+// import store from '../store';
 
-import bindAll from '../utils/bindAll';
+// import bindAll from '../utils/bindAll';
 
 class DefaultPage {
     constructor() {
-        bindAll(this, []);
+        // bindAll(this, []);
 
         this.initVars();
         this.initPage();
@@ -17,25 +17,25 @@ class DefaultPage {
 
     // Init Page
     initPage() {
-        console.log('DefaultPage: initPage()');
+        // console.log('DefaultPage: initPage()');
         this.addListeners();
     }
 
     addListeners() {
-        const _this = this;
+        // const _this = this;
 
 
     }
 
     removeListeners() {
-        const _this = this;
+        // const _this = this;
 
 
     }
 
     // Stop Page
     stopPage() {
-        console.log('DefaultPage: stopPage()');
+        // console.log('DefaultPage: stopPage()');
 
         this.removeListeners();
     }

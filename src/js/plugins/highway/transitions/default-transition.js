@@ -6,10 +6,10 @@ class DefaultTransition extends Highway.Transition {
 
     in({from, to, trigger, done}) {
 
-        console.log('in', to);
+        // console.log('in', to);
 
         setTimeout(() => {
-            console.log('in done');
+            // console.log('in done');
             done();
         }, 500);
 
@@ -17,10 +17,10 @@ class DefaultTransition extends Highway.Transition {
 
     out({from, trigger, done}) {
 
-        console.log('out', from);
+        // console.log('out', from);
 
         setTimeout(() => {
-            console.log('out done');
+            // console.log('out done');
             from.remove();
             done();
         }, 500);

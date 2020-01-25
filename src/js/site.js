@@ -32,10 +32,9 @@ import ContactRenderer from './plugins/highway/renderers/contact-renderer';
 
 // Highway Transitions
 import DefaultTransition from './plugins/highway/transitions/default-transition';
-import HomeTransition from './plugins/highway/transitions/home-transition';
 
 // Components
-import MobileNavMenu from './components/mobileNavMenu';
+import { GlobalMobileNavMenu } from './components/mobileNavMenu';
 
 window.firstLoad = true;
 
@@ -72,10 +71,10 @@ class App {
 
         window.scrollTo(0, 0);
 
-        // const font = new FontFaceObserver('Excellent');
+        // const font = new FontFaceObserver('FontName');
 
         // font.load().then(function () {
-        //     console.log('Excellent has loaded.');
+        //     console.log('FontName has loaded.');
         // });
 
         this.initH();
@@ -96,11 +95,11 @@ class App {
             store.body.classList.toggle('theme-dark');
         });
 
-        // Mobile Nav Menu
-        if (store.isMobileNav) {
-            const mobileNavMenu = new MobileNavMenu();
-        }
+        const footerTop = store.coreFooter.querySelector('.scroll-top');
 
+        footerTop.addEventListener('click', () => {
+            store.locoScroll.scrollTo('#loco-scroll');
+        });
     }
 
     initH() {
@@ -119,7 +118,6 @@ class App {
             },
             transitions: {
                 default: DefaultTransition,
-                home: HomeTransition,
                 contextual: {
                 }
             },
@@ -139,6 +137,8 @@ class App {
             store.body.classList.remove('first-load');
             store.body.classList.add('loading');
             store.isLoading = true;
+
+            GlobalMobileNavMenu.mobileNavMenuClose();
         });
 
         // H.on('NAVIGATE_END', (to, from, location) => {
