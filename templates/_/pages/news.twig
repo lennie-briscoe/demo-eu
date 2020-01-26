@@ -43,16 +43,18 @@
                 are then arrays; empty arrays if no category or image.
             #}
 
+            {% set paginationCount = entry.paginationCount.value %}
+
             {% if category is defined %}
                 {% set query = craft.entries.section('newsArticles')
                     .with(['heroImage', 'newsCategory'])
                     .relatedTo(category)
-                    .limit(2)
+                    .limit(paginationCount)
                 %}
             {% else %}
                 {% set query = craft.entries().section('newsArticles')
                     .with(['heroImage', 'newsCategory'])
-                    .limit(2)
+                    .limit(paginationCount)
                     %}
             {% endif %}
 

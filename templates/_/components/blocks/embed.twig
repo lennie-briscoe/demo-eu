@@ -1,3 +1,7 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+{% set isFirst = isFirst ? 'isFirst' : '' %}
+
 <div class="content-block embed-block" data-scroll-section>
 
     {#
@@ -6,7 +10,7 @@
         Leaving this option
     #}
 
-    <div class="embed-container embed-{{ theBlock.embed.media.type }}">
+    <div class="embed-container embed-{{ theBlock.embed.media.type }} {{ isFirst }}">
 
         {% if theBlock.embed.valid %}
             {{ theBlock.embed.render() }}

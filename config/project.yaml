@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1579937930
+dateModified: 1580074380
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -25,6 +25,8 @@ fieldGroups:
     name: Home
   c0ba2861-5497-46d7-86b4-71dcb76f2a16:
     name: 'News Articles'
+  d6f9a9b8-5dea-469a-af3d-b81ba7040f67:
+    name: News
   f1b24b40-32c4-47c3-859d-21dd41bbe6f4:
     name: Globals
 fields:
@@ -174,6 +176,31 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  a73bf239-f2f0-45ac-b84d-361e5dd1a75f:
+    contentColumnType: string
+    fieldGroup: d6f9a9b8-5dea-469a-af3d-b81ba7040f67
+    handle: paginationCount
+    instructions: 'The max number of news articles to display per page.'
+    name: 'Pagination Count'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          default: ''
+          label: '2'
+          value: '2'
+        -
+          default: '1'
+          label: '5'
+          value: '5'
+        -
+          default: ''
+          label: '10'
+          value: '10'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
   beb1c87a-67bb-421f-933f-4bc3d1e125e3:
     contentColumnType: string
     fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
@@ -1641,6 +1668,9 @@ sections:
               -
                 fields:
                   778abb42-18bd-447c-99ae-483c775ed3bd:
+                    required: false
+                    sortOrder: 2
+                  a73bf239-f2f0-45ac-b84d-361e5dd1a75f:
                     required: false
                     sortOrder: 1
                 name: Content

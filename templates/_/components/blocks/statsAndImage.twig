@@ -7,7 +7,7 @@
 
 {% set image = theBlock.image.one() ?? null %}
 
-<div class="content-block stats-and-image-block" data-scroll-section>
+<div class="content-block stats-and-image-block {{ isFirst }}" data-scroll-section>
 
     <div class="relative">
 

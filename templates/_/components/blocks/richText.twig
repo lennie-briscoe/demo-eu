@@ -7,7 +7,7 @@
 
 {% if richText %}
 
-    <div class="content-block rich-text-block {{ topBorder }} layout-{{ layout }} {{ narrowWidth }}" data-scroll-section>
+    <div class="content-block rich-text-block {{ isFirst }} {{ topBorder }} layout-{{ layout }} {{ narrowWidth }}" data-scroll-section>
         <div class="rich-text">
             {{ richText | typogrify }}
         </div>

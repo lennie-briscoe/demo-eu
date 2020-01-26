@@ -10,7 +10,7 @@
 
 {# {% if exhibit %} #}
 
-    <div class="content-block slider-block {% if slideImages|length %}is-image{% else %}is-entry{% endif %} {% if darkUI %}dark-ui{% endif %}" data-scroll-section>
+    <div class="content-block slider-block {{ isFirst }} {% if slideImages|length %}is-image{% else %}is-entry{% endif %} {% if darkUI %}dark-ui{% endif %}" data-scroll-section>
 
         <div class="slider-info">
 

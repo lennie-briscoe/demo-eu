@@ -1,5 +1,7 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 
+{% set isFirst = isFirst ? 'isFirst' : '' %}
+
 {% set image = theBlock.image.one() ?? null %}
 {% set textColor = theBlock.textColor | default('#000') %}
 {% set preHeading = theBlock.preHeading | default('') %}
@@ -7,7 +9,9 @@
 {% set subHeading = theBlock.subHeading | default('') %}
 {% set highlightText = theBlock.highlightText ? 'is-highlighted' : '' %}
 
-<div class="content-block image-and-headings-block {{ textColor }} {{ highlightText }}" data-scroll-section>
+{% set hasHeroImage = entry.heroImage|length ? true : false %}
+
+<div class="content-block image-and-headings-block {{ isFirst }} {{ textColor }} {{ highlightText }}" data-scroll-section>
 
     <div class="image-and-headings-container">
 
@@ -23,13 +27,13 @@
         </div>
 
         {% if subHeading %}
-            <div class="sub-heading" data-scroll data-scroll-speed="">
+            <div class="sub-heading" data-scroll>
                 {{ subHeading }}
             </div>
         {% endif %}
 
         {% if image %}
-            <div class="image" data-scroll data-scroll-speed="-1">
+            <div class="image" data-scroll data-scroll-speed="-1" {% if not hasHeroImage and isFirst %} data-scroll-position="top"{% endif %}>
                 {# with, classes: 'example' #}
                 {% include "_/components/picture" with {
                     asset: image,

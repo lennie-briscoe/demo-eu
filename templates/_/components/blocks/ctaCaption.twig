@@ -1,5 +1,7 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 
+{% set isFirst = isFirst ? 'isFirst' : '' %}
+
 {% set heading = theBlock.heading %}
 {% set information = theBlock.information %}
 {% set linkLabel = theBlock.linkLabel %}
@@ -8,7 +10,7 @@
 {% set linkIcon = theBlock.linkIcon %}
 {% set narrowWidth = theBlock.narrowWidth ? "narrowWidth" : "" %}
 
-<div class="content-block cta-caption-block {% if linkIcon %}has-icon{% endif %} {{ narrowWidth }}" data-scroll-section>
+<div class="content-block cta-caption-block {{ isFirst }} {% if linkIcon %}has-icon{% endif %} {{ narrowWidth }}" data-scroll-section>
 
     <div class="caption-container">
 

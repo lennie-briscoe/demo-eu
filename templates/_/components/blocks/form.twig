@@ -1,3 +1,5 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
 {#
     Override freeform's styles to make fields render top-to-bottom on mobile.
 
@@ -29,7 +31,7 @@
 {% set freeformId = 'freeform-' ~ seq('freeform') %}
 {% set templateId = 'template-' ~ freeformId %}
 
-<div id="{{ freeformId }}" class="content-block form-block" data-scroll-section>
+<div id="{{ freeformId }}" class="content-block form-block {{ isFirst }}" data-scroll-section>
 
 	{{ theBlock.form.render() }}
 
