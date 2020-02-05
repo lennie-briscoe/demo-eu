@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: 7e72aa7b-bf24-45c1-96f8-48a62b753660
-dateModified: 1580074380
+dateModified: 1580862616
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -1857,7 +1857,7 @@ system:
   edition: pro
   live: true
   name: 'Europa Museum'
-  schemaVersion: 3.4.6
+  schemaVersion: 3.4.7
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
