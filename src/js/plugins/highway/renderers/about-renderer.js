@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class AboutRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // about = new About();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // about = new About();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

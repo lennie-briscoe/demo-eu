@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class ContactRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // contact = new Contact();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // contact = new Contact();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

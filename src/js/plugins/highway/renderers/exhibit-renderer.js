@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class ExhibitRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // exhibit = new Exhibit();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // exhibit = new Exhibit();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

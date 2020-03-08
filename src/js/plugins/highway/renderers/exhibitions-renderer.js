@@ -8,14 +8,14 @@ let exhibitions;
 class ExhibitionsRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        exhibitions = new Exhibitions();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        exhibitions = new Exhibitions();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

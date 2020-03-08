@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class HomeRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // home = new Home();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // home = new Home();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

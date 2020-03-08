@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class NewsRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // news = new News();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // news = new News();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

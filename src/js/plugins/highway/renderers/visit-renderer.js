@@ -7,14 +7,14 @@ let visit;
 class VisitRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        visit = new Visit();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        visit = new Visit();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();

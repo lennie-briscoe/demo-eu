@@ -7,14 +7,14 @@ import DefaultRenderer from './default-renderer';
 class StyleguideRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
-
-        // styleguide = new Styleguide();
     }
     onLeave() {
         super.onLeave();
     }
     onEnterCompleted() {
         super.onEnterCompleted();
+
+        // styleguide = new Styleguide();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
