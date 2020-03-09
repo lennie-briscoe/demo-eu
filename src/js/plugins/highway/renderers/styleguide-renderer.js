@@ -1,9 +1,5 @@
 import DefaultRenderer from './default-renderer';
 
-// import Styleguide from '../../../pages/styleguide';
-
-// let styleguide;
-
 class StyleguideRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
@@ -13,14 +9,9 @@ class StyleguideRenderer extends DefaultRenderer {
     }
     onEnterCompleted() {
         super.onEnterCompleted();
-
-        // styleguide = new Styleguide();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
-
-        // styleguide.stopPage();
-        // styleguide = null;
     }
 }
 

@@ -164,114 +164,11 @@ html.has-scroll-dragging {
     cursor: grabbing;
 }
 
-// Content Blocks
-
-// @media screen and (min-width: 768px) {
-
-// 	.content-block {
-
-// 		padding-left: $grid-width;
-// 		padding-right: $grid-width;
-
-// 		&.is-first {
-// 			padding-top: 120px;
-// 		}
-
-// 		+ .content-block {
-// 			padding-top: 120px;
-// 		}
-
-// 		&:last-of-type {
-// 			padding-bottom: 120px;
-// 		}
-
-// 		+ {
-
-// 			.copy-block,
-// 			.image-block {
-// 				padding-top: 72px;
-// 			}
-
-// 		}
-
-// 	}
-
-// 	.heading-block + .content-block {
-// 		padding-top: 72px;
-// 	}
-
-// }
-
-// @media screen and (max-width: 767px) {
-
-// 	.content-block {
-
-// 		padding-left: 48px;
-//         padding-right: 48px;
-
-// 		&.is-first {
-// 			padding-top: 48px;
-// 		}
-
-// 		+ .content-block {
-// 			padding-top: 120px;
-// 		}
-
-// 		&:last-of-type {
-// 			padding-bottom: 120px;
-// 		}
-
-// 		&:last-of-type.carousel-block {
-// 			padding-bottom: 240px;
-// 		}
-
-// 		+ {
-
-// 			.copy-block,
-// 			.cta-block,
-// 			.image-block {
-// 				padding-top: 48px;
-// 			}
-
-// 		}
-
-// 	}
-
-// 	.heading-block + .content-block {
-// 		padding-top: 48px;
-// 	}
-
-// 	.content-block + .heading-block {
-// 		padding-top: 72px;
-// 	}
-
-// 	.image-and-copy-block + .image-and-copy-block  {
-// 		padding-top: 72px;
-// 	}
-
-// 	.image-and-copy-block + .carousel-block  {
-// 		padding-top: 72px;
-// 	}
-
-// }
-
-// .content-block-wrapper {
-//     display: flex;
-//     align-content: center;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     // max-width: 1080px;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
-
 // Lazyload
 
 .lazypicture {
     display: block;
     width: 100%;
-    // height: 100%;
-    // overflow: hidden;
 
     img {
         display: block;
@@ -433,16 +330,6 @@ html.has-scroll-dragging {
 body.theme-dark {
 
     background-color: #000;
-
-    // .lazyfade.lazyloaded {
-        // opacity: 0.5 !important;
-        // filter: grayscale(1);
-    // }
-
-    // img {
-        // opacity: 0.5;
-        // filter: grayscale(1);
-    // }
 
     // Cover
     .cover {

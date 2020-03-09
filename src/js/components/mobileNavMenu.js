@@ -2,21 +2,17 @@ import { gsap } from 'gsap';
 
 import store from '../store';
 import bindAll from '../utils/bindAll';
-import EventBus from '../utils/EventBus';
-import { Events as GlobalResizeEvents } from '../utils/GlobalResize';
 
 class MobileNavMenu {
     constructor() {
-        // const _this = this;
-
         this.initVars();
         this.initAnimations();
-        this.initComponent();
+        this.initEvents();
     }
 
     // Init Vars
     initVars() {
-        bindAll(this, ['onResize', 'mobileNavMenuToggle']);
+        bindAll(this, ['mobileNavMenuToggle']);
 
         this.btnMobileNav = store.body.querySelector('.btn-mobile-nav');
         this.btnMobileNavLine2 = store.body.querySelector('.btn-mobile-nav .line-2');
@@ -58,32 +54,11 @@ class MobileNavMenu {
         }, 0.3);
     }
 
-    // Init Page
-    initComponent() {
-        // const _this = this;
-
-        this.initEvents();
-    }
-
     // Init Events
     initEvents() {
         const _this = this;
 
-        EventBus.on(GlobalResizeEvents.RESIZE, _this.onResize);
-
         this.btnMobileNav.addEventListener('click', _this.mobileNavMenuToggle);
-    }
-
-    // destroy
-    destroy() {
-        const _this = this;
-
-        EventBus.off(GlobalResizeEvents.RESIZE, _this.onResize);
-    }
-
-    // Resize
-    onResize() {
-        // console.log('resize');
     }
 
     // Mobile Nav Menu - Toggle

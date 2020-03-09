@@ -1,9 +1,5 @@
 import DefaultRenderer from './default-renderer';
 
-// import Contact from '../../../pages/contact';
-
-// let contact;
-
 class ContactRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
@@ -13,14 +9,9 @@ class ContactRenderer extends DefaultRenderer {
     }
     onEnterCompleted() {
         super.onEnterCompleted();
-
-        // contact = new Contact();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
-
-        // contact.stopPage();
-        // contact = null;
     }
 }
 

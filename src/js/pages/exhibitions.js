@@ -18,7 +18,6 @@ class Exhibitions {
 
     // Init Page
     initPage() {
-        // console.log('Exhibitions: initPage()');
         this.addListeners();
     }
 
@@ -36,8 +35,6 @@ class Exhibitions {
 
     // Stop Page
     stopPage() {
-        // console.log('Exhibitions: stopPage()');
-
         this.removeListeners();
     }
 

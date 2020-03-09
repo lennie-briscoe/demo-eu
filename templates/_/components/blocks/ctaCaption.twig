@@ -18,7 +18,6 @@
 
             {% if heading %}
                 <span class="caption-heading">
-                    {# {{ heading }} #}
                     {{ include(template_from_string(heading)|raw) }}
                 </span>
             {% endif %}
@@ -29,7 +28,6 @@
 
             {% if information %}
                 <span class="information">
-                    {# {{ information | typogrify }} #}
                     {{ include(template_from_string(information)|raw) | typogrify }}
                 </span>
             {% endif %}
@@ -44,7 +42,6 @@
                 <a href="{{ externalLink }}" target="_blank" rel="noopener">{{ linkLabel }}</a>
             {% endif %}
 
-            {# {% if linkIcon and internalLink or linkIcon and externalLink %} #}
             {% if linkIcon %}
                 <span>
                     {% include "_/svg/" ~ linkIcon ignore missing %}

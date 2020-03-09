@@ -44,18 +44,7 @@
                         </h6>
                     </div>
 
-                    {# <div class="exhibitions-count-container">
-                        <h2 class="count steradian-light" data-scroll data-scroll-speed="" data-scroll-delay="">
-                            {{ craft.entries().section('exhibits').count() }}
-                        </h2>
-                    </div> #}
-
                 </div>
-
-                {# {% set exhibits = craft.entries()
-                    .section('exhibits')
-                    .orderBy('random()')
-                    .limit(4) %} #}
 
                 {% set exhibits = entry.featuredExhibits.orderBy('random()').all() %}
 
@@ -76,13 +65,6 @@
                     }) %}
 
                     {% set speed = [3, 1, 5, 2] %}
-
-                    {# {% set speed = random(0, 5) %}
-                    {% set delay = random(3, 6) * 0.1 %}
-
-                    {% if loop.index == 1 or loop.index == loop.length %}
-                        {% set speed = 0 %}
-                    {% endif %} #}
 
                     <div class="exhibit exhibit-{% if loop.index is odd %}odd{% else %}even{% endif %} exhibit-{{ loop.index }}">
 

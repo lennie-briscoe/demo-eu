@@ -1,9 +1,5 @@
 import DefaultRenderer from './default-renderer';
 
-// import About from '../../../pages/about';
-
-// let about;
-
 class AboutRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
@@ -13,14 +9,9 @@ class AboutRenderer extends DefaultRenderer {
     }
     onEnterCompleted() {
         super.onEnterCompleted();
-
-        // about = new About();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
-
-        // about.stopPage();
-        // about = null;
     }
 }
 

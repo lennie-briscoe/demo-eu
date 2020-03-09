@@ -2,52 +2,37 @@
 import Highway from '@dogstudio/highway/build/highway';
 import { H } from '../../../site';
 import LocomotiveScroll from 'locomotive-scroll';
-// import sniffer from 'sniffer';
 
 // Core
 import store from '../../../store';
 
 // Utils
 import bindAll from '../../../utils/bindAll';
-// import GlobalRAF from '../../../utils/GlobalRAF';
 
 // Events
 import EventBus from '../../../utils/EventBus';
-// import { Events as GlobalRAFEvents } from '../../../utils/GlobalRAF';
 import { Events as GlobalResizeEvents } from '../../../utils/GlobalResize';
-
-// import DefaultPage from '../../../pages/default-page';
 
 // Blocks
 import BlocksController from '../../../blocks/blocks-controller';
 
-// let defaultPage;
-
 class DefaultRenderer extends Highway.Renderer {
     onEnter() {
-        // console.log('onEnter');
-
-        // defaultPage = new DefaultPage();
-
-        this.el = this.wrap.lastElementChild;
-
         const pageTemplate = H.location.pathname.split('/')[1];
         const pageName = pageTemplate.length > 1 ? pageTemplate : 'home';
         store.body.dataset.page = pageName;
-
         const selectedLink = store.body.querySelector('[data-link="' + pageName + '"]');
+
         if (selectedLink) {
             selectedLink.classList.add('selected');
         }
     }
     onLeave() {
-        // console.log('onLeave');
+
     }
     onEnterCompleted() {
         this.initVars();
         this.init();
-
-        // console.log('onEnterCompleted');
     }
     onLeaveCompleted() {
         this.destroy();
@@ -55,11 +40,6 @@ class DefaultRenderer extends Highway.Renderer {
         store.body.dataset.page = '';
 
         store.coreFooter.style.cssText = '';
-
-        // defaultPage.stopPage();
-        // defaultPage = null;
-
-        // console.log('onLeaveCompleted');
     }
 
     initVars() {
@@ -67,13 +47,9 @@ class DefaultRenderer extends Highway.Renderer {
     }
 
     init() {
-        // console.log('init');
-
         bindAll(this, ['onResize', 'updateScroll', 'onScroll']);
 
         const _this = this;
-
-        // GlobalRAF.update();
 
         this.initLocoScroll();
 
@@ -89,7 +65,6 @@ class DefaultRenderer extends Highway.Renderer {
 
                 store.body.classList.remove('loading');
                 store.isLoading = false;
-                // GlobalRAF.update();
 
                 _this.updateScroll();
 
@@ -147,8 +122,6 @@ class DefaultRenderer extends Highway.Renderer {
     }
 
     destroy() {
-        // console.log('destroy');
-
         const _this = this;
 
         if (this.locoScroll) {

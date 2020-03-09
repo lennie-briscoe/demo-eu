@@ -1,9 +1,5 @@
 import DefaultRenderer from './default-renderer';
 
-// import Home from '../../../pages/home';
-
-// let home;
-
 class HomeRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
@@ -13,14 +9,9 @@ class HomeRenderer extends DefaultRenderer {
     }
     onEnterCompleted() {
         super.onEnterCompleted();
-
-        // home = new Home();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
-
-        // home.stopPage();
-        // home = null;
     }
 }
 

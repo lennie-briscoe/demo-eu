@@ -18,7 +18,6 @@ class Visit {
 
     // Init Page
     initPage() {
-        // console.log('Visit: initPage()');
         this.addListeners();
     }
 
@@ -36,8 +35,6 @@ class Visit {
 
     // Stop Page
     stopPage() {
-        // console.log('Visit: stopPage()');
-
         this.removeListeners();
     }
 

@@ -1,9 +1,5 @@
 import DefaultRenderer from './default-renderer';
 
-// import Exhibit from '../../../pages/exhibit';
-
-// let exhibit;
-
 class ExhibitRenderer extends DefaultRenderer {
     onEnter() {
         super.onEnter();
@@ -13,14 +9,9 @@ class ExhibitRenderer extends DefaultRenderer {
     }
     onEnterCompleted() {
         super.onEnterCompleted();
-
-        // exhibit = new Exhibit();
     }
     onLeaveCompleted() {
         super.onLeaveCompleted();
-
-        // exhibit.stopPage();
-        // exhibit = null;
     }
 }
 

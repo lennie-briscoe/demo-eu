@@ -9,7 +9,6 @@
 
         position: relative;
         z-index: 2;
-        // text-transform: uppercase;
         pointer-events: none;
         user-select: none;
 
@@ -61,10 +60,6 @@
 
     .exhibitions-count-container {
         width: 100%;
-
-        // .count {
-        //     letter-spacing: 0.1em;
-        // }
     }
 
     .exhibitions-info {
@@ -95,10 +90,6 @@
         justify-content: flex-end;
     }
 
-    // .exhibit-1 {
-    //     z-index: -1;
-    // }
-
     .exhibit-2 {
         transform: translateY(-8vh);
     }
@@ -109,7 +100,6 @@
     }
 
     .exhibit-4 {
-        // z-index: -1;
         justify-content: flex-start;
         transform: translateY(-4vh);
     }

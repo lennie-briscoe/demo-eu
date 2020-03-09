@@ -52,17 +52,8 @@
 
     <body class="first-load loading {% if bodyClass is defined %}{{ bodyClass }}{% endif %}">
 
-        {# {% if not craft.app.config.general.devMode %} #}
-        {# {% if env == "live" %}
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-        {% endif %} #}
-
         {% block body %}{% endblock %}
 
-        {# <script src="{{ mix('js/manifest.js') }}"></script>
-        <script src="{{ mix('js/vendor.js') }}"></script> #}
         <script src="{{ mix('js/site.js') }}"></script>
 
     </body>

@@ -110,13 +110,6 @@ select {
 	text-rendering: optimizeLegibility;
 }
 
-// ::selection {
-// 	background: #ccc;
-// }
-// ::-moz-selection {
-// 	background: #ccc;
-// }
-
 // Headings
 
 h1, h2, h3, h4, h5, h6 {
@@ -169,7 +162,6 @@ a {
 
     &:not(.no-underline) {
         position: relative;
-        // display: inline-block;
 
         &:before {
             content: '';
@@ -187,8 +179,6 @@ a {
         &:hover:before,
         &.active:before {
             transform: translateX(-50%) scaleX(1);
-            // transform-origin: left center;
-            // transition-timing-function: $ease-out-2;
         }
     }
 }
@@ -228,22 +218,6 @@ form {
             background-color: #fff;
         }
     }
-
-}
-
-@media screen and (max-width: 767px) {
-
-	// Headings
-
-	h1, h2, h3, h4, h5, h6 {
-
-	}
-
-	// Paragraph
-
-	p {
-
-	}
 
 }
 

@@ -23,24 +23,12 @@
 {# update srcset #}
 {% set srcset = srcset | join(', ') %}
 
-{# placeholder options #}
-{# {% if asset.width < outputWidths|last %}
-    {% set placeholderWidth = asset.width %}
-{% else %}
-    {% set placeholderWidth = outputWidths|last %}
-{% endif %} #}
-
 {% set placeholderOptions = {
     width: 256,
     effects: {
         blur: 1,
     }
 } %}
-
-{# {% set placeholderOptions = {
-    width: 1,
-    height: 1
-} %} #}
 
 <picture class="lazypicture {{ classes ?? '' }}">
 
@@ -49,7 +37,6 @@
         <img class="{{ lazytransition }} lazyload"
             data-src="{{ asset.url }}"
             alt="{{ alt }}"
-            {# crossorigin="anonymous" #}
         />
 
     {% else %}
@@ -62,7 +49,6 @@
             sizes="{{ sizes }}"
             alt="{{ alt }}"
             style="object-position: {{ asset.focalPoint|first * 100 }}% {{ asset.focalPoint|last * 100 }}%;"
-            {# crossorigin="anonymous" #}
         />
 
     {% endif %}
