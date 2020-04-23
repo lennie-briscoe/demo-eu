@@ -22,14 +22,14 @@
 
             {% if category is defined %}
                 {% include '_/svg/arrowLeft' %}
-                <a class="link-back" href="{{ url('news') }}">Back to News</a>
+                <a class="link-back" href="{{ url('news') }}">{{ 'Back to News'|t }}</a>
             {% endif %}
 
             {% if category is defined %}
-                <div class="hero-category">NEWS Category:</div>
+                <div class="hero-category">{{ 'Category:'|t }}</div>
                 <h5 class="hero-category-heading">{{ category.title }}</h5>
             {% else %}
-                <h1 class="hero-heading">News</h1>
+                <h1 class="hero-heading">{{ 'News'|t }}</h1>
             {% endif %}
 
         </div>

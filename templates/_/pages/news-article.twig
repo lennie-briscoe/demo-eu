@@ -23,7 +23,7 @@
         <div class="news-article-container" data-scroll-section>
 
             {% include '_/svg/arrowLeft' %}
-            <a class="link-back" href="{{ url('news') }}">Back to All News</a>
+            <a class="link-back" href="{{ url('news') }}">{{ 'Back to News'|t }}</a>
 
             <h5 class="hero-heading">{{ entry.title |typogrify }}</h5>
 

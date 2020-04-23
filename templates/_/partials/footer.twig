@@ -27,19 +27,19 @@
         <div class="column hide-on-mobile">
 
             <p>
-                Contact Us
+                {{ 'Contact Us'|t }}
             </p>
 
             <p>
 
-                Phone:
+                {{ 'Phone:'|t }}
                 <a href="tel:+1-855-700-5115">
                     +1 855.700.5115
                 </a>
 
                 <br>
 
-                Email:
+                {{ 'Email:'|t }}
                 <a href="mailto:hello@pixelandtonic.com">
                     hello@pixelandtonic.com
                 </a>
@@ -48,7 +48,7 @@
 
             <p>
                 <a href="/contact" class="underline" data-router-disabled>
-                    Contact
+                    {{ 'Contact'|t }}
                 </a>
             </p>
 
@@ -57,12 +57,12 @@
         <div class="column hide-on-mobile">
 
             <p>
-                Open Hours
+                {{ 'Open Hours'|t }}
             </p>
 
             <p>
-                Weekdays: 8am - 5pm<br>
-                Weekend: 8am - 9pm
+                {{ 'Weekdays:'|t }} 8am - 5pm<br>
+                {{ 'Weekend:'|t }} 8am - 9pm
             </p>
 
         </div>
@@ -70,7 +70,7 @@
         <div class="column hide-on-mobile">
 
             <p>
-                Follow Us
+                {{ 'Follow Us'|t }}
             </p>
 
             <p>
@@ -91,7 +91,7 @@
 
         <div class="column last">
 
-            <div class="scroll-top">Top</div>
+            <div class="scroll-top" title="{{ 'Scroll to the top'|t }}">{{ 'Top'|t }}</div>
             {% include "_/svg/arrowUp" %}
 
         </div>
@@ -113,7 +113,14 @@
         <div class="column">
 
             <p>
-                Development by <a href="https://vanholtz.co" target="_blank" rel="noopener">Van Holtz Co</a>.
+                {{ 'Development by {name}.'|t({
+                    name: tag('a', {
+                        href: 'https://vanholtz.co',
+                        target: '_blank',
+                        rel: 'noopener',
+                        text: 'Van Holtz Co',
+                    })
+                })|raw }}
             </p>
 
         </div>
@@ -121,9 +128,9 @@
         <div class="column">
 
             <p>
-                <a href="#">Terms of Use</a>
+                <a href="#">{{ 'Terms of Use'|t }}</a>
                 /
-                <a href="#">Privacy Policy</a>
+                <a href="#">{{ 'Privacy Policy'|t }}</a>
             </p>
 
         </div>
