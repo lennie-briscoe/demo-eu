@@ -8,15 +8,17 @@
 
 {% block content %}
 
-    {% set heroImage = entry.heroImage[0] %}
+    {% if entry.heroImage|length %}
+        {% set heroImage = entry.heroImage[0] %}
 
-    {% set heroImageTransformed = craft.imager.transformImage(heroImage, {
-        width: 1024,
-        allowUpscale: false,
-        format: 'jpg',
-        jpegQuality: 80,
-        interlace: true
-    }) %}
+        {% set heroImageTransformed = craft.imager.transformImage(heroImage, {
+            width: 1024,
+            allowUpscale: false,
+            format: 'jpg',
+            jpegQuality: 80,
+            interlace: true
+        }) %}
+    {% endif %}
 
     <article data-router-view="newsArticle" data-handle="{{ entry.type.handle }}">
 
