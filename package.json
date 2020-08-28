@@ -71,8 +71,8 @@
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "sniffer": "watsondg/sniffer",
-    "tiny-emitter": "^2.1.0",
-    "snyk": "^1.373.0"
+    "snyk": "^1.373.0",
+    "tiny-emitter": "^2.1.0"
   },
   "snyk": true
 }
