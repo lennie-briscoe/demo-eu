@@ -1,0 +1,126 @@
+dateModified: 1602697988
+email:
+  fromEmail: sam@craftcms.com
+  fromName: 'Demo Starter'
+  template: ''
+  transportSettings:
+    token: $POSTMARK_API_TOKEN
+  transportType: craftcms\postmark\Adapter
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: lite
+    enabled: true
+    licenseKey: $FREEFORM_LICENSE_KEY
+    schemaVersion: 3.0.8
+    settings:
+      ajaxByDefault: '1'
+      autoScrollToErrors: ''
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: '1'
+      defaultView: dashboard
+      emailTemplateDirectory: null
+      emailTemplateStorage: db
+      fieldDisplayOrder: name
+      fillWithGet: '1'
+      footerScripts: false
+      formSubmitDisable: '1'
+      formSubmitExpiration: null
+      formTemplateDirectory: ''
+      formattingTemplate: flexbox.html
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: '1'
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaType: v2_checkbox
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      scriptInsertLocation: footer
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: ''
+      spamFolderEnabled: false
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  imager-pretransform:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  kint:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: $SEOMATIC_LICENSE_KEY
+    schemaVersion: 3.0.9
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Europa Museum'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles

@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: 1bff9c9f-5c93-4679-967d-0f9095c856fa
+handle: imageAlt
+instructions: ''
+name: 'Image Alt'
+searchable: false
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,27 @@
+field: 778abb42-18bd-447c-99ae-483c775ed3bd
+fieldLayouts:
+  a0493dba-06c8-4dd6-ba71-c90579ce7c72:
+    tabs:
+      -
+        fields:
+          c88dc31c-dfde-42c6-93df-6af9d0c907b8:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  c88dc31c-dfde-42c6-93df-6af9d0c907b8:
+    contentColumnType: text
+    fieldGroup: null
+    handle: embed
+    instructions: 'Enter a URL link to Twitter tweet, Instagram post, YouTube video, and more.'
+    name: URL
+    searchable: false
+    settings:
+      url: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: wrav\oembed\fields\OembedField
+handle: embed
+name: 'Social Embed'
+sortOrder: 9

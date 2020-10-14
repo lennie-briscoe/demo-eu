@@ -1,0 +1,32 @@
+fieldLayouts:
+  73319165-f289-4758-a3f8-a617823df46f:
+    tabs:
+      -
+        fields:
+          701ed750-1c7f-4b39-9be6-2c25746f29ba:
+            required: false
+            sortOrder: 1
+          8b592bee-c976-4c83-be76-d749cc991410:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+handle: images
+hasUrls: true
+name: Images
+settings:
+  autoFocalPoint: ''
+  bucket: $AWS_IMAGES_BUCKET
+  bucketSelectionMode: manual
+  cfDistributionId: ''
+  cfPrefix: ''
+  expires: ''
+  keyId: $AWS_ACCESS_KEY_ID
+  makeUploadsPublic: '1'
+  region: $AWS_REGION
+  secret: $AWS_SECRET_ACCESS_KEY
+  storageClass: ''
+  subfolder: $AWS_IMAGES_SUBFOLDER
+sortOrder: 1
+type: craft\awss3\Volume
+url: $AWS_BASE_URL
