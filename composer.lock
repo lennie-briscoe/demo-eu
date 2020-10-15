@@ -75,16 +75,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.158.6",
+            "version": "3.158.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "4e912c1ae4d4b3538ada36ac1478f980f9bdf329"
+                "reference": "9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4e912c1ae4d4b3538ada36ac1478f980f9bdf329",
-                "reference": "4e912c1ae4d4b3538ada36ac1478f980f9bdf329",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123",
+                "reference": "9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +156,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-10-09T18:11:48+00:00"
+            "time": "2020-10-15T18:16:19+00:00"
         },
         {
             "name": "brick/math",
@@ -742,16 +742,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.5.12.1",
+            "version": "3.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "142e988624dcb0405a6e4baf126e1207e6b084fd"
+                "reference": "47fb8c41b0a0349a010f2090619e6e062aea6999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/142e988624dcb0405a6e4baf126e1207e6b084fd",
-                "reference": "142e988624dcb0405a6e4baf126e1207e6b084fd",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/47fb8c41b0a0349a010f2090619e6e062aea6999",
+                "reference": "47fb8c41b0a0349a010f2090619e6e062aea6999",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +836,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-10-02T21:21:05+00:00"
+            "time": "2020-10-15T18:44:59+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -4718,20 +4718,20 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v9.99.99",
+            "version": "v9.99.100",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": ">= 7"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*|5.*",
@@ -4759,7 +4759,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-02T15:55:56+00:00"
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "php-science/textrank",
@@ -6263,16 +6263,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.58.0",
+            "version": "v7.60.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "af383f8c707f841302ffceacfeffd2c7f74f362f"
+                "reference": "4015ff20a6838a04b663e20724f2fc4f3943f630"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/af383f8c707f841302ffceacfeffd2c7f74f362f",
-                "reference": "af383f8c707f841302ffceacfeffd2c7f74f362f",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/4015ff20a6838a04b663e20724f2fc4f3943f630",
+                "reference": "4015ff20a6838a04b663e20724f2fc4f3943f630",
                 "shasum": ""
             },
             "require": {
@@ -6316,7 +6316,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-10-14T15:00:30+00:00"
+            "time": "2020-10-15T19:29:35+00:00"
         },
         {
             "name": "studioespresso/craft-dumper",
