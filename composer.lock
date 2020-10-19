@@ -75,16 +75,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.158.7",
+            "version": "3.158.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123"
+                "reference": "6f68f8f3b459166e96e2ba46cd720668f14255e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123",
-                "reference": "9afc422ad4ef0f1de9fa2a0be4b856c1dfa31123",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6f68f8f3b459166e96e2ba46cd720668f14255e2",
+                "reference": "6f68f8f3b459166e96e2ba46cd720668f14255e2",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +156,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-10-15T18:16:19+00:00"
+            "time": "2020-10-16T18:15:17+00:00"
         },
         {
             "name": "brick/math",
@@ -742,16 +742,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.5.13",
+            "version": "3.5.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "47fb8c41b0a0349a010f2090619e6e062aea6999"
+                "reference": "90891b1d386aa8e31c2daeb86851a7aed96f4ff2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/47fb8c41b0a0349a010f2090619e6e062aea6999",
-                "reference": "47fb8c41b0a0349a010f2090619e6e062aea6999",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/90891b1d386aa8e31c2daeb86851a7aed96f4ff2",
+                "reference": "90891b1d386aa8e31c2daeb86851a7aed96f4ff2",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +836,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-10-15T18:44:59+00:00"
+            "time": "2020-10-16T10:55:46+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -989,16 +989,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.8.2",
+            "version": "2.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "d9758847fcdd5b26ed238cfdee3eab707edb0faa"
+                "reference": "92e2aa88ae1aa60fee0fc83b2dede4806395979c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/d9758847fcdd5b26ed238cfdee3eab707edb0faa",
-                "reference": "d9758847fcdd5b26ed238cfdee3eab707edb0faa",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/92e2aa88ae1aa60fee0fc83b2dede4806395979c",
+                "reference": "92e2aa88ae1aa60fee0fc83b2dede4806395979c",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1033,7 @@
                 "html",
                 "yii2"
             ],
-            "time": "2020-10-14T08:21:11+00:00"
+            "time": "2020-10-19T13:52:37+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -1592,16 +1592,16 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.14.2",
+            "version": "v1.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "9d82b20a07ca560a5075e24ca8ac5721bc8c961d"
+                "reference": "c1503299c779af0cbc99b43788f75930988852cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/9d82b20a07ca560a5075e24ca8ac5721bc8c961d",
-                "reference": "9d82b20a07ca560a5075e24ca8ac5721bc8c961d",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/c1503299c779af0cbc99b43788f75930988852cf",
+                "reference": "c1503299c779af0cbc99b43788f75930988852cf",
                 "shasum": ""
             },
             "require": {
@@ -1640,7 +1640,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2020-10-14T16:58:18+00:00"
+            "time": "2020-10-16T21:33:48+00:00"
         },
         {
             "name": "google/cloud",
@@ -3283,16 +3283,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28"
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ea2fbfc988bade315acd5967e6d02274086d0f28",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
                 "shasum": ""
             },
             "require": {
@@ -3330,7 +3330,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-21T18:10:53+00:00"
+            "time": "2020-10-18T11:50:25+00:00"
         },
         {
             "name": "league/oauth2-client",
