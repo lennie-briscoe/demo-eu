@@ -11,7 +11,7 @@ return [
     // All environments
     '*' => [
         'useProjectConfigFile' => true,
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
