@@ -1,4 +1,4 @@
-dateModified: 1602697988
+dateModified: 1605022115
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -19,7 +19,7 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: $FREEFORM_LICENSE_KEY
-    schemaVersion: 3.0.8
+    schemaVersion: 3.1.0
     settings:
       ajaxByDefault: '1'
       autoScrollToErrors: ''
