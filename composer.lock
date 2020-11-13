@@ -80,16 +80,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.160.0",
+            "version": "3.161.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5f1be65b657a53d79f585e2df8c996931b1b01b1"
+                "reference": "4c1852e9efaef18e15f2a6c914d8dc41fda2a052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5f1be65b657a53d79f585e2df8c996931b1b01b1",
-                "reference": "5f1be65b657a53d79f585e2df8c996931b1b01b1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4c1852e9efaef18e15f2a6c914d8dc41fda2a052",
+                "reference": "4c1852e9efaef18e15f2a6c914d8dc41fda2a052",
                 "shasum": ""
             },
             "require": {
@@ -164,9 +164,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.160.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.161.1"
             },
-            "time": "2020-11-11T19:16:21+00:00"
+            "time": "2020-11-13T19:17:55+00:00"
         },
         {
             "name": "brick/math",
@@ -678,16 +678,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "6e076a124f7ee146f2487554a94b6a19a74887ba"
+                "reference": "f28d44c286812c714741478d968104c5e604a1d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6e076a124f7ee146f2487554a94b6a19a74887ba",
-                "reference": "6e076a124f7ee146f2487554a94b6a19a74887ba",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f28d44c286812c714741478d968104c5e604a1d4",
+                "reference": "f28d44c286812c714741478d968104c5e604a1d4",
                 "shasum": ""
             },
             "require": {
@@ -721,7 +721,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/1.4.4"
+                "source": "https://github.com/composer/xdebug-handler/tree/1.4.5"
             },
             "funding": [
                 {
@@ -737,7 +737,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-24T12:39:10+00:00"
+            "time": "2020-11-13T08:04:11+00:00"
         },
         {
             "name": "craftcms/aws-s3",
@@ -6578,16 +6578,16 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.9.2",
+            "version": "3.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "bdd2931c281b0979526f9fdd379651af92212cd4"
+                "reference": "32cad1d77c9e8731b744c4c03ff869596d620969"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/bdd2931c281b0979526f9fdd379651af92212cd4",
-                "reference": "bdd2931c281b0979526f9fdd379651af92212cd4",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/32cad1d77c9e8731b744c4c03ff869596d620969",
+                "reference": "32cad1d77c9e8731b744c4c03ff869596d620969",
                 "shasum": ""
             },
             "require": {
@@ -6632,9 +6632,9 @@
             ],
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.9.2"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.9.4"
             },
-            "time": "2020-11-11T17:01:34+00:00"
+            "time": "2020-11-13T13:57:56+00:00"
         },
         {
             "name": "solspace/craft3-commons",
@@ -10099,16 +10099,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.14",
+            "version": "2.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "7e2eac4a8d3ee604b29df0d10c41459f4e481981"
+                "reference": "317f85c1ac7a8c0b73eea345a49066b5570aa2c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/7e2eac4a8d3ee604b29df0d10c41459f4e481981",
-                "reference": "7e2eac4a8d3ee604b29df0d10c41459f4e481981",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
+                "reference": "317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
                 "shasum": ""
             },
             "require": {
@@ -10185,7 +10185,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-10T12:45:23+00:00"
+            "time": "2020-11-13T10:09:11+00:00"
         },
         {
             "name": "yiisoft/yii2-queue",
