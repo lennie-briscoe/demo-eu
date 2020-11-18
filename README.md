@@ -106,6 +106,12 @@ Just in case Craft or its plugins aren't up to date, run this.
 
 ## Front-end Development
 
+Be sure to add the following environment variable to `.env` or the production build process will fail:
+
+```
+DEFAULT_SITE_URL=https://europamuseum.co
+```
+
 There are a few commands you can run, found in `package.json`:
 
 * `yarn watch`
