@@ -6365,10 +6365,12 @@ laravel-mix-bundle-analyzer@^1.0.2:
   dependencies:
     webpack-bundle-analyzer "^3.0.3"
 
-laravel-mix-critical@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/laravel-mix-critical/-/laravel-mix-critical-0.1.2.tgz#a0d61f4b397f5e9b8178abaeb2dbed2b2b7cad9c"
-  integrity sha512-GQbiRy2kl9SVC6CcBb0XEaL7Voe7ktw2ezzJDGFYLiSMyi0itMDW3zvtf57oUUCA2loLfdo6ErbfLwJOMH1lnQ==
+laravel-mix-criticalcss@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/laravel-mix-criticalcss/-/laravel-mix-criticalcss-1.0.1.tgz#e2ec624cf36f973597f1a42777ea96903f586442"
+  integrity sha512-7+6mnupxtuEJCNFTIg45umsPb+NWvmdm3zdPsCXpBauoRaZ6zDUcGjaPpiWAEjcODLxgoapYjMuFQwd1vOnb6g==
+  dependencies:
+    html-critical-webpack-plugin "^2.1.0"
 
 laravel-mix-purgecss@^4.2.0:
   version "4.2.0"

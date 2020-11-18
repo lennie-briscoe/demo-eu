@@ -2,8 +2,8 @@ const mix = require('laravel-mix');
 
 /* Mix Plugins */
 // require('laravel-mix-bundle-analyzer');
-require('laravel-mix-critical');
-require("laravel-mix-purgecss");
+require('laravel-mix-criticalcss');
+require('laravel-mix-purgecss');
 
 mix
     .setPublicPath('./web')
@@ -34,12 +34,17 @@ mix
         whitelist: ['first-load', 'loading', 'is-ie', 'is-device', 'is-phone', 'is-desktop', 'lazypicture', 'lazyloading', 'lazyloaded', 'lazyfade', 'lazyblur', 'animated-gif', 'has-scroll-smooth', 'has-scroll-init', 'has-scroll-scrolling', 'has-scroll-dragging', 'c-scrollbar', 'c-scrollbar_thumb', 'is-inview', 'flickity-button', 'flickity-button-icon', 'previous', 'next', 'arrow', 'flickity-page-dots', 'is-selected', 'scrolled', 'page-404', 'page-503', 'page-error', '[data-router-wrapper]', '[data-page="home"]', '[data-page="exhibitions"]', '[data-page="visit"]', '[data-page="news"]', '[data-page="about"]', '[data-page="contact"]', '[data-router-view="exhibitions"]', '[data-router-view="visit"]', '[data-router-view="news"]', '[data-router-view="newsArticle"]', '[data-router-view="about"]', '[data-router-view="contact"]', '[data-router-view="styleguide"]', 'active', 'word', 'whiteText', 'exhibit-odd', 'exhibit-even', 'exhibit-1', 'exhibit-2', 'exhibit-3', 'exhibit-4', 'dark-ui', 'has-icon', 'no-blocks', 'isFirst', 'is-image', 'is-entry', 'is-highlighted', 'topBorder', 'layout-imageLeft', 'layout-imageFullWidth', 'layout-imageRight', 'narrowWidth', 'no-hero-image', 'figure']
     })
 
-    .critical({
+    .criticalCss({
         enabled: mix.inProduction(),
+        paths: {
+            base: process.env.DEFAULT_SITE_URL,
+            templates: './templates/_/',
+            suffix: '-critical.min'
+        },
         urls: [
             {
-                src: process.env.DEFAULT_SITE_URL,
-                dest: './templates/_/home-critical.min.css',
+                url: '/',
+                template: 'home'
             },
         ],
         options: {

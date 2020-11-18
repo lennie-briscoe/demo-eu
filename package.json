@@ -43,7 +43,7 @@
     "html-critical-webpack-plugin": "^2.1.0",
     "jshint": "^2.10.3",
     "laravel-mix": "^5.0.0",
-    "laravel-mix-critical": "^0.1.2",
+    "laravel-mix-criticalcss": "^1.0.1",
     "laravel-mix-purgecss": "^4.2.0",
     "picturefill": "^3.0.3",
     "prettier": "^1.19.1",
