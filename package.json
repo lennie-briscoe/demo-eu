@@ -63,7 +63,7 @@
     "flickity-imagesloaded": "^2.0.0",
     "gsap": "^3.0.1",
     "imagesloaded": "^4.1.4",
-    "intersection-observer": "^0.11.0",
+    "intersection-observer": "^0.12.0",
     "laravel-mix-bundle-analyzer": "^1.0.2",
     "lazysizes": "^5.2.1",
     "locomotive-scroll": "^3.6.1",
