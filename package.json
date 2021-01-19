@@ -61,7 +61,7 @@
     "browser-sync-webpack-plugin": "2.2.2",
     "flickity": "^2.2.1",
     "flickity-imagesloaded": "^2.0.0",
-    "gsap": "^3.0.1",
+    "gsap": "^3.6.0",
     "imagesloaded": "^4.1.4",
     "intersection-observer": "^0.11.0",
     "laravel-mix-bundle-analyzer": "^1.0.2",
