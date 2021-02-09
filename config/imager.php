@@ -1,9 +1,11 @@
 <?php
 
+use craft\helpers\App;
+
 return [
     'transformer' => 'craft',
     'imagerSystemPath' => '@webroot/assets/imager/',
-    'imagerUrl' => getenv('AWS_IMAGER_URL'),
+    'imagerUrl' => App::env('AWS_IMAGER_URL'),
     'cacheEnabled' => true,
     'cacheRemoteFiles' => true,
     'cacheDuration' => 31536000,
@@ -117,12 +119,12 @@ return [
     'storages' => ['aws'],
     'storageConfig' => [
         'aws' => [
-            'accessKey' => getenv('AWS_ACCESS_KEY_ID'),
-            'secretAccessKey' => getenv('AWS_SECRET_ACCESS_KEY'),
-            'region' => getenv('AWS_REGION'),
-            'bucket' => getenv('AWS_IMAGES_BUCKET'),
-            'folder' => getenv('AWS_IMAGER_FOLDER'),
-            'requestHeaders' => array(),
+            'accessKey' => App::env('AWS_ACCESS_KEY_ID'),
+            'secretAccessKey' => App::env('AWS_SECRET_ACCESS_KEY'),
+            'region' => App::env('AWS_REGION'),
+            'bucket' => App::env('AWS_IMAGES_BUCKET'),
+            'folder' => App::env('AWS_IMAGER_FOLDER'),
+            'requestHeaders' => [],
             'storageType' => 'standard',
             'cloudfrontInvalidateEnabled' => false,
             'cloudfrontDistributionId' => '',
