@@ -4,20 +4,53 @@
  * Craft console bootstrap file
  */
 
-// Set path constants
+use craft\helpers\App;
+
 define('CRAFT_BASE_PATH', __DIR__);
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
 
-// Load Composer's autoloader
+// Composer autoloader
 require_once CRAFT_VENDOR_PATH.'/autoload.php';
 
-// Load dotenv?
+// dotenv
 if (file_exists(CRAFT_BASE_PATH.'/.env')) {
-    Dotenv\Dotenv::create(CRAFT_BASE_PATH)->load();
+    $dotenv = new Dotenv\Dotenv(CRAFT_BASE_PATH);
+    $dotenv->load();
 }
 
-// Load and run Craft
-define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
+if ($storagePath = App::env('CRAFT_STORAGE_PATH')) {
+    define('CRAFT_STORAGE_PATH', $storagePath);
+}
+
+if ($keyPath = App::env('LICENSE_KEY_PATH')) {
+    define('CRAFT_LICENSE_KEY_PATH', $keyPath);
+}
+
+// Manually load environment variables so they're available to the PHP CLI
+$envVars = '/opt/elasticbeanstalk/support/envvars';
+
+if (file_exists($envVars) && is_file($envVars)) {
+    $contents = file_get_contents($envVars);
+
+    foreach (explode("\n", $contents) as $line) {
+        if (empty($line)) {
+            continue;
+        }
+
+        $new_line = str_replace('export ', '', $line);
+        $first_part = strpos($new_line, '=');
+
+        $last_part = substr($new_line, $first_part, strlen($new_line));
+        $variable_value = str_replace(['=', '"'], '', $last_part);
+
+        $variable_name = substr($new_line, 0, $first_part);
+        putenv($variable_name. '=' .$variable_value);
+    }
+}
+
+define('CRAFT_ENVIRONMENT', App::env('CRAFT_ENV') ?: 'prod');
+
+// Craft
 $app = require CRAFT_VENDOR_PATH.'/craftcms/cms/bootstrap/console.php';
 $exitCode = $app->run();
 exit($exitCode);
