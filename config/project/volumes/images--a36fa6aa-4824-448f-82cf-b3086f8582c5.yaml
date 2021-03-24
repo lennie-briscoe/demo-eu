@@ -3,12 +3,12 @@ fieldLayouts:
     tabs:
       -
         fields:
-          701ed750-1c7f-4b39-9be6-2c25746f29ba:
-            required: false
-            sortOrder: 1
           8b592bee-c976-4c83-be76-d749cc991410:
             required: false
             sortOrder: 2
+          701ed750-1c7f-4b39-9be6-2c25746f29ba:
+            required: false
+            sortOrder: 1
         name: Content
         sortOrder: 1
 handle: images

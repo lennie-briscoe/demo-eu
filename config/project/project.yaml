@@ -1,4 +1,4 @@
-dateModified: 1613088709
+dateModified: 1616623505
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -19,7 +19,7 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: $FREEFORM_LICENSE_KEY
-    schemaVersion: 3.3.0
+    schemaVersion: 3.0.8
     settings:
       ajaxByDefault: '1'
       autoScrollToErrors: ''
@@ -122,5 +122,5 @@ system:
   edition: pro
   live: true
   name: 'Europa Museum'
-  schemaVersion: 3.6.2
+  schemaVersion: 3.6.6
   timeZone: America/Los_Angeles

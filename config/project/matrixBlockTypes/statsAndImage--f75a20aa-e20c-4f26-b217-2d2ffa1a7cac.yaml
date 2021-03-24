@@ -13,9 +13,6 @@ fieldLayouts:
           4c127ec9-df18-4d62-bd02-cf8b5044f7ea:
             required: false
             sortOrder: 7
-          52ff2568-6318-44d5-a130-818c19f83360:
-            required: false
-            sortOrder: 5
           5ccbb75b-a9e9-455a-baf9-60aaa799d452:
             required: false
             sortOrder: 9
@@ -25,6 +22,9 @@ fieldLayouts:
           7cce3872-9055-454a-8fdc-45cbccec785b:
             required: false
             sortOrder: 6
+          52ff2568-6318-44d5-a130-818c19f83360:
+            required: false
+            sortOrder: 5
           d10684d5-bcd7-4e35-b0be-69377f981c39:
             required: false
             sortOrder: 1
@@ -102,19 +102,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  52ff2568-6318-44d5-a130-818c19f83360:
-    contentColumnType: string(255)
-    fieldGroup: null
-    handle: externalLink
-    instructions: ''
-    name: 'External Link'
-    searchable: true
-    settings:
-      maxLength: '255'
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Url
   5ccbb75b-a9e9-455a-baf9-60aaa799d452:
     contentColumnType: text
     fieldGroup: null
@@ -169,6 +156,19 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  52ff2568-6318-44d5-a130-818c19f83360:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: externalLink
+    instructions: ''
+    name: 'External Link'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
   d10684d5-bcd7-4e35-b0be-69377f981c39:
     contentColumnType: text
     fieldGroup: null

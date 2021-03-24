@@ -4,15 +4,15 @@ fieldLayouts:
     tabs:
       -
         fields:
+          4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
+            required: false
+            sortOrder: 1
           11b555a2-89cb-434c-a97c-8bf858a76326:
             required: false
             sortOrder: 4
           13b529cb-1236-4eb5-95a0-e20c2358385e:
             required: false
             sortOrder: 5
-          4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
-            required: false
-            sortOrder: 1
           85241ed2-6bbd-4dd0-af5c-07842116ccf3:
             required: false
             sortOrder: 7
@@ -28,6 +28,24 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
+  4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   11b555a2-89cb-434c-a97c-8bf858a76326:
     contentColumnType: string
     fieldGroup: null
@@ -76,24 +94,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
-    contentColumnType: text
-    fieldGroup: null
-    handle: heading
-    instructions: ''
-    name: Heading
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   85241ed2-6bbd-4dd0-af5c-07842116ccf3:
     contentColumnType: boolean
     fieldGroup: null

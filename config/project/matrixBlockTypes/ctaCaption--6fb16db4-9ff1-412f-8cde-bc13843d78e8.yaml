@@ -7,24 +7,24 @@ fieldLayouts:
           0ba28a66-d3aa-4c97-ad77-8e26087b3d70:
             required: false
             sortOrder: 7
-          24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
-            required: false
-            sortOrder: 1
           3b1b9f85-3554-4b4a-8d39-467bf5e4a35d:
             required: false
             sortOrder: 4
-          42ad64e7-b07b-4601-9e6b-2d21bc0fe5d8:
-            required: false
-            sortOrder: 6
-          55c6cb51-defc-4e30-bc18-e524de65b7b7:
-            required: false
-            sortOrder: 5
           6ee9b9a7-d12d-4c9b-b069-586609cb5ea9:
             required: false
             sortOrder: 3
           8c274864-9cf0-4ef9-b4bd-88da544515ad:
             required: false
             sortOrder: 2
+          24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
+            required: false
+            sortOrder: 1
+          42ad64e7-b07b-4601-9e6b-2d21bc0fe5d8:
+            required: false
+            sortOrder: 6
+          55c6cb51-defc-4e30-bc18-e524de65b7b7:
+            required: false
+            sortOrder: 5
         name: Content
         sortOrder: 1
 fields:
@@ -40,24 +40,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
-    contentColumnType: text
-    fieldGroup: null
-    handle: heading
-    instructions: 'Allows HTML & Twig syntax.'
-    name: Heading
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   3b1b9f85-3554-4b4a-8d39-467bf5e4a35d:
     contentColumnType: string
     fieldGroup: null
@@ -77,6 +59,60 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
+  6ee9b9a7-d12d-4c9b-b069-586609cb5ea9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkLabel
+    instructions: ''
+    name: 'Link Label'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8c274864-9cf0-4ef9-b4bd-88da544515ad:
+    contentColumnType: text
+    fieldGroup: null
+    handle: information
+    instructions: 'Allows HTML & Twig syntax.'
+    name: Information
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  24bd1247-7ed2-48e8-af76-5b8ffc486ef6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: 'Allows HTML & Twig syntax.'
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   42ad64e7-b07b-4601-9e6b-2d21bc0fe5d8:
     contentColumnType: string
     fieldGroup: null
@@ -135,42 +171,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Url
-  6ee9b9a7-d12d-4c9b-b069-586609cb5ea9:
-    contentColumnType: text
-    fieldGroup: null
-    handle: linkLabel
-    instructions: ''
-    name: 'Link Label'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  8c274864-9cf0-4ef9-b4bd-88da544515ad:
-    contentColumnType: text
-    fieldGroup: null
-    handle: information
-    instructions: 'Allows HTML & Twig syntax.'
-    name: Information
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
 handle: ctaCaption
 name: 'CTA Caption'
 sortOrder: 6
