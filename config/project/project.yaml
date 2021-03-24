@@ -1,4 +1,4 @@
-dateModified: 1616626521
+dateModified: 1616626749
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -76,7 +76,7 @@ plugins:
   imager-x:
     edition: pro
     enabled: true
-    licenseKey: 1A5OAQQ3K0QYMAUQZ1WNRSA7
+    licenseKey: $IMAGER_X_LICENSE_KEY
     schemaVersion: 3.0.0
   kint:
     edition: standard
