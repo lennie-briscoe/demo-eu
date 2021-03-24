@@ -1,4 +1,4 @@
-dateModified: 1616623505
+dateModified: 1616626521
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -69,14 +69,15 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
-  imager:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
   imager-pretransform:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: 1A5OAQQ3K0QYMAUQZ1WNRSA7
+    schemaVersion: 3.0.0
   kint:
     edition: standard
     enabled: true
