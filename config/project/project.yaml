@@ -1,4 +1,4 @@
-dateModified: 1616631630
+dateModified: 1616633143
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -70,7 +70,7 @@ plugins:
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
   imager-x:
-    edition: lite
+    edition: pro
     enabled: true
     licenseKey: $IMAGER_X_LICENSE_KEY
     schemaVersion: 3.0.0
