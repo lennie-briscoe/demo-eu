@@ -5,14 +5,18 @@ instructions: ''
 name: 'Hero Image'
 searchable: true
 settings:
+  allowSelfRelations: false
+  allowUploads: true
   allowedKinds:
     - image
   defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
+  previewMode: full
   restrictFiles: '1'
   selectionLabel: 'Add an image'
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
   singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
@@ -22,7 +26,7 @@ settings:
     - 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
   targetSiteId: null
   useSingleFolder: false
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

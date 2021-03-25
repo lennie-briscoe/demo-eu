@@ -3,28 +3,70 @@ fieldLayouts:
   e8d49680-7ba8-48aa-83b6-01f3ddbfe9c4:
     tabs:
       -
-        fields:
-          4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d:
+        elements:
+          -
+            fieldUid: 4e48185d-8e74-4fa1-b4b4-fdac5ceddf6d
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          11b555a2-89cb-434c-a97c-8bf858a76326:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f668aa75-41bb-4309-9114-26d72e1547ff
+            instructions: null
+            label: null
             required: false
-            sortOrder: 4
-          13b529cb-1236-4eb5-95a0-e20c2358385e:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b7672c12-833b-4554-afc9-ec3d68dbd78d
+            instructions: null
+            label: null
             required: false
-            sortOrder: 5
-          85241ed2-6bbd-4dd0-af5c-07842116ccf3:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 11b555a2-89cb-434c-a97c-8bf858a76326
+            instructions: null
+            label: null
             required: false
-            sortOrder: 7
-          b7672c12-833b-4554-afc9-ec3d68dbd78d:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 13b529cb-1236-4eb5-95a0-e20c2358385e
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          e6e6fbf0-a370-48de-b635-6f31bece3c9d:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e6e6fbf0-a370-48de-b635-6f31bece3c9d
+            instructions: null
+            label: null
             required: false
-            sortOrder: 6
-          f668aa75-41bb-4309-9114-26d72e1547ff:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 85241ed2-6bbd-4dd0-af5c-07842116ccf3
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -42,7 +84,8 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -54,14 +97,18 @@ fields:
     name: 'Slide Images'
     searchable: true
     settings:
+      allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
       defaultUploadLocationSubpath: ''
       limit: ''
       localizeRelations: false
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: ''
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
@@ -70,7 +117,7 @@ fields:
       sources: '*'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
@@ -83,13 +130,15 @@ fields:
     name: 'Slide Entries'
     searchable: true
     settings:
+      allowSelfRelations: false
       limit: ''
       localizeRelations: false
       selectionLabel: ''
+      showSiteMenu: true
       source: null
       sources: '*'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
@@ -102,7 +151,9 @@ fields:
     name: 'Dark UI'
     searchable: true
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -120,7 +171,8 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -132,7 +184,9 @@ fields:
     name: 'Slide Layout Centered'
     searchable: true
     settings:
-      default: '1'
+      default: true
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -144,13 +198,15 @@ fields:
     name: 'CTA Link'
     searchable: true
     settings:
+      allowSelfRelations: false
       limit: '1'
       localizeRelations: false
       selectionLabel: ''
+      showSiteMenu: true
       source: null
       sources: '*'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
