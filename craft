@@ -27,7 +27,7 @@ if ($keyPath = App::env('LICENSE_KEY_PATH')) {
 }
 
 // Manually load environment variables so they're available to the PHP CLI
-$envVars = '/opt/elasticbeanstalk/support/envvars';
+$envVars = '/opt/elasticbeanstalk/deployment/env';
 
 if (file_exists($envVars) && is_file($envVars)) {
     $contents = file_get_contents($envVars);
