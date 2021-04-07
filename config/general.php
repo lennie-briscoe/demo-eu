@@ -33,7 +33,7 @@ return [
 
     // Production (live) environment
     'production' => [
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 
     // Staging (pre-production) environment
