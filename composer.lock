@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.175.3",
+            "version": "3.176.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217"
+                "reference": "17dc67514b148979994758fbfb54088a8a3393bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/836564a2cef648e60fee63d3f9c5a74757aa3217",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/17dc67514b148979994758fbfb54088a8a3393bf",
+                "reference": "17dc67514b148979994758fbfb54088a8a3393bf",
                 "shasum": ""
             },
             "require": {
@@ -92,9 +92,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.175.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.9"
             },
-            "time": "2021-03-24T18:14:18+00:00"
+            "time": "2021-04-06T18:13:47+00:00"
         },
         {
             "name": "carlcs/craft-redactorcustomstyles",
@@ -550,16 +550,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.4.5",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4"
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f28d44c286812c714741478d968104c5e604a1d4",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f27e06cd9675801df441b3656569b328e04aa37c",
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c",
                 "shasum": ""
             },
             "require": {
@@ -567,7 +567,8 @@
                 "psr/log": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8"
+                "phpstan/phpstan": "^0.12.55",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
             },
             "type": "library",
             "autoload": {
@@ -593,7 +594,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/1.4.5"
+                "source": "https://github.com/composer/xdebug-handler/tree/1.4.6"
             },
             "funding": [
                 {
@@ -609,7 +610,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T08:04:11+00:00"
+            "time": "2021-03-25T17:01:18+00:00"
         },
         {
             "name": "craftcms/aws-s3",
@@ -670,16 +671,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.11.1",
+            "version": "3.6.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "05f280380028c062efa5acfb42d35259804c6240"
+                "reference": "3a2ab820b75ef50b78223f1222a5fe534cc60ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/05f280380028c062efa5acfb42d35259804c6240",
-                "reference": "05f280380028c062efa5acfb42d35259804c6240",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/3a2ab820b75ef50b78223f1222a5fe534cc60ba2",
+                "reference": "3a2ab820b75ef50b78223f1222a5fe534cc60ba2",
                 "shasum": ""
             },
             "require": {
@@ -769,7 +770,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-03-24T14:39:20+00:00"
+            "time": "2021-03-29T18:52:48+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1283,27 +1284,27 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.25",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
+                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c81f18a3efb941d8c4d2e025f6183b5c6d697307",
+                "reference": "c81f18a3efb941d8c4d2e025f6183b5c6d697307",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "^1.0.1",
-                "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.10"
+                "doctrine/lexer": "^1.2",
+                "php": ">=7.2",
+                "symfony/polyfill-intl-idn": "^1.15"
             },
             "require-dev": {
-                "dominicsayers/isemail": "^3.0.7",
-                "phpunit/phpunit": "^4.8.36|^7.5.15",
-                "satooshi/php-coveralls": "^1.0.1"
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^8.5.8|^9.3.3",
+                "vimeo/psalm": "^4"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -1311,7 +1312,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -1339,7 +1340,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/2.1.25"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.1.1"
             },
             "funding": [
                 {
@@ -1347,7 +1348,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-29T14:50:06+00:00"
+            "time": "2021-04-01T18:37:14+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -1393,16 +1394,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.13",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697"
+                "reference": "5028323230da075d6f515448fe62dfb179b9bde8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/99f6d95aebd94251573e4f4febf14bc6aba28697",
-                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5028323230da075d6f515448fe62dfb179b9bde8",
+                "reference": "5028323230da075d6f515448fe62dfb179b9bde8",
                 "shasum": ""
             },
             "require": {
@@ -1446,9 +1447,9 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/oscarotero/Embed/tree/v3.4.13"
+                "source": "https://github.com/oscarotero/Embed/tree/v3.4.15"
             },
-            "time": "2020-12-24T09:42:20+00:00"
+            "time": "2021-04-02T10:59:24+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -2128,72 +2129,21 @@
             "time": "2020-11-26T19:24:33+00:00"
         },
         {
-            "name": "imageoptim/imageoptim",
-            "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ImageOptim/php-imageoptim-api.git",
-                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ImageOptim/php-imageoptim-api/zipball/b73eb5d6747fc181de86b2de50fb158dff463618",
-                "reference": "b73eb5d6747fc181de86b2de50fb158dff463618",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ImageOptim\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kornel",
-                    "email": "kornel@imageoptim.com"
-                }
-            ],
-            "description": "ImageOptim API for PHP",
-            "homepage": "https://imageoptim.com/api",
-            "keywords": [
-                "image",
-                "optimize",
-                "performance",
-                "resize",
-                "scale"
-            ],
-            "support": {
-                "issues": "https://github.com/ImageOptim/php-imageoptim-api/issues",
-                "source": "https://github.com/ImageOptim/php-imageoptim-api/tree/master"
-            },
-            "time": "2017-01-09T23:58:20+00:00"
-        },
-        {
             "name": "imgix/imgix-php",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imgix/imgix-php.git",
-                "reference": "6995ca3440fe442b1175c12dc63b41617568b606"
+                "reference": "ddb7e427b601bc3534f108180c81292d5b29bc39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imgix/imgix-php/zipball/6995ca3440fe442b1175c12dc63b41617568b606",
-                "reference": "6995ca3440fe442b1175c12dc63b41617568b606",
+                "url": "https://api.github.com/repos/imgix/imgix-php/zipball/ddb7e427b601bc3534f108180c81292d5b29bc39",
+                "reference": "ddb7e427b601bc3534f108180c81292d5b29bc39",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=7.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "*"
@@ -2214,9 +2164,9 @@
             ],
             "support": {
                 "issues": "https://github.com/imgix/imgix-php/issues",
-                "source": "https://github.com/imgix/imgix-php/tree/3.3.0"
+                "source": "https://github.com/imgix/imgix-php/tree/3.3.1"
             },
-            "time": "2020-06-05T21:57:36+00:00"
+            "time": "2021-03-25T15:10:34+00:00"
         },
         {
             "name": "intervention/httpauth",
@@ -2519,6 +2469,53 @@
             "time": "2018-09-29T07:24:13+00:00"
         },
         {
+            "name": "kornrunner/blurhash",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kornrunner/php-blurhash.git",
+                "reference": "7dde9c0c7ee7e688dc79fb7770ee110ed308ffc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kornrunner/php-blurhash/zipball/7dde9c0c7ee7e688dc79fb7770ee110ed308ffc7",
+                "reference": "7dde9c0c7ee7e688dc79fb7770ee110ed308ffc7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "ocramius/package-versions": "^1.4|^2.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "kornrunner\\Blurhash\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Boris Momčilović",
+                    "email": "boris.momcilovic@gmail.com"
+                }
+            ],
+            "description": "Pure PHP implementation of Blurhash",
+            "homepage": "https://github.com/kornrunner/php-blurhash",
+            "support": {
+                "issues": "https://github.com/kornrunner/php-blurhash/issues",
+                "source": "https://github.com/kornrunner/php-blurhash.git"
+            },
+            "time": "2021-01-18T11:17:12+00:00"
+        },
+        {
             "name": "kraken-io/kraken-php",
             "version": "1.6",
             "source": {
@@ -2681,16 +2678,16 @@
         },
         {
             "name": "laminas/laminas-feed",
-            "version": "2.14.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-feed.git",
-                "reference": "85cf475aa76c10b8c12134873100f592251456a6"
+                "reference": "463fdae515fba30633906098c258d3b2c733c15c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/85cf475aa76c10b8c12134873100f592251456a6",
-                "reference": "85cf475aa76c10b8c12134873100f592251456a6",
+                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/463fdae515fba30633906098c258d3b2c733c15c",
+                "reference": "463fdae515fba30633906098c258d3b2c733c15c",
                 "shasum": ""
             },
             "require": {
@@ -2757,7 +2754,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-03-16T16:01:42+00:00"
+            "time": "2021-04-01T19:26:09+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -4448,16 +4445,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.35",
+            "version": "3.3.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "c76d832eb8f956b47b0c9176c7d9cfb2381e2174"
+                "reference": "58e9bb7558d8b7ce3ad9dc57e112ef06868ec333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c76d832eb8f956b47b0c9176c7d9cfb2381e2174",
-                "reference": "c76d832eb8f956b47b0c9176c7d9cfb2381e2174",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/58e9bb7558d8b7ce3ad9dc57e112ef06868ec333",
+                "reference": "58e9bb7558d8b7ce3ad9dc57e112ef06868ec333",
                 "shasum": ""
             },
             "require": {
@@ -4475,23 +4472,8 @@
             "extra": {
                 "name": "SEOmatic",
                 "handle": "seomatic",
-                "hasCpSettings": true,
-                "hasCpSection": true,
                 "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-seomatic/v3/CHANGELOG.md",
-                "class": "nystudio107\\seomatic\\Seomatic",
-                "components": {
-                    "frontendTemplates": "nystudio107\\seomatic\\services\\FrontendTemplates",
-                    "helper": "nystudio107\\seomatic\\services\\Helper",
-                    "jsonLd": "nystudio107\\seomatic\\services\\JsonLd",
-                    "link": "nystudio107\\seomatic\\services\\Link",
-                    "metaBundles": "nystudio107\\seomatic\\services\\MetaBundles",
-                    "metaContainers": "nystudio107\\seomatic\\services\\MetaContainers",
-                    "seoElements": "nystudio107\\seomatic\\services\\SeoElements",
-                    "script": "nystudio107\\seomatic\\services\\Script",
-                    "sitemaps": "nystudio107\\seomatic\\services\\Sitemaps",
-                    "tag": "nystudio107\\seomatic\\services\\Tag",
-                    "title": "nystudio107\\seomatic\\services\\Title"
-                }
+                "class": "nystudio107\\seomatic\\Seomatic"
             },
             "autoload": {
                 "psr-4": {
@@ -4526,9 +4508,9 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.35"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.38"
             },
-            "time": "2021-03-03T22:31:22+00:00"
+            "time": "2021-04-06T18:56:21+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -5967,21 +5949,21 @@
         },
         {
             "name": "solspace/craft-freeform",
-            "version": "3.10.10",
+            "version": "3.10.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solspace/craft3-freeform.git",
-                "reference": "ccf19aa98470f8a54b9c006651db76f59b78fc5b"
+                "reference": "bae33c4f580057c07ee38fc8b13559e035713c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/ccf19aa98470f8a54b9c006651db76f59b78fc5b",
-                "reference": "ccf19aa98470f8a54b9c006651db76f59b78fc5b",
+                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/bae33c4f580057c07ee38fc8b13559e035713c6f",
+                "reference": "bae33c4f580057c07ee38fc8b13559e035713c6f",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.4.0",
-                "egulias/email-validator": "^2.1",
+                "egulias/email-validator": "^2.1|^3.0",
                 "hashids/hashids": "^2.0|^3.0|^4.0",
                 "nesbot/carbon": "^1.22.1|^2.19",
                 "phpoffice/phpspreadsheet": "^1.6.0",
@@ -6040,9 +6022,9 @@
             "description": "The most reliable, intuitive and powerful form builder for Craft.",
             "support": {
                 "issues": "https://github.com/solspace/craft3-freeform/issues",
-                "source": "https://github.com/solspace/craft3-freeform/tree/v3.10.10"
+                "source": "https://github.com/solspace/craft3-freeform/tree/v3.10.11"
             },
-            "time": "2021-03-15T16:25:57+00:00"
+            "time": "2021-03-25T21:42:39+00:00"
         },
         {
             "name": "solspace/craft3-commons",
@@ -6080,27 +6062,28 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "v3.3.0",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spacecatninja/craft-imager-x.git",
-                "reference": "aeb6508185d308fe2e641be7a77bb0e245a5d8f3"
+                "reference": "4345ec47414819b32741391cf72e9cb06a9588ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/aeb6508185d308fe2e641be7a77bb0e245a5d8f3",
-                "reference": "aeb6508185d308fe2e641be7a77bb0e245a5d8f3",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/4345ec47414819b32741391cf72e9cb06a9588ea",
+                "reference": "4345ec47414819b32741391cf72e9cb06a9588ea",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.0.0",
                 "craftcms/cms": "^3.3.0",
                 "google/cloud-storage": "~1.0",
-                "imageoptim/imageoptim": "^1.3",
                 "imgix/imgix-php": "^3.0",
+                "kornrunner/blurhash": "^1.1",
                 "kraken-io/kraken-php": "^1.2",
                 "ksubileau/color-thief-php": "^1.4.0",
                 "mikehaertl/php-shellcommand": "^1.2",
+                "php": ">=7.2.5",
                 "ssnepenthe/color-utils": "~0.4",
                 "tinify/tinify": ">=1.1.1"
             },
@@ -6145,9 +6128,9 @@
             "support": {
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues",
-                "source": "https://github.com/spacecatninja/craft-imager-x/tree/v3.3.0"
+                "source": "https://github.com/spacecatninja/craft-imager-x/tree/v3.4.0"
             },
-            "time": "2021-01-31T22:28:42+00:00"
+            "time": "2021-03-31T21:32:56+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -6470,16 +6453,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.5",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "938ebbadae1b0a9c9d1ec313f87f9708609f1b79"
+                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/938ebbadae1b0a9c9d1ec313f87f9708609f1b79",
-                "reference": "938ebbadae1b0a9c9d1ec313f87f9708609f1b79",
+                "url": "https://api.github.com/repos/symfony/console/zipball/35f039df40a3b335ebf310f244cb242b3a83ac8d",
+                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d",
                 "shasum": ""
             },
             "require": {
@@ -6547,7 +6530,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.2.5"
+                "source": "https://github.com/symfony/console/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -6563,7 +6546,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-06T13:42:15+00:00"
+            "time": "2021-03-28T09:42:18+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -6634,16 +6617,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.2.4",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108"
+                "reference": "8c86a82f51658188119e62cff0a050a12d09836f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/710d364200997a5afde34d9fe57bd52f3cc1e108",
-                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/8c86a82f51658188119e62cff0a050a12d09836f",
+                "reference": "8c86a82f51658188119e62cff0a050a12d09836f",
                 "shasum": ""
             },
             "require": {
@@ -6676,7 +6659,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.2.4"
+                "source": "https://github.com/symfony/filesystem/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -6692,7 +6675,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-12T10:38:38+00:00"
+            "time": "2021-03-28T14:30:26+00:00"
         },
         {
             "name": "symfony/finder",
@@ -7798,16 +7781,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v5.2.4",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "4e78d7d47061fa183639927ec40d607973699609"
+                "reference": "ad0bd91bce2054103f5eaa18ebeba8d3bc2a0572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/4e78d7d47061fa183639927ec40d607973699609",
-                "reference": "4e78d7d47061fa183639927ec40d607973699609",
+                "url": "https://api.github.com/repos/symfony/string/zipball/ad0bd91bce2054103f5eaa18ebeba8d3bc2a0572",
+                "reference": "ad0bd91bce2054103f5eaa18ebeba8d3bc2a0572",
                 "shasum": ""
             },
             "require": {
@@ -7861,7 +7844,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v5.2.4"
+                "source": "https://github.com/symfony/string/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -7877,20 +7860,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-16T10:20:28+00:00"
+            "time": "2021-03-17T17:12:15+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v5.2.5",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "0947ab1e3aabd22a6bef393874b2555d2bb976da"
+                "reference": "2cc7f45d96db9adfcf89adf4401d9dfed509f4e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/0947ab1e3aabd22a6bef393874b2555d2bb976da",
-                "reference": "0947ab1e3aabd22a6bef393874b2555d2bb976da",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/2cc7f45d96db9adfcf89adf4401d9dfed509f4e1",
+                "reference": "2cc7f45d96db9adfcf89adf4401d9dfed509f4e1",
                 "shasum": ""
             },
             "require": {
@@ -7954,7 +7937,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.2.5"
+                "source": "https://github.com/symfony/translation/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -7970,7 +7953,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-06T07:59:01+00:00"
+            "time": "2021-03-23T19:33:48+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -8052,16 +8035,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.2.5",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "002ab5a36702adf0c9a11e6d8836623253e9045e"
+                "reference": "89412a68ea2e675b4e44f260a5666729f77f668e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/002ab5a36702adf0c9a11e6d8836623253e9045e",
-                "reference": "002ab5a36702adf0c9a11e6d8836623253e9045e",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/89412a68ea2e675b4e44f260a5666729f77f668e",
+                "reference": "89412a68ea2e675b4e44f260a5666729f77f668e",
                 "shasum": ""
             },
             "require": {
@@ -8120,7 +8103,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.2.5"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.2.6"
             },
             "funding": [
                 {
@@ -8136,7 +8119,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-06T07:59:01+00:00"
+            "time": "2021-03-28T09:42:18+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -8539,16 +8522,16 @@
         },
         {
             "name": "voku/anti-xss",
-            "version": "4.1.31",
+            "version": "4.1.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/anti-xss.git",
-                "reference": "22dea9be8dbffa466995ea87a12da5f3bce874bb"
+                "reference": "159b49a50cf3f6cf72ee43b0dcf7c2580a0c12d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/anti-xss/zipball/22dea9be8dbffa466995ea87a12da5f3bce874bb",
-                "reference": "22dea9be8dbffa466995ea87a12da5f3bce874bb",
+                "url": "https://api.github.com/repos/voku/anti-xss/zipball/159b49a50cf3f6cf72ee43b0dcf7c2580a0c12d1",
+                "reference": "159b49a50cf3f6cf72ee43b0dcf7c2580a0c12d1",
                 "shasum": ""
             },
             "require": {
@@ -8581,7 +8564,7 @@
                 {
                     "name": "Lars Moelleken",
                     "email": "lars@moelleken.org",
-                    "homepage": "http://www.moelleken.org/"
+                    "homepage": "https://www.moelleken.org/"
                 }
             ],
             "description": "anti xss-library",
@@ -8594,7 +8577,7 @@
             ],
             "support": {
                 "issues": "https://github.com/voku/anti-xss/issues",
-                "source": "https://github.com/voku/anti-xss/tree/4.1.31"
+                "source": "https://github.com/voku/anti-xss/tree/4.1.32"
             },
             "funding": [
                 {
@@ -8618,20 +8601,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-02T02:10:30+00:00"
+            "time": "2021-03-29T14:29:34+00:00"
         },
         {
             "name": "voku/arrayy",
-            "version": "7.8.8",
+            "version": "7.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Arrayy.git",
-                "reference": "8b6ba81b9fbfdc3631af175d398a4dc58370c52f"
+                "reference": "d26e7d59ac2f6eb891b77c48bfdb9fe1e76afa60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/8b6ba81b9fbfdc3631af175d398a4dc58370c52f",
-                "reference": "8b6ba81b9fbfdc3631af175d398a4dc58370c52f",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/d26e7d59ac2f6eb891b77c48bfdb9fe1e76afa60",
+                "reference": "d26e7d59ac2f6eb891b77c48bfdb9fe1e76afa60",
                 "shasum": ""
             },
             "require": {
@@ -8660,7 +8643,7 @@
                 {
                     "name": "Lars Moelleken",
                     "email": "lars@moelleken.org",
-                    "homepage": "http://www.moelleken.org/",
+                    "homepage": "https://www.moelleken.org/",
                     "role": "Maintainer"
                 }
             ],
@@ -8701,7 +8684,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-09T13:07:20+00:00"
+            "time": "2021-03-29T13:31:10+00:00"
         },
         {
             "name": "voku/email-check",
@@ -9001,16 +8984,16 @@
         },
         {
             "name": "voku/stringy",
-            "version": "6.4.0",
+            "version": "6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/Stringy.git",
-                "reference": "b534a95b58b020faf3e3b779abc0bc277b5fb83c"
+                "reference": "5b74e0e428e466bda91489b4c6e9ab385aa7c73a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Stringy/zipball/b534a95b58b020faf3e3b779abc0bc277b5fb83c",
-                "reference": "b534a95b58b020faf3e3b779abc0bc277b5fb83c",
+                "url": "https://api.github.com/repos/voku/Stringy/zipball/5b74e0e428e466bda91489b4c6e9ab385aa7c73a",
+                "reference": "5b74e0e428e466bda91489b4c6e9ab385aa7c73a",
                 "shasum": ""
             },
             "require": {
@@ -9018,8 +9001,8 @@
                 "ext-json": "*",
                 "php": ">=7.0.0",
                 "voku/anti-xss": "~4.1",
-                "voku/arrayy": "~7.5",
-                "voku/email-check": "~3.0",
+                "voku/arrayy": "~7.8",
+                "voku/email-check": "~3.1",
                 "voku/portable-ascii": "~1.5",
                 "voku/portable-utf8": "~5.4",
                 "voku/urlify": "~5.0"
@@ -9028,7 +9011,7 @@
                 "danielstjules/stringy": "~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~6.0 || ~7.0"
+                "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0"
             },
             "type": "library",
             "autoload": {
@@ -9053,7 +9036,7 @@
                 {
                     "name": "Lars Moelleken",
                     "email": "lars@moelleken.org",
-                    "homepage": "http://www.moelleken.org/",
+                    "homepage": "https://www.moelleken.org/",
                     "role": "Fork-Maintainer"
                 }
             ],
@@ -9092,7 +9075,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-27T21:32:36+00:00"
+            "time": "2021-04-07T09:23:38+00:00"
         },
         {
             "name": "voku/urlify",
