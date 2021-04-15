@@ -1,4 +1,4 @@
-dateModified: 1617805257
+dateModified: 1618512848
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -119,5 +119,5 @@ system:
   edition: pro
   live: true
   name: 'Europa Museum'
-  schemaVersion: 3.6.7
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
