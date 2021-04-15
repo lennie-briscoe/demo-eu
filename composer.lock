@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.176.9",
+            "version": "3.178.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "17dc67514b148979994758fbfb54088a8a3393bf"
+                "reference": "5a268a20272c0c9171570ed57f68b629e966deab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/17dc67514b148979994758fbfb54088a8a3393bf",
-                "reference": "17dc67514b148979994758fbfb54088a8a3393bf",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5a268a20272c0c9171570ed57f68b629e966deab",
+                "reference": "5a268a20272c0c9171570ed57f68b629e966deab",
                 "shasum": ""
             },
             "require": {
@@ -92,9 +92,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.5"
             },
-            "time": "2021-04-06T18:13:47+00:00"
+            "time": "2021-04-15T18:12:46+00:00"
         },
         {
             "name": "carlcs/craft-redactorcustomstyles",
@@ -293,16 +293,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.0.10",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "890c79ff096818e762b42c9624ca1df800ab789b"
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/890c79ff096818e762b42c9624ca1df800ab789b",
-                "reference": "890c79ff096818e762b42c9624ca1df800ab789b",
+                "url": "https://api.github.com/repos/composer/composer/zipball/6c12ce263da71641903e399c3ce8ecb08fd375fb",
+                "reference": "6c12ce263da71641903e399c3ce8ecb08fd375fb",
                 "shasum": ""
             },
             "require": {
@@ -370,7 +370,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.0.10"
+                "source": "https://github.com/composer/composer/tree/2.0.12"
             },
             "funding": [
                 {
@@ -386,7 +386,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-23T15:11:37+00:00"
+            "time": "2021-04-01T08:14:59+00:00"
         },
         {
             "name": "composer/semver",
@@ -671,20 +671,20 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.11.2",
+            "version": "3.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "3a2ab820b75ef50b78223f1222a5fe534cc60ba2"
+                "reference": "06a2e1d78b8b097f824efede5a6b36807a5bed5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/3a2ab820b75ef50b78223f1222a5fe534cc60ba2",
-                "reference": "3a2ab820b75ef50b78223f1222a5fe534cc60ba2",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/06a2e1d78b8b097f824efede5a6b36807a5bed5a",
+                "reference": "06a2e1d78b8b097f824efede5a6b36807a5bed5a",
                 "shasum": ""
             },
             "require": {
-                "composer/composer": "2.0.10",
+                "composer/composer": "2.0.12",
                 "craftcms/oauth2-craftid": "~1.0.0",
                 "craftcms/plugin-installer": "~1.5.6",
                 "craftcms/server-check": "~1.2.0",
@@ -770,7 +770,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-03-29T18:52:48+00:00"
+            "time": "2021-04-13T17:05:18+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -941,16 +941,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.8.5",
+            "version": "2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "baa05090b17b9b631ed3eb9f0687f48947d7dbc2"
+                "reference": "db2e4eb27cb2165d3dbd87aa999886012b749117"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/baa05090b17b9b631ed3eb9f0687f48947d7dbc2",
-                "reference": "baa05090b17b9b631ed3eb9f0687f48947d7dbc2",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/db2e4eb27cb2165d3dbd87aa999886012b749117",
+                "reference": "db2e4eb27cb2165d3dbd87aa999886012b749117",
                 "shasum": ""
             },
             "require": {
@@ -992,7 +992,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2020-12-08T12:55:30+00:00"
+            "time": "2021-04-13T18:15:38+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -1137,26 +1137,25 @@
         },
         {
             "name": "defuse/php-encryption",
-            "version": "v2.2.1",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/defuse/php-encryption.git",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620"
+                "reference": "77880488b9954b7884c25555c2a0ea9e7053f9d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/0f407c43b953d571421e0020ba92082ed5fb7620",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620",
+                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/77880488b9954b7884c25555c2a0ea9e7053f9d2",
+                "reference": "77880488b9954b7884c25555c2a0ea9e7053f9d2",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "paragonie/random_compat": ">= 2",
-                "php": ">=5.4.0"
+                "php": ">=5.6.0"
             },
             "require-dev": {
-                "nikic/php-parser": "^2.0|^3.0|^4.0",
-                "phpunit/phpunit": "^4|^5"
+                "phpunit/phpunit": "^4|^5|^6|^7|^8|^9"
             },
             "bin": [
                 "bin/generate-defuse-key"
@@ -1198,9 +1197,9 @@
             ],
             "support": {
                 "issues": "https://github.com/defuse/php-encryption/issues",
-                "source": "https://github.com/defuse/php-encryption/tree/master"
+                "source": "https://github.com/defuse/php-encryption/tree/v2.3.1"
             },
-            "time": "2018-07-24T23:27:56+00:00"
+            "time": "2021-04-09T23:57:26+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -4399,16 +4398,16 @@
         },
         {
             "name": "nystudio107/craft-plugin-manifest",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-plugin-manifest.git",
-                "reference": "0651fd915219167de2e0ae61120b50204c3736ca"
+                "reference": "803f69b7d18cad99aca0185a44822ac294462eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-manifest/zipball/0651fd915219167de2e0ae61120b50204c3736ca",
-                "reference": "0651fd915219167de2e0ae61120b50204c3736ca",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-manifest/zipball/803f69b7d18cad99aca0185a44822ac294462eba",
+                "reference": "803f69b7d18cad99aca0185a44822ac294462eba",
                 "shasum": ""
             },
             "require": {
@@ -4439,22 +4438,22 @@
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-manifest/blob/v1/README.md",
                 "issues": "https://github.com/nystudio107/craft-plugin-manifest/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-manifest/tree/1.0.2"
+                "source": "https://github.com/nystudio107/craft-plugin-manifest/tree/1.0.3"
             },
-            "time": "2021-03-21T18:14:47+00:00"
+            "time": "2021-04-08T03:12:09+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.38",
+            "version": "3.3.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "58e9bb7558d8b7ce3ad9dc57e112ef06868ec333"
+                "reference": "8f52021d9c566a7a7e34ac16e6bf0229d835c36f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/58e9bb7558d8b7ce3ad9dc57e112ef06868ec333",
-                "reference": "58e9bb7558d8b7ce3ad9dc57e112ef06868ec333",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8f52021d9c566a7a7e34ac16e6bf0229d835c36f",
+                "reference": "8f52021d9c566a7a7e34ac16e6bf0229d835c36f",
                 "shasum": ""
             },
             "require": {
@@ -4508,9 +4507,9 @@
             "support": {
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support",
-                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.38"
+                "source": "https://github.com/nystudio107/craft-seomatic/tree/3.3.40"
             },
-            "time": "2021-04-06T18:56:21+00:00"
+            "time": "2021-04-15T15:01:20+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -4576,16 +4575,16 @@
         },
         {
             "name": "opis/closure",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5"
+                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5",
-                "reference": "943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5",
+                "url": "https://api.github.com/repos/opis/closure/zipball/06e2ebd25f2869e54a306dda991f7db58066f7f6",
+                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6",
                 "shasum": ""
             },
             "require": {
@@ -4635,9 +4634,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.1"
+                "source": "https://github.com/opis/closure/tree/3.6.2"
             },
-            "time": "2020-11-07T02:01:34+00:00"
+            "time": "2021-04-09T13:42:10+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -6206,16 +6205,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.76.0",
+            "version": "v7.77.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "47e66d4186712be33c593fe820dccf270a04d5d6"
+                "reference": "f6724447481f6fb8c2e714165e092adad9ca470a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/47e66d4186712be33c593fe820dccf270a04d5d6",
-                "reference": "47e66d4186712be33c593fe820dccf270a04d5d6",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/f6724447481f6fb8c2e714165e092adad9ca470a",
+                "reference": "f6724447481f6fb8c2e714165e092adad9ca470a",
                 "shasum": ""
             },
             "require": {
@@ -6261,9 +6260,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.76.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.77.0"
             },
-            "time": "2021-03-22T16:50:21+00:00"
+            "time": "2021-04-12T17:19:16+00:00"
         },
         {
             "name": "studioespresso/craft-dumper",
