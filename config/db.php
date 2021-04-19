@@ -6,13 +6,15 @@
  * list of the available settings in vendor/craftcms/cms/src/config/DbConfig.php.
  */
 
+use craft\helpers\App;
+
 return [
-    'driver' => getenv('DB_DRIVER'),
-    'server' => getenv('DB_SERVER'),
-    'user' => getenv('DB_USER'),
-    'password' => getenv('DB_PASSWORD'),
-    'database' => getenv('DB_DATABASE'),
-    'schema' => getenv('DB_SCHEMA'),
-    'tablePrefix' => getenv('DB_TABLE_PREFIX'),
-    'port' => getenv('DB_PORT')
+    'driver' => App::env('DB_DRIVER'),
+    'server' => App::env('DB_SERVER'),
+    'user' => App::env('DB_USER'),
+    'password' => App::env('DB_PASSWORD'),
+    'database' => App::env('DB_DATABASE'),
+    'schema' => App::env('DB_SCHEMA'),
+    'tablePrefix' => App::env('DB_TABLE_PREFIX'),
+    'port' => App::env('DB_PORT')
 ];

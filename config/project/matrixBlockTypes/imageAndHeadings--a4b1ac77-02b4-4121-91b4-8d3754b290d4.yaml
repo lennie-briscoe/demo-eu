@@ -3,25 +3,61 @@ fieldLayouts:
   6f1b2935-dba4-460d-be70-b29a7aa0aa60:
     tabs:
       -
-        fields:
-          3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f:
+        elements:
+          -
+            fieldUid: dad3b3bd-ab3c-486d-a552-b3cc718f8e1c
+            instructions: null
+            label: null
             required: false
-            sortOrder: 5
-          3b943244-76d1-4973-9d71-6ec6c109e255:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a65ec270-2111-40c2-bf47-f3d6d929603a
+            instructions: null
+            label: null
             required: false
-            sortOrder: 4
-          913eb47c-ce43-4325-bb3a-1f5d99065038:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f109ee5b-bb41-47ce-aaa0-53b5304e0e22
+            instructions: null
+            label: null
             required: false
-            sortOrder: 6
-          a65ec270-2111-40c2-bf47-f3d6d929603a:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3b943244-76d1-4973-9d71-6ec6c109e255
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          dad3b3bd-ab3c-486d-a552-b3cc718f8e1c:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          f109ee5b-bb41-47ce-aaa0-53b5304e0e22:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 913eb47c-ce43-4325-bb3a-1f5d99065038
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -35,13 +71,27 @@ fields:
     settings:
       options:
         -
-          default: '1'
-          label: 'Black Text'
-          value: blackText
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - 'Black Text'
+            -
+              - value
+              - blackText
         -
-          default: ''
-          label: 'White Text'
-          value: whiteText
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - 'White Text'
+            -
+              - value
+              - whiteText
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\RadioButtons
@@ -59,7 +109,8 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -71,7 +122,9 @@ fields:
     name: 'Highlight Text'
     searchable: true
     settings:
-      default: ''
+      default: false
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
@@ -89,7 +142,8 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -101,14 +155,18 @@ fields:
     name: Image
     searchable: true
     settings:
+      allowSelfRelations: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
+      previewMode: full
       restrictFiles: '1'
       selectionLabel: ''
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
       singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
@@ -117,7 +175,7 @@ fields:
       sources: '*'
       targetSiteId: null
       useSingleFolder: true
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
@@ -136,7 +194,8 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText

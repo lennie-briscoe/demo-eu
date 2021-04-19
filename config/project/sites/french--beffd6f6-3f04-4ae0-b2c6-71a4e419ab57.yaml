@@ -1,4 +1,5 @@
 baseUrl: '@web/fr/'
+enabled: true
 handle: french
 hasUrls: true
 language: fr

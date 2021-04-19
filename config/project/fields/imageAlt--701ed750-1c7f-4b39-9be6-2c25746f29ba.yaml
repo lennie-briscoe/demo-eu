@@ -5,12 +5,14 @@ instructions: ''
 name: 'Image Alt'
 searchable: false
 settings:
-  charLimit: ''
+  byteLimit: null
+  charLimit: null
   code: ''
   columnType: text
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: null
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText
