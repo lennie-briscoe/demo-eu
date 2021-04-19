@@ -1,4 +1,4 @@
-dateModified: 1605022115
+dateModified: 1618512848
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -19,7 +19,7 @@ plugins:
     edition: lite
     enabled: true
     licenseKey: $FREEFORM_LICENSE_KEY
-    schemaVersion: 3.1.0
+    schemaVersion: 3.3.0
     settings:
       ajaxByDefault: '1'
       autoScrollToErrors: ''
@@ -69,14 +69,11 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
-  imager:
-    edition: standard
+  imager-x:
+    edition: pro
     enabled: true
-    schemaVersion: 2.0.0
-  imager-pretransform:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
+    licenseKey: $IMAGER_X_LICENSE_KEY
+    schemaVersion: 3.0.0
   kint:
     edition: standard
     enabled: true
@@ -122,5 +119,5 @@ system:
   edition: pro
   live: true
   name: 'Europa Museum'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles

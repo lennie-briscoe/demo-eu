@@ -3,13 +3,25 @@ fieldLayouts:
   317b7d36-2f97-4ffa-846f-0404ab3c6df8:
     tabs:
       -
-        fields:
-          6c31cab7-7f79-4628-b345-9a700a16a726:
+        elements:
+          -
+            fieldUid: 6c31cab7-7f79-4628-b345-9a700a16a726
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          8df6d29d-59a0-44ee-80e5-f69849956547:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8df6d29d-59a0-44ee-80e5-f69849956547
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -21,15 +33,17 @@ fields:
     name: Entry
     searchable: true
     settings:
+      allowSelfRelations: false
       limit: '1'
       localizeRelations: false
       selectionLabel: ''
+      showSiteMenu: true
       source: null
       sources:
         - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb'
         - 'section:666bcffb-61d7-43b4-a9f5-8c51c458b356'
       targetSiteId: null
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
@@ -44,13 +58,27 @@ fields:
     settings:
       options:
         -
-          default: '1'
-          label: 'Black Text'
-          value: blackText
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - 'Black Text'
+            -
+              - value
+              - blackText
         -
-          default: ''
-          label: 'White Text'
-          value: whiteText
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - 'White Text'
+            -
+              - value
+              - whiteText
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\RadioButtons

@@ -5,14 +5,16 @@ instructions: 'Will be displayed in a random order.'
 name: 'Featured Exhibits'
 searchable: true
 settings:
+  allowSelfRelations: false
   limit: '4'
   localizeRelations: false
   selectionLabel: ''
+  showSiteMenu: true
   source: null
   sources:
     - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb'
   targetSiteId: null
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
