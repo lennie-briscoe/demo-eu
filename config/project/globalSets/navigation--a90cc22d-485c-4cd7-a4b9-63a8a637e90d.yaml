@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 1addbebe-4d59-4c1d-9607-6c47999665df
+            fieldUid: 1addbebe-4d59-4c1d-9607-6c47999665df # Links - Middle
             instructions: null
             label: null
             required: false
@@ -13,7 +13,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 599f0646-f724-4ce4-a810-a8eaf7798b2d
+            fieldUid: 599f0646-f724-4ce4-a810-a8eaf7798b2d # Links - Right
             instructions: null
             label: null
             required: false

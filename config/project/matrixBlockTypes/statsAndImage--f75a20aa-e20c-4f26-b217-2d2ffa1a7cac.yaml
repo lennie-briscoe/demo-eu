@@ -1,11 +1,11 @@
-field: 778abb42-18bd-447c-99ae-483c775ed3bd
+field: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
 fieldLayouts:
   b00121d3-e692-4fad-9a4d-14069ec52bf4:
     tabs:
       -
         elements:
           -
-            fieldUid: d10684d5-bcd7-4e35-b0be-69377f981c39
+            fieldUid: d10684d5-bcd7-4e35-b0be-69377f981c39 # Heading
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: eb7b8bc9-c07a-4a25-9201-8174bd70fcb9
+            fieldUid: eb7b8bc9-c07a-4a25-9201-8174bd70fcb9 # Description
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 00f86307-b225-423b-bd34-b70af6632cf2
+            fieldUid: 00f86307-b225-423b-bd34-b70af6632cf2 # Link Label
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f466ab59-2e29-4cce-85b8-f9ebe7000b03
+            fieldUid: f466ab59-2e29-4cce-85b8-f9ebe7000b03 # Internal Link
             instructions: null
             label: null
             required: false
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 52ff2568-6318-44d5-a130-818c19f83360
+            fieldUid: 52ff2568-6318-44d5-a130-818c19f83360 # External Link
             instructions: null
             label: null
             required: false
@@ -50,7 +50,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7cce3872-9055-454a-8fdc-45cbccec785b
+            fieldUid: 7cce3872-9055-454a-8fdc-45cbccec785b # Left Stat Value
             instructions: null
             label: null
             required: false
@@ -59,7 +59,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 4c127ec9-df18-4d62-bd02-cf8b5044f7ea
+            fieldUid: 4c127ec9-df18-4d62-bd02-cf8b5044f7ea # Left Stat Label
             instructions: null
             label: null
             required: false
@@ -68,7 +68,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5f06df0c-02b7-4b2d-9b75-4b22a09c3a12
+            fieldUid: 5f06df0c-02b7-4b2d-9b75-4b22a09c3a12 # Right Stat Value
             instructions: null
             label: null
             required: false
@@ -77,7 +77,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5ccbb75b-a9e9-455a-baf9-60aaa799d452
+            fieldUid: 5ccbb75b-a9e9-455a-baf9-60aaa799d452 # Right Stat Label
             instructions: null
             label: null
             required: false
@@ -86,7 +86,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2b1996eb-1a60-4257-b4ab-2e41c49fbd06
+            fieldUid: 2b1996eb-1a60-4257-b4ab-2e41c49fbd06 # Image
             instructions: null
             label: null
             required: false
@@ -97,7 +97,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  00f86307-b225-423b-bd34-b70af6632cf2:
+  00f86307-b225-423b-bd34-b70af6632cf2: # Link Label
     contentColumnType: text
     fieldGroup: null
     handle: linkLabel
@@ -116,7 +116,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  2b1996eb-1a60-4257-b4ab-2e41c49fbd06:
+  2b1996eb-1a60-4257-b4ab-2e41c49fbd06: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -128,7 +128,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5' # Images
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -138,7 +138,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
-      singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5' # Images
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -149,7 +149,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  4c127ec9-df18-4d62-bd02-cf8b5044f7ea:
+  4c127ec9-df18-4d62-bd02-cf8b5044f7ea: # Left Stat Label
     contentColumnType: text
     fieldGroup: null
     handle: leftStatLabel
@@ -168,7 +168,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  5ccbb75b-a9e9-455a-baf9-60aaa799d452:
+  5ccbb75b-a9e9-455a-baf9-60aaa799d452: # Right Stat Label
     contentColumnType: text
     fieldGroup: null
     handle: rightStatLabel
@@ -187,7 +187,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  5f06df0c-02b7-4b2d-9b75-4b22a09c3a12:
+  5f06df0c-02b7-4b2d-9b75-4b22a09c3a12: # Right Stat Value
     contentColumnType: text
     fieldGroup: null
     handle: rightStatValue
@@ -206,7 +206,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  7cce3872-9055-454a-8fdc-45cbccec785b:
+  7cce3872-9055-454a-8fdc-45cbccec785b: # Left Stat Value
     contentColumnType: text
     fieldGroup: null
     handle: leftStatValue
@@ -225,7 +225,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  52ff2568-6318-44d5-a130-818c19f83360:
+  52ff2568-6318-44d5-a130-818c19f83360: # External Link
     contentColumnType: string(255)
     fieldGroup: null
     handle: externalLink
@@ -240,7 +240,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Url
-  d10684d5-bcd7-4e35-b0be-69377f981c39:
+  d10684d5-bcd7-4e35-b0be-69377f981c39: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -259,7 +259,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  eb7b8bc9-c07a-4a25-9201-8174bd70fcb9:
+  eb7b8bc9-c07a-4a25-9201-8174bd70fcb9: # Description
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -287,7 +287,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  f466ab59-2e29-4cce-85b8-f9ebe7000b03:
+  f466ab59-2e29-4cce-85b8-f9ebe7000b03: # Internal Link
     contentColumnType: string
     fieldGroup: null
     handle: internalLink

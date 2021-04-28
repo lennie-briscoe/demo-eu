@@ -1,11 +1,11 @@
-field: 778abb42-18bd-447c-99ae-483c775ed3bd
+field: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
 fieldLayouts:
   6f1b2935-dba4-460d-be70-b29a7aa0aa60:
     tabs:
       -
         elements:
           -
-            fieldUid: dad3b3bd-ab3c-486d-a552-b3cc718f8e1c
+            fieldUid: dad3b3bd-ab3c-486d-a552-b3cc718f8e1c # Image
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a65ec270-2111-40c2-bf47-f3d6d929603a
+            fieldUid: a65ec270-2111-40c2-bf47-f3d6d929603a # Pre Heading
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f109ee5b-bb41-47ce-aaa0-53b5304e0e22
+            fieldUid: f109ee5b-bb41-47ce-aaa0-53b5304e0e22 # Heading
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3b943244-76d1-4973-9d71-6ec6c109e255
+            fieldUid: 3b943244-76d1-4973-9d71-6ec6c109e255 # Sub Heading
             instructions: null
             label: null
             required: false
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f
+            fieldUid: 3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f # Text Color
             instructions: null
             label: null
             required: false
@@ -50,7 +50,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 913eb47c-ce43-4325-bb3a-1f5d99065038
+            fieldUid: 913eb47c-ce43-4325-bb3a-1f5d99065038 # Highlight Text
             instructions: null
             label: null
             required: false
@@ -61,7 +61,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f:
+  3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f: # Text Color
     contentColumnType: string
     fieldGroup: null
     handle: textColor
@@ -95,7 +95,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\RadioButtons
-  3b943244-76d1-4973-9d71-6ec6c109e255:
+  3b943244-76d1-4973-9d71-6ec6c109e255: # Sub Heading
     contentColumnType: text
     fieldGroup: null
     handle: subHeading
@@ -114,7 +114,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  913eb47c-ce43-4325-bb3a-1f5d99065038:
+  913eb47c-ce43-4325-bb3a-1f5d99065038: # Highlight Text
     contentColumnType: boolean
     fieldGroup: null
     handle: highlightText
@@ -128,7 +128,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  a65ec270-2111-40c2-bf47-f3d6d929603a:
+  a65ec270-2111-40c2-bf47-f3d6d929603a: # Pre Heading
     contentColumnType: text
     fieldGroup: null
     handle: preHeading
@@ -147,7 +147,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  dad3b3bd-ab3c-486d-a552-b3cc718f8e1c:
+  dad3b3bd-ab3c-486d-a552-b3cc718f8e1c: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -159,7 +159,7 @@ fields:
       allowUploads: true
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      defaultUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5' # Images
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -169,7 +169,7 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
-      singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5'
+      singleUploadLocationSource: 'volume:a36fa6aa-4824-448f-82cf-b3086f8582c5' # Images
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'
@@ -180,7 +180,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  f109ee5b-bb41-47ce-aaa0-53b5304e0e22:
+  f109ee5b-bb41-47ce-aaa0-53b5304e0e22: # Heading
     contentColumnType: text
     fieldGroup: null
     handle: heading

@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: beb1c87a-67bb-421f-933f-4bc3d1e125e3
+            fieldUid: beb1c87a-67bb-421f-933f-4bc3d1e125e3 # Hero Image
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 778abb42-18bd-447c-99ae-483c775ed3bd
+            fieldUid: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: c8da1bd9-67c9-402f-8a95-aeaec337e207
+            fieldUid: c8da1bd9-67c9-402f-8a95-aeaec337e207 # SEO
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: contact
 hasTitleField: false
 name: Contact
-section: 8f6c3046-e9ee-4df9-af84-6dc0199f01da
+section: 8f6c3046-e9ee-4df9-af84-6dc0199f01da # Contact
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

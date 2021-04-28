@@ -1,11 +1,11 @@
-field: 778abb42-18bd-447c-99ae-483c775ed3bd
+field: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
 fieldLayouts:
   43071b8b-6243-4eea-b70b-e6122dd5a909:
     tabs:
       -
         elements:
           -
-            fieldUid: b28c567f-a9f9-4d96-848b-1de28c643417
+            fieldUid: b28c567f-a9f9-4d96-848b-1de28c643417 # __blank__
             instructions: null
             label: null
             required: false
@@ -16,7 +16,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  b28c567f-a9f9-4d96-848b-1de28c643417:
+  b28c567f-a9f9-4d96-848b-1de28c643417: # __blank__
     contentColumnType: text
     fieldGroup: null
     handle: heading

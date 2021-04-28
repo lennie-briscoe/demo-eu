@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a73bf239-f2f0-45ac-b84d-361e5dd1a75f
+            fieldUid: a73bf239-f2f0-45ac-b84d-361e5dd1a75f # Pagination Count
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 778abb42-18bd-447c-99ae-483c775ed3bd
+            fieldUid: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
             instructions: null
             label: null
             required: false
@@ -49,7 +49,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: c8da1bd9-67c9-402f-8a95-aeaec337e207
+            fieldUid: c8da1bd9-67c9-402f-8a95-aeaec337e207 # SEO
             instructions: null
             label: null
             required: false
@@ -62,7 +62,7 @@ fieldLayouts:
 handle: news
 hasTitleField: false
 name: News
-section: 9b80c4d3-7a27-4bc4-af25-742e6cf5f77a
+section: 9b80c4d3-7a27-4bc4-af25-742e6cf5f77a # News
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

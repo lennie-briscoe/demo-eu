@@ -12,7 +12,7 @@ previewTargets:
         - '{url}'
 propagationMethod: all
 siteSettings:
-  c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9:
+  c42694e0-26f4-46d0-9ffe-3e7fe6a64cb9: # English
     enabledByDefault: true
     hasUrls: true
     template: _/pages/contact

@@ -1,11 +1,11 @@
-field: 778abb42-18bd-447c-99ae-483c775ed3bd
+field: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
 fieldLayouts:
   b7542268-90e7-488e-aaf2-8c6695a2948c:
     tabs:
       -
         elements:
           -
-            fieldUid: aa1aa6b7-0e81-4b68-8694-ed5f543f38bc
+            fieldUid: aa1aa6b7-0e81-4b68-8694-ed5f543f38bc # __blank__
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: eb910859-8baf-408a-ae9a-3af97b637806
+            fieldUid: eb910859-8baf-408a-ae9a-3af97b637806 # Top Border
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: cdc345f6-dec9-46b7-80b5-6de7918fcdf3
+            fieldUid: cdc345f6-dec9-46b7-80b5-6de7918fcdf3 # Layout
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: fadcfcb9-b6bc-4adf-9adb-18ba2e89bfb7
+            fieldUid: fadcfcb9-b6bc-4adf-9adb-18ba2e89bfb7 # Narrow Width
             instructions: null
             label: null
             required: false
@@ -43,7 +43,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  aa1aa6b7-0e81-4b68-8694-ed5f543f38bc:
+  aa1aa6b7-0e81-4b68-8694-ed5f543f38bc: # __blank__
     contentColumnType: text
     fieldGroup: null
     handle: richText
@@ -53,7 +53,7 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes:
-        - a36fa6aa-4824-448f-82cf-b3086f8582c5
+        - a36fa6aa-4824-448f-82cf-b3086f8582c5 # Images
       cleanupHtml: true
       columnType: text
       configSelectionMode: choose
@@ -72,7 +72,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  cdc345f6-dec9-46b7-80b5-6de7918fcdf3:
+  cdc345f6-dec9-46b7-80b5-6de7918fcdf3: # Layout
     contentColumnType: string
     fieldGroup: null
     handle: layout
@@ -117,7 +117,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\RadioButtons
-  eb910859-8baf-408a-ae9a-3af97b637806:
+  eb910859-8baf-408a-ae9a-3af97b637806: # Top Border
     contentColumnType: boolean
     fieldGroup: null
     handle: topBorder
@@ -131,7 +131,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  fadcfcb9-b6bc-4adf-9adb-18ba2e89bfb7:
+  fadcfcb9-b6bc-4adf-9adb-18ba2e89bfb7: # Narrow Width
     contentColumnType: boolean
     fieldGroup: null
     handle: narrowWidth

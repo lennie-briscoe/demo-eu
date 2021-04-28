@@ -1,11 +1,11 @@
-field: 778abb42-18bd-447c-99ae-483c775ed3bd
+field: 778abb42-18bd-447c-99ae-483c775ed3bd # Content Blocks
 fieldLayouts:
   317b7d36-2f97-4ffa-846f-0404ab3c6df8:
     tabs:
       -
         elements:
           -
-            fieldUid: 6c31cab7-7f79-4628-b345-9a700a16a726
+            fieldUid: 6c31cab7-7f79-4628-b345-9a700a16a726 # Entry
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 8df6d29d-59a0-44ee-80e5-f69849956547
+            fieldUid: 8df6d29d-59a0-44ee-80e5-f69849956547 # Text Color
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  6c31cab7-7f79-4628-b345-9a700a16a726:
+  6c31cab7-7f79-4628-b345-9a700a16a726: # Entry
     contentColumnType: string
     fieldGroup: null
     handle: entry
@@ -40,15 +40,15 @@ fields:
       showSiteMenu: true
       source: null
       sources:
-        - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb'
-        - 'section:666bcffb-61d7-43b4-a9f5-8c51c458b356'
+        - 'section:c49dac11-102e-429e-8bcc-5c8d99508dcb' # Exhibits
+        - 'section:666bcffb-61d7-43b4-a9f5-8c51c458b356' # News Articles
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  8df6d29d-59a0-44ee-80e5-f69849956547:
+  8df6d29d-59a0-44ee-80e5-f69849956547: # Text Color
     contentColumnType: string
     fieldGroup: null
     handle: textColor
