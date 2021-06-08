@@ -1,7 +1,9 @@
 name: Build and Push Docker Images
+
 on:
   push:
-    branches: [ master ]
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,4 +31,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: craftcms/europa-demo:latest
+          tags: craftcms/demo-europa:latest
