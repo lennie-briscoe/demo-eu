@@ -2,18 +2,18 @@
     "name": "vonscriptor/vhc",
     "description": "Van Holtz Co Starter",
     "keywords": [
-      "craft",
-      "cms",
-      "craftcms",
-      "project",
-      "demo",
-      "starter"
+        "craft",
+        "cms",
+        "craftcms",
+        "project",
+        "demo",
+        "starter"
     ],
     "license": "",
     "homepage": "https://vanholtz.co/",
     "type": "project",
     "support": {
-      "email": "dev@vanholtz.co"
+        "email": "dev@vanholtz.co"
     },
     "minimum-stability": "stable",
     "require": {
@@ -36,16 +36,17 @@
         "wrav/oembed": "^1.2.2"
     },
     "autoload": {
-      "psr-4": {
-        "modules\\sitemodule\\": "modules/sitemodule/src/"
-      }
+        "psr-4": {
+            "modules\\sitemodule\\": "modules/sitemodule/src/",
+            "modules\\demos\\": "modules/demos/src/"
+        }
     },
     "config": {
-      "optimize-autoloader": true,
-      "sort-packages": true,
-      "platform": {
-        "php": "7.4"
-      }
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        }
     },
     "scripts": {
     }
