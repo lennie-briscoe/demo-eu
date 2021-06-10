@@ -58,7 +58,6 @@ return [
             'signKey' => '',
             'sourceIsWebProxy' => false,
             'useCloudSourcePath' => true,
-            'shardStrategy' => 'cycle',
             'getExternalImageDimensions' => true,
             'defaultParams' => [],
         ]
