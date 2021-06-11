@@ -159,7 +159,6 @@ class SeedController extends Controller
      */
     public function actionFreeformData(string $formHandle): int
     {
-        // TODO: save form to not collectIp
         $this->stdout("Seeding Freeform data ..." . PHP_EOL);
 
         $freeform = Freeform::getInstance();
