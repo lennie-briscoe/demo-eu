@@ -98,6 +98,8 @@ class SeedController extends Controller
         if ($this->runAction('freeform-data', ['contact'])) {
             return ExitCode::UNSPECIFIED_ERROR;
         }
+
+        return ExitCode::OK;
     }
 
     /**
