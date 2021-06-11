@@ -5,7 +5,7 @@ use craft\helpers\App;
 return [
     'transformer' => 'craft',
     'imagerSystemPath' => '@webroot/assets/imager/',
-    'imagerUrl' => App::env('AWS_IMAGER_URL'),
+    'imagerUrl' => '@web/assets/imager/',
     'cacheEnabled' => true,
     'cacheRemoteFiles' => true,
     'cacheDuration' => 31536000,
