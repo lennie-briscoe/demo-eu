@@ -12,7 +12,6 @@
 
 # WEB
 /web/cpresources
-/web/assets
 /web/css
 /web/images
 /web/js
