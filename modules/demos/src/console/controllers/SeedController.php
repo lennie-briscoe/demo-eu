@@ -6,15 +6,20 @@ use Craft;
 use craft\console\Controller;
 use craft\elements\User;
 use craft\helpers\Console;
+use craft\helpers\Db;
 use Faker\Generator as FakerGenerator;
 use Solspace\Freeform\Elements\Submission;
 use Solspace\Freeform\Freeform;
 use Solspace\Freeform\Library\Composer\Components\Form;
-use Solspace\Freeform\Services\SubmissionsService;
 use yii\console\ExitCode;
 
 class SeedController extends Controller
 {
+    public const FREEFORM_SUBMISSION_MIN = 100;
+    public const FREEFORM_SUBMISSION_MAX = 200;
+    public const FREEFORM_MESSAGE_CHARS_MIN = 120;
+    public const FREEFORM_MESSAGE_CHARS_MAX = 300;
+
     /**
      * @var string|null
      */
@@ -31,7 +36,7 @@ class SeedController extends Controller
     public ?string $password = null;
 
     /**
-     * @var string
+     * @var string|null
      */
     public ?string $dumpfile = null;
 
@@ -40,6 +45,9 @@ class SeedController extends Controller
      */
     private FakerGenerator $_faker;
 
+    /**
+     * {@inheritdoc}
+     */
     public function init(): void
     {
         parent::init();
@@ -47,33 +55,59 @@ class SeedController extends Controller
         $this->_faker = \Faker\Factory::create();
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function options($actionID): array
     {
         $options = parent::options($actionID);
 
-        $options[] = 'email';
-        $options[] = 'username';
-        $options[] = 'password';
-        $options[] = 'dumpfile';
+        switch ($actionID) {
+            case 'index':
+                $options[] = 'dumpfile';
+                $options[] = 'email';
+                $options[] = 'username';
+                $options[] = 'password';
+            case 'admin-user':
+                $options[] = 'email';
+                $options[] = 'username';
+                $options[] = 'password';
+                break;
+        }
 
         return $options;
     }
 
+    /**
+     * Seeds all data necessary for a working demo
+     *
+     * @return int
+     */
     public function actionIndex(): int
     {
         if ($this->dumpfile) {
-            $this->runAction('restore-db', [$this->dumpfile]);
+            if ($this->runAction('restore-db', [$this->dumpfile])) {
+                return ExitCode::UNSPECIFIED_ERROR;
+            }
         }
 
-        $this->runAction('create-user');
-        $this->runAction('seed-freeform-data');
+        if ($this->runAction('admin-user')) {
+            return ExitCode::UNSPECIFIED_ERROR;
+        }
 
-        return ExitCode::OK;
+        if ($this->runAction('freeform-data', ['contact'])) {
+            return ExitCode::UNSPECIFIED_ERROR;
+        }
     }
 
-    public function actionCreateUser(): int
+    /**
+     * Creates an admin user
+     *
+     * @return int
+     */
+    public function actionAdminUser(): int
     {
-        $this->stdout('Creating the user ... ');
+        $this->stdout('Creating admin user ... ');
 
         $user = new User([
             'username' => $this->username,
@@ -85,7 +119,7 @@ class SeedController extends Controller
         if (!Craft::$app->getElements()->saveElement($user)) {
             $this->stderr('failed:' . PHP_EOL . '    - ' . implode(PHP_EOL . '    - ', $user->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
 
-            return ExitCode::USAGE;
+            return ExitCode::UNSPECIFIED_ERROR;
         }
 
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
@@ -93,9 +127,15 @@ class SeedController extends Controller
         return ExitCode::OK;
     }
 
+    /**
+     * Restores an uncompressed database dump
+     *
+     * @param string $path Path to the uncompressed database dump
+     * @return int
+     */
     public function actionRestoreDb(string $path): int
     {
-        $this->stdout('Restoring database backup ... ');
+        $this->stdout("Restoring database backup ... ");
 
         try {
             Craft::$app->getDb()->restore($path);
@@ -111,36 +151,86 @@ class SeedController extends Controller
         return ExitCode::OK;
     }
 
-    public function actionSeedFreeformData(): int
+    /**
+     * Seeds Freeform with submission data
+     *
+     * @param string $formHandle Freeform form handle
+     * @return int
+     */
+    public function actionFreeformData(string $formHandle): int
     {
-        $this->stdout('Seeding Freeform Data ... ');
+        // TODO: save form to not collectIp
+        $this->stdout("Seeding Freeform data ..." . PHP_EOL);
 
-        // $freeform = Freeform::getInstance();
-        // $form = $freeform->forms->getFormByHandle('contact');
-        //
-        // // $form = new Form();
-        // $submission = $freeform->submissions->createSubmissionFromForm($form);
-        // // $submission = Submission::create();
-        // // $submission->formId = $form->id;
-        //
-        //
-        // $submission->setFormFieldValues([
-        //     'email' => $this->_faker->email,
-        //     'firstName' => $this->_faker->firstName,
-        //     'lastName' => $this->_faker->lastName,
-        //     'message' => $this->_faker->text
-        // ]);
-        //
-        // for ($i = 0; $i < 10; $i++) {
-        //     if (!Craft::$app->getElements()->saveElement($submission)) {
-        //         $this->stderr('failed:' . PHP_EOL . '    - ' . implode(PHP_EOL . '    - ', $submission->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
-        //
-        //         return ExitCode::USAGE;
-        //     }
-        // }
+        $freeform = Freeform::getInstance();
+        $form = $freeform->forms->getFormByHandle($formHandle)->getForm();
+        $submissionCount = $this->_faker->numberBetween(self::FREEFORM_SUBMISSION_MIN, self::FREEFORM_SUBMISSION_MAX);
+        $errorCount = 0;
 
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+        for ($i = 1; $i <= $submissionCount; $i++) {
+            try {
+                $submission = $this->_createFormSubmission($form);
+                $this->stdout("    - [{$i}/{$submissionCount}] Creating submission {$submission->title} ... ");
 
-        return ExitCode::OK;
+                if ($this->_saveFormSubmission($submission)) {
+                    $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+                } else {
+                    $this->stderr('failed: ' . implode(', ', $submission->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
+                    $errorCount++;
+                }
+            } catch (\Throwable $e) {
+                $this->stderr('error: ' . $e->getMessage() . PHP_EOL, Console::FG_RED);
+                $errorCount++;
+            }
+        }
+
+        $this->stdout('Done seeding Freeform data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
+        return $errorCount ? ExitCode::UNSPECIFIED_ERROR : ExitCode::OK;
+    }
+
+    private function _createFormSubmission(Form $form): Submission
+    {
+        /** @var Submission $submission */
+        $submission = Freeform::getInstance()->submissions->createSubmissionFromForm($form);
+        $submission->dateCreated = $submission->dateUpdated = $this->_faker->dateTimeThisMonth();
+
+        // Reparse the title with the fake date
+        $submission->title = Craft::$app->view->renderString(
+            $form->getSubmissionTitleFormat(),
+            $form->getLayout()->getFieldsByHandle() + [
+                'dateCreated' => $submission->dateCreated,
+                'form' => $form,
+            ]
+        );
+
+        $submission->setFormFieldValues([
+            'email' => $this->_faker->email,
+            'firstName' => $this->_faker->firstName,
+            'lastName' => $this->_faker->lastName,
+            'message' => $this->_faker->realTextBetween(self::FREEFORM_MESSAGE_CHARS_MIN, self::FREEFORM_MESSAGE_CHARS_MAX),
+        ]);
+
+        return $submission;
+    }
+
+    private function _saveFormSubmission(Submission $submission): bool
+    {
+        if (!Craft::$app->getElements()->saveElement($submission)) {
+            return false;
+        }
+
+        // Update submissions table to match date, so element index will sort properly
+        $dateCreatedDb = Db::prepareDateForDb($submission->dateCreated);
+
+        Craft::$app->db->createCommand()
+            ->update($submission::TABLE, [
+                'dateCreated' => $dateCreatedDb,
+                'dateUpdated' => $dateCreatedDb,
+            ], [
+                'id' => $submission->id,
+            ])
+            ->execute();
+
+        return true;
     }
 }
