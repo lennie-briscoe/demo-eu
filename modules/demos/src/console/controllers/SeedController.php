@@ -41,6 +41,11 @@ class SeedController extends Controller
     public ?string $dumpfile = null;
 
     /**
+     * @var int Duration in seconds to wait between retries
+     */
+    public int $timeout = 2;
+
+    /**
      * @var FakerGenerator
      */
     private FakerGenerator $_faker;
@@ -73,6 +78,8 @@ class SeedController extends Controller
                 $options[] = 'username';
                 $options[] = 'password';
                 break;
+            case 'wait-for-db':
+                $options[] = 'timeout';
         }
 
         return $options;
@@ -187,6 +194,31 @@ class SeedController extends Controller
 
         $this->stdout('Done seeding Freeform data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return $errorCount ? ExitCode::UNSPECIFIED_ERROR : ExitCode::OK;
+    }
+
+    /**
+     * @param int $maxTime Maximum time in seconds to wait for database connection
+     * @return int
+     */
+    public function actionWaitForDb(int $maxTime = 0): int
+    {
+        $this->stdout("Waiting for database ..." . PHP_EOL);
+        $retries = 0;
+        $startTime = time();
+
+        while (!Craft::$app->getIsDbConnectionValid()) {
+            if ($maxTime && (time() - $startTime) > $maxTime) {
+                $this->stderr("Database connection failed: maximum time of $maxTime seconds reached." . PHP_EOL . PHP_EOL, Console::FG_RED);
+                return ExitCode::UNSPECIFIED_ERROR;
+            }
+            $retries++;
+            $this->stdout("    - [{$retries}] Retrying in $this->retryTimeout seconds..." . PHP_EOL, Console::FG_YELLOW);
+            sleep($this->retryTimeout);
+        }
+
+        $totalTime = time() - $startTime;
+        $this->stdout("Database connection successful ($totalTime seconds)." . PHP_EOL . PHP_EOL, Console::FG_GREEN);
+        return ExitCode::OK;
     }
 
     private function _createFormSubmission(Form $form): Submission
