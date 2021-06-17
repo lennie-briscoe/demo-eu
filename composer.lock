@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9c114cd2ea2fa77b1d5210c3ac60f64",
+    "content-hash": "e5d20a69e16d692ff748ac873cac3953",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -741,16 +741,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.6.15",
+            "version": "3.7.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "7a0c70fd7c7d46cbeb993d345a4b47c968bdd82a"
+                "reference": "7988b0508ef3b2c34d08a8fdee87a4504928b7e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/7a0c70fd7c7d46cbeb993d345a4b47c968bdd82a",
-                "reference": "7a0c70fd7c7d46cbeb993d345a4b47c968bdd82a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/7988b0508ef3b2c34d08a8fdee87a4504928b7e3",
+                "reference": "7988b0508ef3b2c34d08a8fdee87a4504928b7e3",
                 "shasum": ""
             },
             "require": {
@@ -825,6 +825,12 @@
             "license": [
                 "proprietary"
             ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
             "description": "Craft CMS",
             "homepage": "https://craftcms.com",
             "keywords": [
@@ -840,7 +846,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-05-18T21:47:23+00:00"
+            "time": "2021-06-15T16:56:01+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -10020,7 +10026,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "craftcms/cms": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
