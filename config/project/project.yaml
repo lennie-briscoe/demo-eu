@@ -1,4 +1,4 @@
-dateModified: 1623963036
+dateModified: 1624024311
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -205,7 +205,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $SEOMATIC_LICENSE_KEY
-    schemaVersion: 3.0.9
+    schemaVersion: 3.0.10
   typedlinkfield:
     edition: standard
     enabled: true

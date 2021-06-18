@@ -26,15 +26,15 @@
         "mildlygeeky/craft-kint": "^1.0.0",
         "misterbk/mix": "^1.5.2",
         "nystudio107/craft-minify": "^1.2.9",
-        "nystudio107/craft-seomatic": "^3.2.41",
+        "nystudio107/craft-seomatic": "3.3.43",
         "nystudio107/craft-typogrify": "^1.1.18",
         "samhernandez/craft-db-paths": "^1.0",
         "sebastianlenz/linkfield": "^1.0.19",
-        "solspace/craft-freeform": "^3.6.2",
+        "solspace/craft-freeform": "3.11.6",
         "spacecatninja/imager-x": "^3.3",
         "studioespresso/craft-dumper": "^2.0.0",
         "vlucas/phpdotenv": "^3.4.0",
-        "wrav/oembed": "^1.2.2"
+        "wrav/oembed": "1.3.9"
     },
     "autoload": {
         "psr-4": {

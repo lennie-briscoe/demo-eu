@@ -98,6 +98,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   00f86307-b225-423b-bd34-b70af6632cf2: # Link Label
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: linkLabel
@@ -117,6 +118,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   2b1996eb-1a60-4257-b4ab-2e41c49fbd06: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -150,6 +152,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   4c127ec9-df18-4d62-bd02-cf8b5044f7ea: # Left Stat Label
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: leftStatLabel
@@ -169,6 +172,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   5ccbb75b-a9e9-455a-baf9-60aaa799d452: # Right Stat Label
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: rightStatLabel
@@ -188,6 +192,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   5f06df0c-02b7-4b2d-9b75-4b22a09c3a12: # Right Stat Value
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: rightStatValue
@@ -207,6 +212,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   7cce3872-9055-454a-8fdc-45cbccec785b: # Left Stat Value
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: leftStatValue
@@ -226,6 +232,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   52ff2568-6318-44d5-a130-818c19f83360: # External Link
+    columnSuffix: null
     contentColumnType: string(255)
     fieldGroup: null
     handle: externalLink
@@ -241,6 +248,7 @@ fields:
     translationMethod: none
     type: craft\fields\Url
   d10684d5-bcd7-4e35-b0be-69377f981c39: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -260,6 +268,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   eb7b8bc9-c07a-4a25-9201-8174bd70fcb9: # Description
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: description
@@ -288,6 +297,7 @@ fields:
     translationMethod: none
     type: craft\redactor\Field
   f466ab59-2e29-4cce-85b8-f9ebe7000b03: # Internal Link
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: internalLink

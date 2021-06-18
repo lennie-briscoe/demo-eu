@@ -26,6 +26,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   6c31cab7-7f79-4628-b345-9a700a16a726: # Entry
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: entry
@@ -49,6 +50,7 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
   8df6d29d-59a0-44ee-80e5-f69849956547: # Text Color
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: textColor

@@ -71,6 +71,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   0ba28a66-d3aa-4c97-ad77-8e26087b3d70: # Narrow Width
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: narrowWidth
@@ -85,6 +86,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   3b1b9f85-3554-4b4a-8d39-467bf5e4a35d: # Internal Link
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: internalLink
@@ -106,6 +108,7 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
   6ee9b9a7-d12d-4c9b-b069-586609cb5ea9: # Link Label
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: linkLabel
@@ -125,6 +128,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   8c274864-9cf0-4ef9-b4bd-88da544515ad: # Information
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: information
@@ -144,6 +148,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   24bd1247-7ed2-48e8-af76-5b8ffc486ef6: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading
@@ -163,6 +168,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   42ad64e7-b07b-4601-9e6b-2d21bc0fe5d8: # Link Icon
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: linkIcon
@@ -264,6 +270,7 @@ fields:
     translationMethod: none
     type: craft\fields\Dropdown
   55c6cb51-defc-4e30-bc18-e524de65b7b7: # External Link
+    columnSuffix: null
     contentColumnType: string(255)
     fieldGroup: null
     handle: externalLink

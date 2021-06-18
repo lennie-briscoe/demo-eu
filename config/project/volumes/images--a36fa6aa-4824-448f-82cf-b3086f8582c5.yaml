@@ -51,7 +51,7 @@ hasUrls: true
 name: Images
 settings:
   path: '@webroot/assets/images'
-sortOrder: 0
+sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 type: craft\volumes\Local
