@@ -93,16 +93,15 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        if ($this->runAction('restore-db', [$this->dumpfile])) {
-            return ExitCode::UNSPECIFIED_ERROR;
-        }
-
-        if ($this->runAction('admin-user')) {
-            return ExitCode::UNSPECIFIED_ERROR;
-        }
-
-        if ($this->runAction('freeform-data', ['contact'])) {
-            return ExitCode::UNSPECIFIED_ERROR;
+        foreach([
+            $this->runAction('restore-db', [$this->dumpfile]),
+            $this->runAction('admin-user'),
+            $this->runAction('freeform-data', ['contact']),
+            $this->runAction('refresh-news'),
+        ] as $responseCode) {
+            if ($responseCode > 0) {
+                return $responseCode;
+            }
         }
 
         return ExitCode::OK;
