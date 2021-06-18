@@ -37,9 +37,9 @@ class SeedController extends Controller
     public ?string $password = null;
 
     /**
-     * @var string|null
+     * @var string
      */
-    public ?string $dumpfile = null;
+    public string $dumpfile = 'europa-museum-3.7.0-beta.2.sql';
 
     /**
      * @var int Duration in seconds to wait between retries
@@ -93,10 +93,8 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        if ($this->dumpfile) {
-            if ($this->runAction('restore-db', [$this->dumpfile])) {
-                return ExitCode::UNSPECIFIED_ERROR;
-            }
+        if ($this->runAction('restore-db', [$this->dumpfile])) {
+            return ExitCode::UNSPECIFIED_ERROR;
         }
 
         if ($this->runAction('admin-user')) {
@@ -226,8 +224,8 @@ class SeedController extends Controller
                 return ExitCode::UNSPECIFIED_ERROR;
             }
             $retries++;
-            $this->stdout("    - [{$retries}] Retrying in $this->retryTimeout seconds..." . PHP_EOL, Console::FG_YELLOW);
-            sleep($this->retryTimeout);
+            $this->stdout("    - [{$retries}] Retrying in $this->timeout seconds..." . PHP_EOL, Console::FG_YELLOW);
+            sleep($this->timeout);
         }
 
         $totalTime = time() - $startTime;
