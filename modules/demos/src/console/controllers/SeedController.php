@@ -4,6 +4,7 @@ namespace modules\demos\console\controllers;
 
 use Craft;
 use craft\console\Controller;
+use craft\elements\Entry;
 use craft\elements\User;
 use craft\helpers\Console;
 use craft\helpers\Db;
@@ -194,6 +195,19 @@ class SeedController extends Controller
 
         $this->stdout('Done seeding Freeform data.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return $errorCount ? ExitCode::UNSPECIFIED_ERROR : ExitCode::OK;
+    }
+
+    public function actionRefreshNews(): int
+    {
+        $this->stdout("Refreshing news ... " . PHP_EOL);
+        $entries = Entry::find()->section('newsArticles');
+
+        foreach ($entries->all() as $entry) {
+            $entry->postDate = $this->_faker->dateTimeInInterval('-1 months', '-5 days');
+            Craft::$app->elements->saveElement($entry);
+        }
+
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
