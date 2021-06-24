@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72fe2bacaeaf86fa99abb58f43cbdfbe",
+    "content-hash": "0eb1e0390da4c5b2c5737c087266fc9d",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -741,16 +741,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.0-beta.2",
+            "version": "3.7.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "b12608700edde07f7c46df38c2d757e61e88074d"
+                "reference": "ad83ae1d13ea10a2ae83694ca6a6d08ddee0220b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/b12608700edde07f7c46df38c2d757e61e88074d",
-                "reference": "b12608700edde07f7c46df38c2d757e61e88074d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/ad83ae1d13ea10a2ae83694ca6a6d08ddee0220b",
+                "reference": "ad83ae1d13ea10a2ae83694ca6a6d08ddee0220b",
                 "shasum": ""
             },
             "require": {
@@ -846,7 +846,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-06-17T22:08:37+00:00"
+            "time": "2021-06-22T23:04:48+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",

@@ -74,6 +74,7 @@ class SeedController extends Controller
                 $options[] = 'email';
                 $options[] = 'username';
                 $options[] = 'password';
+                break;
             case 'admin-user':
                 $options[] = 'email';
                 $options[] = 'username';
@@ -81,6 +82,7 @@ class SeedController extends Controller
                 break;
             case 'wait-for-db':
                 $options[] = 'timeout';
+                break;
         }
 
         return $options;
@@ -205,6 +207,8 @@ class SeedController extends Controller
         }
 
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        return ExitCode::OK;
     }
 
     /**
