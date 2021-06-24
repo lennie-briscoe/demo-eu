@@ -96,11 +96,12 @@ class SeedController extends Controller
     public function actionIndex(): int
     {
         foreach([
-            $this->runAction('restore-db', [$this->dumpfile]),
-            $this->runAction('admin-user'),
-            $this->runAction('freeform-data', ['contact']),
-            $this->runAction('refresh-news'),
-        ] as $responseCode) {
+            function() { return $this->runAction('restore-db', [$this->dumpfile]); },
+            function() { return $this->runAction('admin-user'); },
+            function() { return $this->runAction('freeform-data', ['contact']); },
+            function() { return $this->runAction('refresh-news'); },
+        ] as $callable) {
+            $responseCode = $callable();
             if ($responseCode > 0) {
                 return $responseCode;
             }
@@ -202,7 +203,7 @@ class SeedController extends Controller
         $entries = Entry::find()->section('newsArticles');
 
         foreach ($entries->all() as $entry) {
-            $entry->postDate = $this->_faker->dateTimeInInterval('-1 months', '-5 days');
+            $entry->postDate = $this->_faker->dateTimeInInterval('now', '-2 weeks');
             Craft::$app->elements->saveElement($entry);
         }
 
