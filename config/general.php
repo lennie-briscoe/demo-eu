@@ -18,6 +18,7 @@ return [
             'subRight' => true,
         ],
         'enableCsrfProtection' => true,
+        'useEmailAsUsername' => true,
         'generateTransformsBeforePageLoad' => true,
         'omitScriptNameInUrls' => true,
         'securityKey' => App::env('SECURITY_KEY'),
