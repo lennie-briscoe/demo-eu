@@ -30,7 +30,7 @@
         "nystudio107/craft-typogrify": "^1.1.18",
         "samhernandez/craft-db-paths": "^1.0",
         "sebastianlenz/linkfield": "^1.0.19",
-        "solspace/craft-freeform": "3.11.6",
+        "solspace/craft-freeform": "3.11.8",
         "spacecatninja/imager-x": "^3.3",
         "studioespresso/craft-dumper": "^2.0.0",
         "vlucas/phpdotenv": "^3.4.0",
