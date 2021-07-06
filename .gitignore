@@ -34,7 +34,7 @@
 .idea
 /web/css/site.css.map
 /web/js/site.js.map
-!europa-museum-*.sql
+!seed.sql
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64898960c6ba3cac9e6992bc63b74d59",
+    "content-hash": "e43ae9bbfeed422bf5da931dd769fcd4",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -551,11 +551,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.0-beta.3",
+            "version": "3.7.0-beta.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/cms.git",
+                "reference": "d2d02998aeff3f95c50cf636baa2f06927e6f43c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/ad83ae1d13ea10a2ae83694ca6a6d08ddee0220b",
-                "reference": "ad83ae1d13ea10a2ae83694ca6a6d08ddee0220b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d2d02998aeff3f95c50cf636baa2f06927e6f43c",
+                "reference": "d2d02998aeff3f95c50cf636baa2f06927e6f43c",
                 "shasum": ""
             },
             "require": {
@@ -603,6 +608,17 @@
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
+            "require-dev": {
+                "codeception/codeception": "^4.0.0",
+                "codeception/module-asserts": "^1.0.0",
+                "codeception/module-datafactory": "^1.0.0",
+                "codeception/module-phpbrowser": "^1.0.0",
+                "codeception/module-rest": "^1.0.0",
+                "codeception/module-yii2": "^1.0.0",
+                "fzaninotto/faker": "^1.8",
+                "league/factory-muffin": "^3.0",
+                "vlucas/phpdotenv": "^3.0"
+            },
             "suggest": {
                 "ext-iconv": "Adds support for more character encodings than PHP’s built-in mb_convert_encoding() function, which Craft will take advantage of when converting strings to UTF-8.",
                 "ext-imagick": "Adds support for more image processing formats and options.",
@@ -615,6 +631,7 @@
                     "crafttests\\fixtures\\": "tests/fixtures/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -632,14 +649,14 @@
                 "yii2"
             ],
             "support": {
-                "email": "support@craftcms.com",
-                "issues": "https://github.com/craftcms/cms/issues?state=open",
-                "forum": "https://craftcms.stackexchange.com/",
-                "source": "https://github.com/craftcms/cms",
                 "docs": "https://craftcms.com/docs/3.x/",
-                "rss": "https://github.com/craftcms/cms/releases.atom"
+                "email": "support@craftcms.com",
+                "forum": "https://craftcms.stackexchange.com/",
+                "issues": "https://github.com/craftcms/cms/issues?state=open",
+                "rss": "https://github.com/craftcms/cms/releases.atom",
+                "source": "https://github.com/craftcms/cms"
             },
-            "time": "2021-06-22T23:04:48+00:00"
+            "time": "2021-06-29T17:01:38+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
