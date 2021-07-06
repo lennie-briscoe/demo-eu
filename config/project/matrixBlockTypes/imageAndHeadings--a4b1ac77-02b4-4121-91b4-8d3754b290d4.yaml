@@ -62,6 +62,7 @@ fieldLayouts:
         sortOrder: 1
 fields:
   3ad065f3-cd49-4ea6-91e3-12d3a0f0e30f: # Text Color
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: textColor
@@ -96,6 +97,7 @@ fields:
     translationMethod: none
     type: craft\fields\RadioButtons
   3b943244-76d1-4973-9d71-6ec6c109e255: # Sub Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: subHeading
@@ -115,6 +117,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   913eb47c-ce43-4325-bb3a-1f5d99065038: # Highlight Text
+    columnSuffix: null
     contentColumnType: boolean
     fieldGroup: null
     handle: highlightText
@@ -129,6 +132,7 @@ fields:
     translationMethod: none
     type: craft\fields\Lightswitch
   a65ec270-2111-40c2-bf47-f3d6d929603a: # Pre Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: preHeading
@@ -148,6 +152,7 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
   dad3b3bd-ab3c-486d-a552-b3cc718f8e1c: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -181,6 +186,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   f109ee5b-bb41-47ce-aaa0-53b5304e0e22: # Heading
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: heading

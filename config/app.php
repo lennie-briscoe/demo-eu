@@ -18,12 +18,13 @@ return [
     // All environments
     '*' => [
         'modules'   => [
+            'demos' => \modules\demos\Module::class,
             'site-module' => [
                 'class' => \modules\sitemodule\SiteModule::class,
             ],
             'craft-db-paths' => \samhernandez\craftdbpaths\CraftDbPaths::class,
         ],
-        'bootstrap' => ['site-module', 'craft-db-paths'],
+        'bootstrap' => ['demos', 'site-module', 'craft-db-paths'],
     ],
 
     // Live (production) environment
