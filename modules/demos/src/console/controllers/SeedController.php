@@ -95,17 +95,9 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        foreach([
-            function() { return $this->runAction('restore-db', [$this->dumpfile]); },
-            function() { return $this->runAction('admin-user'); },
-            function() { return $this->runAction('freeform-data', ['contact']); },
-            function() { return $this->runAction('refresh-news'); },
-        ] as $callable) {
-            $responseCode = $callable();
-            if ($responseCode > 0) {
-                return $responseCode;
-            }
-        }
+        $this->runAction('admin-user');
+        $this->runAction('freeform-data', ['contact']);
+        $this->runAction('refresh-news');
 
         return ExitCode::OK;
     }
