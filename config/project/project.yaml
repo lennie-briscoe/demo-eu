@@ -1,4 +1,4 @@
-dateModified: 1624024311
+dateModified: 1625687869
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Demo Starter'
@@ -117,8 +117,7 @@ plugins:
   freeform:
     edition: lite
     enabled: true
-    licenseKey: $FREEFORM_LICENSE_KEY
-    schemaVersion: 3.3.1
+    schemaVersion: 3.3.2
     settings:
       ajaxByDefault: '1'
       autoScrollToErrors: ''
@@ -171,7 +170,6 @@ plugins:
   imager-x:
     edition: pro
     enabled: true
-    licenseKey: $IMAGER_X_LICENSE_KEY
     schemaVersion: 3.0.0
   kint:
     edition: standard
@@ -204,7 +202,6 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: $SEOMATIC_LICENSE_KEY
     schemaVersion: 3.0.10
   typedlinkfield:
     edition: standard
