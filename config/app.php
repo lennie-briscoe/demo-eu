@@ -14,28 +14,15 @@
  */
 
 return [
-
-    // All environments
-    '*' => [
-        'modules'   => [
-            'demos' => \modules\demos\Module::class,
-            'site-module' => [
-                'class' => \modules\sitemodule\SiteModule::class,
-            ],
-            'craft-db-paths' => \samhernandez\craftdbpaths\CraftDbPaths::class,
+    'modules'   => [
+        'demos' => \modules\demos\Module::class,
+        'site-module' => [
+            'class' => \modules\sitemodule\SiteModule::class,
         ],
-        'bootstrap' => ['demos', 'site-module', 'craft-db-paths'],
+        'craft-db-paths' => \samhernandez\craftdbpaths\CraftDbPaths::class,
     ],
-
-    // Live (production) environment
-    'production'  => [
-    ],
-
-    // Staging (pre-production) environment
-    'staging'  => [
-    ],
-
-    // Local (development) environment
-    'local'  => [
+    'bootstrap' => ['demos', 'site-module', 'craft-db-paths'],
+    'components' => [
+        'mailer' => null,
     ],
 ];
