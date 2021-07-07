@@ -36,10 +36,6 @@ return [
     'production' => [
     ],
 
-    // Staging (pre-production) environment
-    'staging' => [
-    ],
-
     // Local (development) environment
     'local' => [
         'allowAdminChanges' => true,
