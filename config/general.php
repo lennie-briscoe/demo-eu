@@ -17,6 +17,7 @@ return [
             'subLeft' => true,
             'subRight' => true,
         ],
+        'disallowRobots' => true,
         'enableCsrfProtection' => true,
         'useEmailAsUsername' => true,
         'generateTransformsBeforePageLoad' => true,
@@ -36,13 +37,8 @@ return [
     'production' => [
     ],
 
-    // Staging (pre-production) environment
-    'staging' => [
-    ],
-
     // Local (development) environment
     'local' => [
-        'allowAdminChanges' => true,
         'devMode' => true,
         'enableTemplateCaching' => false,
     ],
