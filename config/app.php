@@ -28,7 +28,7 @@ return [
     ],
 
     // Live (production) environment
-    'live'  => [
+    'production'  => [
     ],
 
     // Staging (pre-production) environment

@@ -12,7 +12,7 @@ return [
 
     // All environments
     '*' => [
-        'allowAdminChanges' => false,
+        'allowAdminChanges' => true,
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
@@ -34,7 +34,6 @@ return [
 
     // Production (live) environment
     'production' => [
-        'allowAdminChanges' => true,
     ],
 
     // Staging (pre-production) environment
