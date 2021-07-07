@@ -37,11 +37,6 @@ class SeedController extends Controller
     public ?string $password = null;
 
     /**
-     * @var string
-     */
-    public string $dumpfile = 'seed.sql';
-
-    /**
      * @var int Duration in seconds to wait between retries
      */
     public int $timeout = 2;
@@ -70,11 +65,6 @@ class SeedController extends Controller
 
         switch ($actionID) {
             case 'index':
-                $options[] = 'dumpfile';
-                $options[] = 'email';
-                $options[] = 'username';
-                $options[] = 'password';
-                break;
             case 'admin-user':
                 $options[] = 'email';
                 $options[] = 'username';
@@ -120,30 +110,6 @@ class SeedController extends Controller
 
         if (!Craft::$app->getElements()->saveElement($user)) {
             $this->stderr('failed:' . PHP_EOL . '    - ' . implode(PHP_EOL . '    - ', $user->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
-
-            return ExitCode::UNSPECIFIED_ERROR;
-        }
-
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-
-        return ExitCode::OK;
-    }
-
-    /**
-     * Restores an uncompressed database dump
-     *
-     * @param string $path Path to the uncompressed database dump
-     * @return int
-     */
-    public function actionRestoreDb(string $path): int
-    {
-        $this->stdout("Restoring database backup ... ");
-
-        try {
-            Craft::$app->getDb()->restore($path);
-        } catch (\Throwable $e) {
-            Craft::$app->getErrorHandler()->logException($e);
-            $this->stderr('error: ' . $e->getMessage() . PHP_EOL, Console::FG_RED);
 
             return ExitCode::UNSPECIFIED_ERROR;
         }
