@@ -1,11 +1,12 @@
-dateModified: 1625687869
+dateModified: 1625688271
 email:
-  fromEmail: sam@craftcms.com
-  fromName: 'Demo Starter'
+  fromEmail: support@craftcms.com
+  fromName: 'Europa Museum'
+  replyToEmail: null
   template: ''
   transportSettings:
-    token: $POSTMARK_API_TOKEN
-  transportType: craftcms\postmark\Adapter
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
     0b3ab84a-728c-4dfa-b505-ee524b9631d9: Home # Home
