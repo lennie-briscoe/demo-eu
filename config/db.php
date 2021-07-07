@@ -14,7 +14,7 @@ return [
     'user' => App::env('DB_USER'),
     'password' => App::env('DB_PASSWORD'),
     'database' => App::env('DB_DATABASE'),
-    'schema' => App::env('DB_SCHEMA'),
+    'schema' => App::env('DB_SCHEMA') ?: 'public',
     'tablePrefix' => App::env('DB_TABLE_PREFIX'),
     'port' => App::env('DB_PORT')
 ];
