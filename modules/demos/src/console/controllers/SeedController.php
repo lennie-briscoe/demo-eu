@@ -157,7 +157,7 @@ class SeedController extends Controller
 
     public function actionRefreshNews(): int
     {
-        $this->stdout("Refreshing news ... " . PHP_EOL);
+        $this->stdout("Refreshing news ... ");
         $entries = Entry::find()->section('newsArticles');
 
         foreach ($entries->all() as $entry) {
