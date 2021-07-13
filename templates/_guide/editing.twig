@@ -5,6 +5,8 @@ Click **Entries** → **News Articles** and click any title in the list to have 
 
 ## Common Fields
 
+![](/guide/common-fields.png)
+
 Most entries have the same basic required fields you’ll see in any CMS:
 
 - **Title** is the primary, human-friendly name for the entry. (The field itself can have a different label that makes sense for the content, like “Service Name” or “Practice Area”.)
@@ -19,6 +21,8 @@ Everything after the **Title** field is a custom field that’s been added to th
 
 ### Entries, Categories, Assets
 
+![](/guide/entries-categories-assets.png)
+
 The first two fields, **Featured Exhibits** and **News Category**, are Entries and Categories fields.
 
 These are two of Craft’s native relational fields that make it easy for the content editor to select other content to relate rather than duplicate content entry.
@@ -31,23 +35,35 @@ The **Hero Image** field establishes a relationship to an asset as well. In this
 
 ### Plain Text
 
+![](/guide/plain-text.png)
+
 The **Summary** is a Plain Text field, which is exactly what it sounds like.
 
 ### Matrix
 
-The **Content Block** field is a special, complex field type called Matrix. Matrix fields are made of blocks, or groups of fields you create and name. A content editor can add and arrange these fields to flexibly build page content, with a clarity and predictability that’s ideal for developers.
+![](/guide/matrix-menu.png)
 
-Navigate to **Entries** → **News Articles** and press **New entry**. Notice on this empty entry form how little exists before any content has been added. Press **Add a block** to see the list of Matrix blocks that have been configured for this Europa **Content Blocks** field. None of these ships with Craft; you can see how they’ve been configured by a developer navigating to **Settings** → **Fields** and clicking **Content Blocks**.
+The **Content Blocks** field is a special, complex field type called [Matrix](https://craftcms.com/docs/3.x/matrix-fields.html). Matrix fields are made of blocks, or groups of fields you create and name. A content editor can add and arrange these fields to flexibly build page content, with a clarity and predictability that’s ideal for developers.
+
+Navigate to **Entries** → **News Articles** and press **New entry**. Notice on this empty entry form how little exists before any content has been added.
+
+![](/guide/matrix-add-block.png)
+
+Press **Add a block** to see the list of Matrix blocks that have been configured for this Europa **Content Blocks** field. None of these ships with Craft; you can see how they’ve been configured by a developer navigating to **Settings** → **Fields** and clicking **Content Blocks**.
 
 Matrix fields are powerful, flexible content modeling tools that work well with component-based design systems.
 
 ## Preview
+
+![](/guide/preview.png)
 
 Return to an existing News Articles entry or build out one of your own and press the **Preview** button.
 
 This slides open Craft’s live preview pane, where you can continue making content edits and see exactly how they’d look on the site—including a viewport selector that lets you check responsive layouts at desktop, tablet, and phone breakpoints.
 
 ### Preview Targets
+
+![](/guide/preview-targets.png)
 
 Select the **Primary entry page** menu at the top of the preview pane and choose **Listing page**.
 
@@ -59,11 +75,15 @@ Press **Close Preview** to return to the entry editor.
 
 ### Sharing Previews
 
+![](/guide/sharing-previews.png)
+
 Those same preview targets are available from the **View** menu on this page. Choosing any item from the **View** dropdown will open that target in a new tab or window. If we’re looking at draft or unpublished changes, the URL will include special preview tokens that make it possible to view that content. Craft will maintain those special tokens as you browse the site, and they’ll automatically expire in 24 hours—which a developer can change via Craft’s [defaultTokenDuration](https://craftcms.com/docs/3.x/config/config-settings.html#defaulttokenduration) config setting.
 
 It can be useful to share these preview links with editorial staff or stakeholders that don’t have access to the Craft CMS control panel, or even your own team if you’re looking for feedback prior to publishing.
 
 ### Drafts and Versioning
+
+![](/guide/drafts-versioning.png)
 
 Click on the dropdown menu just to the right of the page title. Any time you publish changes, create a draft, or make edits, this is where you’ll be able to get back to them. You can use **Preview** and **View** the same way with anything in this menu, and Craft will prompt you to decide what to do with any unsaved edits.
 
@@ -79,6 +99,8 @@ You can use these different sites to translate content, vary presentation for di
 
 Europa has [two sites]({{ cpUrl('settings/sites') }}) you can see navigating to **Settings** → **Sites**:
 
+![](/guide/sites.png)
+
 1. The primary English version, whose front end we’ve already looked at.
 2. The French version, which uses the same front end for translated content—where all the URLs are the same except for their additional `/fr/` segment.
 
@@ -87,6 +109,8 @@ In other words, `{{ siteUrl('about') }}` is for the English about page, while `{
 Each section is in charge of its rules for propagation, or how new content is (or isn’t) copied to other sites. If you return to the **News Articles** settings we saw earlier (**Settings** → **Sections** → **News Articles**), you’ll see **Site Settings** where you can adjust templates, default status, and that propagation method. There’s plenty more to think about here—see [Sites & Localization](https://craftcms.com/docs/3.x/sites.html) in the Craft docs for more on creating sites.
 
 The best part about sites is that they don’t have to be a burden to the content editor. Anywhere we’ve seen an **English** option—in the Entries listing and editor pages—we can open that menu to select the other site and edit away.
+
+![](/guide/change-site.png)
 
 If the content editor needs to further control whether a specific entry appears on a given site, the **Enabled** switch can be easily expanded for per-site control.
 
