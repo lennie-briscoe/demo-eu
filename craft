@@ -47,6 +47,7 @@ if (file_exists($envVars) && is_file($envVars)) {
     }
 }
 
+define('CRAFT_STREAM_LOG', true);
 define('CRAFT_ENVIRONMENT', App::env('ENVIRONMENT') ?: 'production');
 
 // Craft
