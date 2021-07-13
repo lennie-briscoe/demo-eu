@@ -1,4 +1,4 @@
-dateModified: 1626126062
+dateModified: 1626194288
 email:
   fromEmail: support@craftcms.com
   fromName: 'Europa Museum'
@@ -168,6 +168,15 @@ plugins:
       spamProtectionBehaviour: simulate_success
       submissionThrottlingCount: null
       submissionThrottlingTimeFrame: null
+  guide:
+    edition: lite
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      assetVolume: a36fa6aa-4824-448f-82cf-b3086f8582c5 # Images
+      clientName: 'Europa Museum'
+      myCompanyName: 'Pixel & Tonic'
+      templatePath: _guide
   imager-x:
     edition: pro
     enabled: true

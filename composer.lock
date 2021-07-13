@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cc677d67e7584b64e63d0eeb694c2d3",
+    "content-hash": "831f41698d3426a2c5f8c044755e4fdb",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -7365,6 +7365,62 @@
                 "urlify"
             ],
             "time": "2019-12-13T02:57:54+00:00"
+        },
+        {
+            "name": "wbrowar/guide",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wbrowar/craft-guide.git",
+                "reference": "915e812d815b78bc7dcd30bffaebf7eb4a0b5a02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wbrowar/craft-guide/zipball/915e812d815b78bc7dcd30bffaebf7eb4a0b5a02",
+                "reference": "915e812d815b78bc7dcd30bffaebf7eb4a0b5a02",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.5.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Guide",
+                "handle": "guide",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/wbrowar/craft-guide/master/CHANGELOG.md",
+                "class": "wbrowar\\guide\\Guide"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wbrowar\\guide\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Will Browar",
+                    "homepage": "https://wbrowar.com"
+                }
+            ],
+            "description": "A CMS Guide for Craft CMS.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "guide"
+            ],
+            "support": {
+                "docs": "https://github.com/wbrowar/craft-guide/blob/master/README.md",
+                "issues": "https://github.com/wbrowar/craft-guide/issues",
+                "source": "https://github.com/wbrowar/craft-guide/tree/2.2.1"
+            },
+            "time": "2020-10-31T15:06:20+00:00"
         },
         {
             "name": "webmozart/assert",
