@@ -2,10 +2,6 @@
 
 ![Europa Museum homepage](https://raw.githubusercontent.com/craftcms/demo-europa-museum/main/web/guide/homepage.png?token=AAS7TRYXIII4MECM2DBULDDA7CR2Y)
 
-By [Van Holtz Co](https://vanholtz.co) and [Pixel & Tonic](https://pixelandtonic.com).
-
----
-
 ## Overview
 
 The Europa Museum is a custom Craft CMS marketing website for a stylishly-fictitious art museum. This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo).
