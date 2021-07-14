@@ -9,7 +9,6 @@
     "demo",
     "starter"
   ],
-  "license": "",
   "homepage": "https://craftcms.com/demo",
   "type": "project",
   "support": {
@@ -45,7 +44,5 @@
     "platform": {
       "php": "7.4"
     }
-  },
-  "scripts": {
   }
 }
