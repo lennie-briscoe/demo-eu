@@ -2,7 +2,7 @@
 
 ![Europa Museum homepage](https://raw.githubusercontent.com/craftcms/demo-europa-museum/main/web/guide/homepage.png?token=AAS7TRYXIII4MECM2DBULDDA7CR2Y)
 
-By [vanholtzco](https://vanholtz.co) and Pixel & Tonic.
+By [Van Holtz Co](https://vanholtz.co) and [Pixel & Tonic](https://pixelandtonic.com).
 
 ---
 
