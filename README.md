@@ -104,7 +104,7 @@ Just in case Craft or its plugins aren't up to date, run this.
 ./craft update
 ```
 
-## Front-end Development
+## Front End Development
 
 Be sure to add the following environment variable to `.env` or the production build process will fail:
 
@@ -121,11 +121,12 @@ There are a few commands you can run, found in `package.json`:
 
 ## Development Technologies
 
-- [Craft CMS 3](https://docs.craftcms.com/v3/)
+- [Craft CMS 3](https://craftcms.com/docs/3.x/)
 - PostgreSQL (11.5+) / MySQL (5.7+)
 - PHP (7.0+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
 
 ### devDependencies
+
 - [Babel](https://babeljs.io/) with ES6
 - [Sass](https://sass-lang.com/)
 - [Laravel Mix](https://github.com/JeffreyWay/laravel-mix#readme) (Webpack)
@@ -133,6 +134,7 @@ There are a few commands you can run, found in `package.json`:
   - [Critical CSS](https://github.com/riasvdv/laravel-mix-critical#readme)
 
 ### Dependencies
+
 - [Highway.js](https://highway.js.org/)
 - [GSAP](https://greensock.com/gsap)
 - [Lazysizes](https://github.com/aFarkas/lazysizes#readme)
@@ -140,5 +142,5 @@ There are a few commands you can run, found in `package.json`:
 
 ## Additional Craft CMS 3 Information
 
-- [Server Requirements](https://docs.craftcms.com/v3/requirements.html)
-- [Installation Instructions](https://docs.craftcms.com/v3/installation.html)
+- [Server Requirements](https://craftcms.com/docs/3.x/requirements.html)
+- [Installation Instructions](https://craftcms.com/docs/3.x/installation.html)
