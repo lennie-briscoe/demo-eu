@@ -60,7 +60,7 @@ If you’d like to get Europa running in a local environment, we recommend using
 
 Run `npm install` with node 14.15.0 or later.
 
-Be sure to add the following environment variable to `.env` or the production build process will fail:
+If you use a different site URL, update `DEFAULT_SITE_URL` in `.env` or the production build process will fail:
 
 ```
 DEFAULT_SITE_URL=https://europa.nitro
