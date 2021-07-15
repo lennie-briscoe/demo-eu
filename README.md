@@ -14,7 +14,7 @@ Europa shows off many of Craft’s core features and includes a guided tour cour
 
 - [Craft CMS 3](https://craftcms.com/docs/3.x/)
 - PostgreSQL (11.5+) / MySQL (5.7+)
-- PHP (7.0+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
+- PHP (7.2.5+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
 
 ### devDependencies
 
