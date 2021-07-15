@@ -17,7 +17,7 @@
   "minimum-stability": "stable",
   "require": {
     "carlcs/craft-redactorcustomstyles": "^3.0.2",
-    "craftcms/cms": "^3.7.1",
+    "craftcms/cms": "^3.7",
     "craftcms/redactor": "^2.5.0",
     "fakerphp/faker": "^1.14",
     "misterbk/mix": "^1.5.2",
