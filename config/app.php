@@ -19,9 +19,8 @@ return [
         'site-module' => [
             'class' => \modules\sitemodule\SiteModule::class,
         ],
-        'craft-db-paths' => \samhernandez\craftdbpaths\CraftDbPaths::class,
     ],
-    'bootstrap' => ['demos', 'site-module', 'craft-db-paths'],
+    'bootstrap' => ['demos', 'site-module'],
     'components' => [
         'mailer' => null,
     ],
