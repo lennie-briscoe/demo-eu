@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Europa Museum is a custom Craft CMS marketing website for a stylishly-fictitious art museum. This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo).
+The Europa Museum is a custom [Craft CMS](https://craftcms.com) marketing website for a stylishly-fictitious art museum. This repository houses the source code for our demo, which you can spin up for yourself by visiting [craftcms.com/demo](https://craftcms.com/demo).
 
 We’ve also included instructions below for setting up the demo in a local development environment with [Craft Nitro](https://getnitro.sh).
 
@@ -72,3 +72,9 @@ You can then run any of the development scripts found in `package.json`:
 - `npm run sync` to watch files and reload with BrowserSync for local development
 - `npm run dev` to compile assets for local development
 - `npm run prod` to compile optimized assets for production
+
+## License
+
+The source code of this project is licensed under the [BSD Zero Clause License](LICENSE.MD) unless stated otherwise.
+
+The imagery used by this project is the property of each respective license holder. You are not free to use it for your own projects.
