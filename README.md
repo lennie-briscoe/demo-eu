@@ -14,16 +14,14 @@ Europa shows off many of Craft’s core features and includes a guided tour cour
 
 - [Craft CMS 3](https://craftcms.com/docs/3.x/)
 - PostgreSQL (11.5+) / MySQL (5.7+)
-- PHP (7.2.5+), and built on the [Yii 2 framework](https://www.yiiframework.com/)
+- PHP (7.2.5+), built on the [Yii 2 framework](https://www.yiiframework.com/)
+- Native Twig templates
 
-### devDependencies
+### Front End Dependencies
 
 - [Babel](https://babeljs.io/) with ES6
 - [Sass](https://sass-lang.com/)
 - [Laravel Mix](https://github.com/JeffreyWay/laravel-mix#readme) with [PurgeCSS](https://github.com/spatie/laravel-mix-purgecss#readme) and [Critical CSS](https://github.com/riasvdv/laravel-mix-critical#readme)
-
-### Dependencies
-
 - [Highway.js](https://highway.js.org/)
 - [GSAP](https://greensock.com/gsap)
 - [Lazysizes](https://github.com/aFarkas/lazysizes#readme)
