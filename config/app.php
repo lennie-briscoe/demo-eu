@@ -16,11 +16,8 @@
 return [
     'modules'   => [
         'demos' => \modules\demos\Module::class,
-        'site-module' => [
-            'class' => \modules\sitemodule\SiteModule::class,
-        ],
     ],
-    'bootstrap' => ['demos', 'site-module'],
+    'bootstrap' => ['demos'],
     'components' => [
         'mailer' => null,
     ],

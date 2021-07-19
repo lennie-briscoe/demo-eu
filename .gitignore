@@ -1,6 +1,5 @@
 # CRAFT ENVIRONMENT
 .env
-.env.sh
 
 # COMPOSER
 /vendor
@@ -35,8 +34,3 @@
 /web/css/site.css.map
 /web/js/site.js.map
 !seed.sql
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml

@@ -1,11 +1,4 @@
 {
-  "name": "vhc",
-  "version": "1.0.0",
-  "description": "Website by Van Holtz Co",
-  "main": "site.js",
-  "author": "Eric Van Holtz, Van Holtz Co <dev@vanholtz.co>",
-  "copyright": "Van Holtz Co",
-  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "dev": "npm run development",
