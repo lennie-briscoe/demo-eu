@@ -2,12 +2,15 @@
 
 namespace modules\demos\console\controllers;
 
+use Composer\Util\Platform;
 use Craft;
 use craft\console\Controller;
 use craft\elements\Entry;
 use craft\elements\User;
+use craft\helpers\App;
 use craft\helpers\Console;
 use craft\helpers\Db;
+use craft\helpers\FileHelper;
 use Faker\Generator as FakerGenerator;
 use Solspace\Freeform\Elements\Submission;
 use Solspace\Freeform\Freeform;
@@ -45,6 +48,15 @@ class SeedController extends Controller
     {
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-news');
+
+        if ($this->interactive) {
+            $this->stdout("Creating admin user ..." . PHP_EOL);
+            Craft::$app->runAction('users/create', ['admin' => true]);
+            $this->stdout('Done creating admin user.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
+        } else {
+            $this->stdout('Run the following command to create an admin user:' . PHP_EOL);
+            $this->_outputCommand('users/create --admin');
+        }
 
         return ExitCode::OK;
     }
@@ -144,5 +156,22 @@ class SeedController extends Controller
             ->execute();
 
         return true;
+    }
+
+    /**
+     * Outputs a terminal command.
+     *
+     * @param string $command
+     */
+    private function _outputCommand(string $command)
+    {
+        $script = FileHelper::normalizePath($this->request->getScriptFile());
+        if (!Platform::isWindows() && ($home = App::env('HOME')) !== false) {
+            $home = FileHelper::normalizePath($home);
+            if (strpos($script, $home . DIRECTORY_SEPARATOR) === 0) {
+                $script = '~' . substr($script, strlen($home));
+            }
+        }
+        $this->stdout(PHP_EOL . '    php ' . $script . ' ' . $command . PHP_EOL . PHP_EOL);
     }
 }
