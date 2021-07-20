@@ -50,16 +50,19 @@ class SeedController extends Controller
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-news');
 
+        $this->_cleanup();
+
+        $this->stdout(PHP_EOL);
+
         if ($this->interactive) {
             $this->stdout("Creating admin user ..." . PHP_EOL);
             Craft::$app->runAction('users/create', ['admin' => true]);
             $this->stdout('Done creating admin user.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         } else {
-            $this->stdout('Run the following command to create an admin user:' . PHP_EOL);
+            $this->stdout('Run the following command to create an admin user:' . PHP_EOL, Console::FG_YELLOW);
             $this->_outputCommand('users/create --admin');
         }
 
-        $this->_cleanup();
         $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
     }
