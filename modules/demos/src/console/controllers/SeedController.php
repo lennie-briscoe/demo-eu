@@ -73,9 +73,9 @@ class SeedController extends Controller
         Craft::$app->projectConfig->set('system.live', true, null, false);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
-        $this->stdout('Running queue ... ');
+        $this->stdout('Running queue ... ' . PHP_EOL);
         Craft::$app->queue->run();
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Queue finished.' . PHP_EOL, Console::FG_GREEN);
 
         $this->stdout('Clearing data cache ... ');
         Craft::$app->getCache()->flush();
