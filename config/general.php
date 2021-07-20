@@ -40,7 +40,7 @@ return [
 
     // Local (development) environment
     'local' => [
-        'devMode' => true,
-        'enableTemplateCaching' => false,
+        // 'devMode' => true,
+        // 'enableTemplateCaching' => false,
     ],
 ];

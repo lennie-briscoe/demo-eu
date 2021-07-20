@@ -22,26 +22,6 @@ class SeedController extends Controller
     public const FREEFORM_MESSAGE_CHARS_MAX = 300;
 
     /**
-     * @var string|null
-     */
-    public ?string $email = null;
-
-    /**
-     * @var string|null
-     */
-    public string $username = 'admin';
-
-    /**
-     * @var string|null
-     */
-    public ?string $password = null;
-
-    /**
-     * @var int Duration in seconds to wait between retries
-     */
-    public int $timeout = 2;
-
-    /**
      * @var FakerGenerator
      */
     private FakerGenerator $_faker;
