@@ -43,5 +43,15 @@
     "platform": {
       "php": "7.4"
     }
-  }
+  },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"unlink('composer.json');\"",
+            "@php -r \"rename('composer.json.default', 'composer.json');\"",
+            "@composer dump-autoload -o",
+            "@php craft setup/welcome",
+            "@php craft db/restore seed.sql"
+        ]
+    }
 }
