@@ -46,6 +46,7 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
+        $this->stdout('Beginning seed ... ' . PHP_EOL);
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-news');
 
@@ -58,7 +59,30 @@ class SeedController extends Controller
             $this->_outputCommand('users/create --admin');
         }
 
+        $this->_cleanup();
+        $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
+    }
+
+    private function _cleanup()
+    {
+        $this->stdout('Setting system status to online ... ');
+        Craft::$app->projectConfig->set('system.live', true, null, false);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Running queue ... ');
+        Craft::$app->queue->run();
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Clearing data cache ... ');
+        Craft::$app->getCache()->flush();
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $compiledClassesPath = Craft::$app->getPath()->getCompiledClassesPath();
+
+        $this->stdout('Clearing compiled classes ... ');
+        FileHelper::removeDirectory($compiledClassesPath);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
     }
 
     /**
