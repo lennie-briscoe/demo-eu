@@ -57,64 +57,14 @@ class SeedController extends Controller
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function options($actionID): array
-    {
-        $options = parent::options($actionID);
-
-        switch ($actionID) {
-            case 'index':
-            case 'admin-user':
-                $options[] = 'email';
-                $options[] = 'username';
-                $options[] = 'password';
-                break;
-            case 'wait-for-db':
-                $options[] = 'timeout';
-                break;
-        }
-
-        return $options;
-    }
-
-    /**
      * Seeds all data necessary for a working demo
      *
      * @return int
      */
     public function actionIndex(): int
     {
-        $this->runAction('admin-user');
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-news');
-
-        return ExitCode::OK;
-    }
-
-    /**
-     * Creates an admin user
-     *
-     * @return int
-     */
-    public function actionAdminUser(): int
-    {
-        $this->stdout('Creating admin user ... ');
-
-        $user = new User([
-            'username' => $this->username,
-            'newPassword' => $this->password,
-            'email' => $this->email,
-            'admin' => true,
-        ]);
-
-        if (!Craft::$app->getElements()->saveElement($user)) {
-            $this->stderr('failed:' . PHP_EOL . '    - ' . implode(PHP_EOL . '    - ', $user->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
-
-            return ExitCode::UNSPECIFIED_ERROR;
-        }
-
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
         return ExitCode::OK;
     }
@@ -167,31 +117,6 @@ class SeedController extends Controller
 
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
 
-        return ExitCode::OK;
-    }
-
-    /**
-     * @param int $maxTime Maximum time in seconds to wait for database connection
-     * @return int
-     */
-    public function actionWaitForDb(int $maxTime = 0): int
-    {
-        $this->stdout("Waiting for database ..." . PHP_EOL);
-        $retries = 0;
-        $startTime = time();
-
-        while (!Craft::$app->getIsDbConnectionValid()) {
-            if ($maxTime && (time() - $startTime) > $maxTime) {
-                $this->stderr("Database connection failed: maximum time of $maxTime seconds reached." . PHP_EOL . PHP_EOL, Console::FG_RED);
-                return ExitCode::UNSPECIFIED_ERROR;
-            }
-            $retries++;
-            $this->stdout("    - [{$retries}] Retrying in $this->timeout seconds..." . PHP_EOL, Console::FG_YELLOW);
-            sleep($this->timeout);
-        }
-
-        $totalTime = time() - $startTime;
-        $this->stdout("Database connection successful ($totalTime seconds)." . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
     }
 
