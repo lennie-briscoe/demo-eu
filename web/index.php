@@ -19,8 +19,9 @@ if (file_exists(CRAFT_BASE_PATH.'/.env')) {
     Dotenv\Dotenv::create(CRAFT_BASE_PATH)->load();
 }
 
-// Load and run Craft
 define('CRAFT_STREAM_LOG', true);
 define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
+
+// Load and run Craft
 $app = require CRAFT_VENDOR_PATH.'/craftcms/cms/bootstrap/web.php';
 $app->run();
