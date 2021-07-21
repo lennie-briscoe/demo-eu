@@ -56,10 +56,6 @@ class SeedController extends Controller
 
     private function _cleanup()
     {
-        $this->stdout('Setting system status to online ... ');
-        Craft::$app->projectConfig->set('system.live', true, null, false);
-        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
-
         $this->stdout('Running queue ... ' . PHP_EOL);
         Craft::$app->queue->run();
         $this->stdout('Queue finished.' . PHP_EOL, Console::FG_GREEN);
@@ -72,6 +68,10 @@ class SeedController extends Controller
 
         $this->stdout('Clearing compiled classes ... ');
         FileHelper::removeDirectory($compiledClassesPath);
+        $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
+
+        $this->stdout('Setting system status to online ... ');
+        Craft::$app->projectConfig->set('system.live', true, null, false);
         $this->stdout('done' . PHP_EOL, Console::FG_GREEN);
     }
 
