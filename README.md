@@ -37,7 +37,7 @@ If you’d like to get Europa running in a local environment, we recommend using
 2. Make sure you’ve used `nitro db new` to create a PostgreSQL 13 database engine.
 3. Run `nitro create` with the URL to this repository:
     ```zsh
-    nitro create https://github.com/craftcms/demo-europa-museum europa
+    nitro create craftcms/demo-europa-museum europa
     ```
     - hostname: `europa.nitro`
     - web root: `web`
