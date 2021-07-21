@@ -9,23 +9,28 @@
 use craft\helpers\App;
 
 return [
-    'allowAdminChanges' => true,
-    'defaultSearchTermOptions' => [
-        'subLeft' => true,
-        'subRight' => true,
+    '*' => [
+        'allowAdminChanges' => true,
+        'defaultSearchTermOptions' => [
+            'subLeft' => true,
+            'subRight' => true,
+        ],
+        'disallowRobots' => true,
+        'enableCsrfProtection' => true,
+        'useEmailAsUsername' => true,
+        'generateTransformsBeforePageLoad' => true,
+        'omitScriptNameInUrls' => true,
+        'securityKey' => App::env('SECURITY_KEY'),
+        'maxInvalidLogins' => 1000,
+        'maxUploadFileSize' => 20000000,
+        'postCpLoginRedirect' => 'guide/page/welcome',
+        'resourceBasePath' => dirname(__DIR__) . '/web/cpresources',
+        'maxSlugIncrement' => 100,
+        'aliases' => [
+            '@web' => App::env('DEFAULT_SITE_URL'),
+        ],
     ],
-    'disallowRobots' => true,
-    'enableCsrfProtection' => true,
-    'useEmailAsUsername' => true,
-    'generateTransformsBeforePageLoad' => true,
-    'omitScriptNameInUrls' => true,
-    'securityKey' => App::env('SECURITY_KEY'),
-    'maxInvalidLogins' => 1000,
-    'maxUploadFileSize' => 20000000,
-    'postCpLoginRedirect' => 'guide/page/welcome',
-    'resourceBasePath' => dirname(__DIR__) . '/web/cpresources',
-    'maxSlugIncrement' => 100,
-    'aliases' => [
-        '@web' => App::env('DEFAULT_SITE_URL'),
+    'dev' => [
+
     ],
 ];
