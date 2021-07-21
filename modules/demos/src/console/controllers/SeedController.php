@@ -46,24 +46,11 @@ class SeedController extends Controller
      */
     public function actionIndex(): int
     {
-        $this->stdout('Beginning seed ... ' . PHP_EOL);
+        $this->stdout('Beginning seed ... ' . PHP_EOL . PHP_EOL);
         $this->runAction('freeform-data', ['contact']);
         $this->runAction('refresh-news');
-
         $this->_cleanup();
-
-        $this->stdout(PHP_EOL);
-
-        if ($this->interactive) {
-            $this->stdout("Creating admin user ..." . PHP_EOL);
-            Craft::$app->runAction('users/create', ['admin' => true]);
-            $this->stdout('Done creating admin user.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
-        } else {
-            $this->stdout('Run the following command to create an admin user:' . PHP_EOL, Console::FG_YELLOW);
-            $this->_outputCommand('users/create --admin');
-        }
-
-        $this->stdout('Seed complete.' . PHP_EOL, Console::FG_GREEN);
+        $this->stdout('Seed complete.' . PHP_EOL . PHP_EOL, Console::FG_GREEN);
         return ExitCode::OK;
     }
 
@@ -183,22 +170,5 @@ class SeedController extends Controller
             ->execute();
 
         return true;
-    }
-
-    /**
-     * Outputs a terminal command.
-     *
-     * @param string $command
-     */
-    private function _outputCommand(string $command)
-    {
-        $script = FileHelper::normalizePath($this->request->getScriptFile());
-        if (!Platform::isWindows() && ($home = App::env('HOME')) !== false) {
-            $home = FileHelper::normalizePath($home);
-            if (strpos($script, $home . DIRECTORY_SEPARATOR) === 0) {
-                $script = '~' . substr($script, strlen($home));
-            }
-        }
-        $this->stdout(PHP_EOL . '    php ' . $script . ' ' . $command . PHP_EOL . PHP_EOL);
     }
 }

@@ -52,7 +52,8 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@composer dump-autoload -o",
             "@php craft db/restore seed.sql > /dev/null 2>&1",
-            "@php craft demos/seed"
+            "@php craft demos/seed > /dev/null 2>&1",
+            "@php craft users/create --admin"
         ]
     }
 }
