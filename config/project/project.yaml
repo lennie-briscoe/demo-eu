@@ -1,4 +1,4 @@
-dateModified: 1626828504
+dateModified: 1626896824
 email:
   fromEmail: support@craftcms.com
   fromName: 'Europa Museum'
@@ -107,6 +107,16 @@ meta:
     f668aa75-41bb-4309-9114-26d72e1547ff: 'CTA Link' # CTA Link
     fadcfcb9-b6bc-4adf-9adb-18ba2e89bfb7: 'Narrow Width' # Narrow Width
 plugins:
+  default-dashboard:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      excludeAdmin: ''
+      logErrors: false
+      logInfo: false
+      override: ''
+      userDashboard: '879'
   freeform:
     edition: lite
     enabled: true
@@ -209,5 +219,6 @@ system:
   edition: pro
   live: false
   name: 'Europa Museum'
+  retryDuration: null
   schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
