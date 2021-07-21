@@ -11,12 +11,12 @@
 
 # WEB
 /web/cpresources
+/web/assets
 /web/css
 /web/images
 /web/js
 /web/fonts
 /web/mix-manifest.json
-/web/uploads
 /web/favicon.ico
 /web/manifest.json
 /web/browserconfig.xml
@@ -33,4 +33,15 @@
 .idea
 /web/css/site.css.map
 /web/js/site.js.map
+
+# For demo infrastucture only
 !seed.sql
+!/web/assets
+!/web/css
+!/web/images
+!/web/js
+!/web/fonts
+!/web/mix-manifest.json
+!/web/favicon.ico
+!/web/manifest.json
+!/web/browserconfig.xml
