@@ -26,7 +26,6 @@ return [
     'resourceBasePath' => dirname(__DIR__) . '/web/cpresources',
     'maxSlugIncrement' => 100,
     'aliases' => [
-        // @web should be set intentionally
         '@web' => App::env('DEFAULT_SITE_URL'),
     ],
 ];
