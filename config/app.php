@@ -14,11 +14,16 @@
  */
 
 return [
-    'modules'   => [
-        'demos' => \modules\demos\Module::class,
+    '*' => [
+        'modules'   => [
+            'demos' => \modules\demos\Module::class,
+        ],
+        'bootstrap' => ['demos'],
+        'components' => [
+            'mailer' => null,
+        ],
     ],
-    'bootstrap' => ['demos'],
-    'components' => [
-        'mailer' => null,
-    ],
+    'dev' => [
+        'components' => [],
+    ]
 ];
