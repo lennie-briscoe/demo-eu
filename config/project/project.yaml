@@ -207,7 +207,7 @@ plugins:
     schemaVersion: 1.0.0
 system:
   edition: pro
-  live: true
+  live: false
   name: 'Europa Museum'
   schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
