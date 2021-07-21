@@ -55,6 +55,12 @@ If you’d like to get Europa running in a local environment, we recommend using
 
 Run `npm install` with node 14.15.0 or later.
 
+If you use a different site URL, update `DEFAULT_SITE_URL` in `.env` or the production build process will fail:
+
+```
+DEFAULT_SITE_URL=https://europa.nitro
+```
+
 You can then run any of the development scripts found in `package.json`:
 
 - `npm run watch` to watch and automatically recompile assets for local development
