@@ -51,8 +51,7 @@
         "post-create-project-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php craft db/restore seed.sql > /dev/null 2>&1",
-            "@php craft demos/seed > /dev/null 2>&1",
-            "@php craft users/create --admin"
+            "@php craft demos/seed > /dev/null 2>&1"
         ]
     }
 }
