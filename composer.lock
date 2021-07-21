@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.185.13",
+            "version": "3.185.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2c66ec7eab4ce3ca93f86295ac4e0fe56ddec128"
+                "reference": "3f639e8a6fff677f788700940a68dc138ea5da71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2c66ec7eab4ce3ca93f86295ac4e0fe56ddec128",
-                "reference": "2c66ec7eab4ce3ca93f86295ac4e0fe56ddec128",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3f639e8a6fff677f788700940a68dc138ea5da71",
+                "reference": "3f639e8a6fff677f788700940a68dc138ea5da71",
                 "shasum": ""
             },
             "require": {
@@ -92,9 +92,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.13"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.17"
             },
-            "time": "2021-07-14T18:15:40+00:00"
+            "time": "2021-07-20T18:19:09+00:00"
         },
         {
             "name": "carlcs/craft-redactorcustomstyles",
@@ -4910,20 +4910,20 @@
         },
         {
             "name": "psr/cache",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/cache.git",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+                "reference": "213f9dbc5b9bfbc4f8db86d2838dc968752ce13b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/213f9dbc5b9bfbc4f8db86d2838dc968752ce13b",
+                "reference": "213f9dbc5b9bfbc4f8db86d2838dc968752ce13b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
@@ -4943,7 +4943,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for caching libraries",
@@ -4953,9 +4953,9 @@
                 "psr-6"
             ],
             "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
+                "source": "https://github.com/php-fig/cache/tree/2.0.0"
             },
-            "time": "2016-08-06T20:24:11+00:00"
+            "time": "2021-02-03T23:23:37+00:00"
         },
         {
             "name": "psr/container",
@@ -5877,16 +5877,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.89.0",
+            "version": "v7.90.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "fea12a15d46d15c017b3fe76f78aa7c983cb5928"
+                "reference": "c33e0810a05be37b0ff372f2bc83b82ca8010e61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/fea12a15d46d15c017b3fe76f78aa7c983cb5928",
-                "reference": "fea12a15d46d15c017b3fe76f78aa7c983cb5928",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c33e0810a05be37b0ff372f2bc83b82ca8010e61",
+                "reference": "c33e0810a05be37b0ff372f2bc83b82ca8010e61",
                 "shasum": ""
             },
             "require": {
@@ -5932,9 +5932,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v7.89.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v7.90.0"
             },
-            "time": "2021-07-14T17:24:56+00:00"
+            "time": "2021-07-21T01:11:04+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -8850,16 +8850,16 @@
         },
         {
             "name": "wrav/oembed",
-            "version": "1.3.10",
+            "version": "1.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wrav/oembed.git",
-                "reference": "b30ed9bad7da3c94e7e9680088bb13d1600114f4"
+                "reference": "3d011b4b2d0fd5152dceedc448ef04da752f3e60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wrav/oembed/zipball/b30ed9bad7da3c94e7e9680088bb13d1600114f4",
-                "reference": "b30ed9bad7da3c94e7e9680088bb13d1600114f4",
+                "url": "https://api.github.com/repos/wrav/oembed/zipball/3d011b4b2d0fd5152dceedc448ef04da752f3e60",
+                "reference": "3d011b4b2d0fd5152dceedc448ef04da752f3e60",
                 "shasum": ""
             },
             "require": {
@@ -8913,9 +8913,9 @@
             "support": {
                 "docs": "https://github.com/wrav/oembed/blob/master/README.md",
                 "issues": "https://github.com/wrav/oembed/issues",
-                "source": "https://github.com/wrav/oembed/tree/1.3.10"
+                "source": "https://github.com/wrav/oembed/tree/1.3.11"
             },
-            "time": "2021-07-20T02:18:27+00:00"
+            "time": "2021-07-21T01:21:37+00:00"
         },
         {
             "name": "yii2tech/ar-softdelete",
