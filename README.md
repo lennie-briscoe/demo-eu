@@ -46,8 +46,11 @@ If you’d like to get Europa running in a local environment, we recommend using
     - database engine: `postgres-13-*.database.nitro`
     - database name: `europa`
     - update env file? `Y`
-4. Run `cd europa` to move into the project directory.
-5. Add a Craft account for yourself using `nitro craft users/create --admin` and following the prompts.
+4. Move to the project directory and add a Craft account for yourself by following the prompts:
+    ```zsh
+    cd europa
+    nitro craft users/create --admin
+    ```
 
 > 💡 If you’re using a different local environment, see Craft’s [Server Requirements](https://craftcms.com/docs/3.x/requirements.html) and [Installation Instructions](https://craftcms.com/docs/3.x/installation.html).
 
