@@ -1,12 +1,18 @@
-dateModified: 1626915599
+dateModified: 1626920668
 email:
   fromEmail: support@craftcms.com
   fromName: 'Europa Museum'
   replyToEmail: null
   template: ''
   transportSettings:
-    command: ''
-  transportType: craft\mail\transportadapters\Sendmail
+    encryptionMethod: ''
+    host: $SMTP_HOST
+    password: ''
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: ''
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
     0b3ab84a-728c-4dfa-b505-ee524b9631d9: Home # Home
